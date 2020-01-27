@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JavaCapstoneApp</string>
+    <string name="button">OHS</string>
+
 </resources>
