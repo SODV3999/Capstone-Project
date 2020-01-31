@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">JavaCapstoneApp</string>
+    <string name="linktosite">
+        <a href="http://www.workershealthcentre.ca/">Alberta Worker Health Center</a>
+    </string>
+    <string name="linktocomplaint">
+<a href="http://www.helpwrc.org/">Calgary Workers Resource Centre</a>
+    </string>
 </resources>
