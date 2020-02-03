@@ -18,4 +18,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ESActivity.class);
         startActivity(intent);
     }
+
+    public void navigateToResources(View view) {
+        Intent intent = new Intent(this, ResourceActivity.class);
+        startActivity(intent);
+    }
+
+
 }
