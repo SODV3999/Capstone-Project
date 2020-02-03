@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".MainActivity">
+    tools:context=".ESActivity">
 
     <TextView
         android:id="@+id/textView2"
@@ -19,11 +19,14 @@
         android:gravity="center"
         android:text="Employment Standards"
         android:textColor="@android:color/white"
+        android:justificationMode="inter_word"
         android:textSize="34dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
     <TextView
         android:id="@+id/textView"
@@ -48,7 +51,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="31dp"
         android:gravity="center"
-        android:text="@string/linktosite"
+        android:text="@string/ES"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
@@ -62,7 +65,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="18dp"
-        android:text="@string/linktosite1"
+        android:text="@string/ES1"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
@@ -76,7 +79,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="26dp"
-        android:text="@string/linktosite2"
+        android:text="@string/ES2"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
@@ -95,6 +98,7 @@
         android:layout_marginBottom="87dp"
         android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters.The Employment Standards Code establishes Alberta’s minimum standards of employment in areasoutside of health and safety that are relevant to the workplace. These includewages, hours of work, overtime, vacation and holidays, leaves and termination of employment."
         android:textSize="20dp"
+        android:justificationMode="inter_word"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
