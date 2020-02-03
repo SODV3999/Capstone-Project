@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">JavaCapstoneApp</string>
-    <string name="linktosite">
+<string name="app_name">JavaCapstoneApp</string>
+<string name="linktosite_humanrights">
         <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act</a>
     </string>
-    <string name="linktocomplaint">
+<string name="linktocomplaint_humanrights">
 <a href="https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf">The Human Rights Complaint Process</a>
     </string>
 </resources>
