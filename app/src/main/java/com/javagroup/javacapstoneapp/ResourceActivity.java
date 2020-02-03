@@ -15,13 +15,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class ResourceActivity extends AppCompatActivity {
 
     private Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_resource);
         TextView text = (TextView) findViewById(R.id.txt_health_center);
         text.setMovementMethod(LinkMovementMethod.getInstance());
 
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent callIntent = new Intent(Intent.ACTION_CALL);
                 callIntent.setData(Uri.parse("tel:0377778888"));
 
-                if (ActivityCompat.checkSelfPermission(MainActivity.this,
+                if (ActivityCompat.checkSelfPermission(ResourecActivity.this,
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     return;
                 }

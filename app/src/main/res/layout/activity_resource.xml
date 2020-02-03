@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".ResourceActivity">
 
     <TextView
         android:id="@+id/txt_resource"
@@ -40,7 +40,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:justificationMode="inter_word"
-        android:text="@string/the_alberta_worker_s_health_centre_and_calgary_workers_resource_centre_provide_free_of_charge_help_for_people_who_have_issues_with_health_and_safety_and_worker_rights"
+        android:text="@string/para1"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -76,7 +76,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:justificationMode="inter_word"
-        android:text="@string/services_are_free_of_charge_provides_a_first_point_of_contact_for_workers_facing_occupational_health_and_safety_issues_in_their_workplace_will_provide_support_public_legal_education_and_referrals"
+        android:text="@string/para2"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -112,7 +112,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
         android:justificationMode="inter_word"
-        android:text="@string/provides_free_case_work_and_public_legal_education_program_if_you_are_having_issues_accessing_your_rights_in_your_workplace"
+        android:text="@string/para3"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -138,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#EF5350"
-        android:text="@string/dial1"
+        android:text="@string/dial"
         android:textStyle="bold"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_para3"
