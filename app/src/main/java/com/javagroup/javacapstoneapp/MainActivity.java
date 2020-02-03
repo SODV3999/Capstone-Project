@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         TextView t = (TextView) findViewById(R.id.txt_Resource_Center);
         t.setMovementMethod(LinkMovementMethod.getInstance());
 
-        Button dial1 = findViewById(R.id.Dial1);
+        Button dial1 = findViewById(R.id.btn_dial1);
     }
 
 

@@ -120,7 +120,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_Resource_Center" />
 
     <Button
-        android:id="@+id/Dial1"
+        android:id="@+id/btn_dial1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#EF5350"
@@ -134,7 +134,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_para1" />
 
     <Button
-        android:id="@+id/Dial2"
+        android:id="@+id/btn_dial2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#EF5350"
