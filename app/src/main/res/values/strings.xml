@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">JavaCapstoneApp</string>
+
+    <!-- Nigam strings -->
+    <string name="ES">
+        <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
+    </string>
+
+    <string name="ES1">
+        <a href="http://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code</a>
+    </string>
+
+    <string name="ES2">
+        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Reguations</a>
+    </string>
+
+    <!-- Sagar strings -->
+    <string name="linktosite_humanrights">
+        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act</a>
+    </string>
+    <string name="linktocomplaint_humanrights">
+        <a href="https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf">The Human Rights Complaint Process</a>
+    </string>
+
+    <!-- Twinkle strings -->
+    <string name="resources">Resources</string>
+    <string name="the_alberta_worker_s_health_centre_and_calgary_workers_resource_centre_provide_free_of_charge_help_for_people_who_have_issues_with_health_and_safety_and_worker_rights">The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:</string>
+    <string name="services_are_free_of_charge_provides_a_first_point_of_contact_for_workers_facing_occupational_health_and_safety_issues_in_their_workplace_will_provide_support_public_legal_education_and_referrals">Services are free of charge. Provides a first point of contact for workers facing occupational health and safety issues in their workplace. Will provide support, public legal education, and referrals.</string>
+    <string name="provides_free_case_work_and_public_legal_education_program_if_you_are_having_issues_accessing_your_rights_in_your_workplace">Provides free case work and public legal education program if you are having issues accessing your rights in your workplace</string>
+    <string name="dial">Dial</string>
+    <string name="dial1">DIAL</string>
+
+    <!-- Neil strings -->
+    <string name="intro">
+        A safe workplace takes your physical, mental, and emotional safety into consideration. Your safety at work is protected by 3 pieces of legislations:
+    </string>
+    <string name="ohs">Occupational Health and Safety</string>
+    <string name="emp_standards">Employment Standards</string>
+    <string name="human_rights">Human Rights</string>
+
+    <!-- Victor strings -->
+    <string name="toGoLink"><u><i>Health and Safety Rights</i></u></string>
+    <string name="intro_message">In Alberta, workers have 4 basic rights that relate to health safety (information from Alberta Workers Health Centre</string>
+    <string name="ohs_message">Current Legislation</string>
+    <string name="ohs_link">OHS Act, Regulation and Code</string>
+    <string name="sectionName_ES">Employment Standards</string>
+
 </resources>
