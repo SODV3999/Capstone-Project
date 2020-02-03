@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">JavaCapstoneApp</string>
-    <string name="linktosite">
+    <string name="ES">
         <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
     </string>
 
-    <string name="linktosite1">
+    <string name="ES1">
         <a href="http://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code</a>
     </string>
 
-    <string name="linktosite2">
+    <string name="ES2">
         <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Reguations</a>
     </string>
 </resources>

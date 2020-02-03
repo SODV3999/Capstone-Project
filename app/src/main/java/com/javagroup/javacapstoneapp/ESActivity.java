@@ -6,12 +6,12 @@ import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class ESActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_es);
         TextView text = (TextView) findViewById(R.id.textlink);
         text.setMovementMethod(LinkMovementMethod.getInstance());
         TextView t = (TextView) findViewById(R.id.employmentcode);
