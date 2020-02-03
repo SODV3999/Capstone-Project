@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".Human_rightsActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -37,6 +37,7 @@
         android:layout_marginRight="20dp"
         android:text="In addition to workplace safety, hazards, rights, and standards, Alberta has legislation that relates to the rights of all people and their dignity, regardless of background such as ethnocultural group, source of income,participation in a labour union,gender, age, sexual orientation, or immigration status:"
         android:textSize="20dp"
+        android:justificationMode="inter_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +47,7 @@
         android:id="@+id/textlink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/linktosite"
+        android:text="@string/linktosite_humanrights"
         android:textColorLink="@android:color/holo_green_dark"
         android:textSize="20dp"
         android:textStyle="bold|italic"
@@ -66,6 +67,7 @@
         android:layout_marginRight="20dp"
         android:text="Human Rights in Alberta relate to the idea that everyone should be free from discrimination, and apply to employers and workers. Employers cannot sign away their employees’ human rights. In cases of human rights breaches, specific steps need to be taken see"
         android:textSize="20dp"
+        android:justificationMode="inter_word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textlink" />
@@ -74,7 +76,7 @@
         android:id="@+id/human_rights_complainght"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/linktocomplaint"
+        android:text="@string/linktocomplaint_humanrights"
         android:textColorLink="@android:color/holo_green_dark"
         android:textSize="20dp"
         android:textStyle="bold|italic"
