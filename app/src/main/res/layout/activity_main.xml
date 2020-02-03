@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -44,7 +48,7 @@
 
     <TextView
         android:id="@+id/textlink"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
@@ -53,7 +57,7 @@
         android:layout_marginRight="20dp"
         android:text="@string/linktosite"
         android:textColorLink="@android:color/holo_blue_light"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -78,7 +82,7 @@
 
     <TextView
         android:id="@+id/Resource_Center"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
@@ -87,7 +91,7 @@
         android:layout_marginRight="20dp"
         android:text="@string/linktocomplaint"
         android:textColorLink="@android:color/holo_blue_light"
-        android:textSize="20dp"
+        android:textSize="18dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -109,4 +113,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Resource_Center" />
 
+    <Button
+        android:id="@+id/Dial1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EF5350"
+        android:onClick="OnDialButton"
+        android:text="Dial"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textlink"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/Dial2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EF5350"
+        android:text="DIAL"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Resource_Center"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
