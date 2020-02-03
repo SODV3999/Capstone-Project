@@ -20,25 +20,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        TextView text = (TextView) findViewById(R.id.textlink);
+        TextView text = (TextView) findViewById(R.id.txt_health_center);
         text.setMovementMethod(LinkMovementMethod.getInstance());
 
-        TextView t = (TextView) findViewById(R.id.Resource_Center);
+        TextView t = (TextView) findViewById(R.id.txt_Resource_Center);
         t.setMovementMethod(LinkMovementMethod.getInstance());
 
-        Button dial = findViewById(R.id.Dial1);
-
+        Button dial1 = findViewById(R.id.Dial1);
     }
 
 
+
     @RequiresApi(api = Build.VERSION_CODES.M)
+           // button.setOnClickListener(new View.OnClickListener(){
     public void OnDialButton(View v) {
-        Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:7804869009"));
+        Intent callIntent  = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:7804869009"));
         if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 
             return;
         }
-        startActivity(intent);
+        startActivity(callIntent);
     }
+
 }
