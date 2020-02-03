@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void navigateTo(View view) {
+    public void navigateToES(View view) {
         Intent intent = new Intent(this, ESActivity.class);
         startActivity(intent);
     }

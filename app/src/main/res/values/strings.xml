@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">JavaCapstoneApp</string>
 
+    <string name="section01_Name">Workplace Safety</string>
+    <string name="section02_Name">Ocupational Health and Safety</string>
+    <string name="section03_Name">Human Rights</string>
+    <string name="section04_Name">Employment Standards</string>
+    <string name="section05_Name">Navigating the System</string>
+    <string name="section06_Name">Resources</string>
+
+
     <!-- Nigam strings -->
     <string name="ES">
         <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
