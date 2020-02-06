@@ -21,7 +21,7 @@ public class ResourceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resource);
+        setContentView(R.layout.activity_resources);
         TextView text = (TextView) findViewById(R.id.txt_health_center);
         text.setMovementMethod(LinkMovementMethod.getInstance());
 
