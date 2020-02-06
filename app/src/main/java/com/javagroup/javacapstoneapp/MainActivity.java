@@ -14,12 +14,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void navigateToES(View view) {
+    public void navToSection1(View view) {
+        Intent intent = new Intent(this, OHSActivity.class);
+        startActivity(intent);
+    }
+
+    public void navToSection2(View view) {
+        Intent intent = new Intent(this, OHSActivity.class);
+        startActivity(intent);
+    }
+
+    public void navToSection3(View view) {
+        Intent intent = new Intent(this, OHSActivity.class);
+        startActivity(intent);
+    }
+
+    public void navToSection4(View view) {
         Intent intent = new Intent(this, ESActivity.class);
         startActivity(intent);
     }
 
-    public void navigateToResources(View view) {
+    public void navToSection5(View view) {
+        Intent intent = new Intent(this, ESActivity.class);
+        startActivity(intent);
+    }
+
+    public void navToSection6(View view) {
         Intent intent = new Intent(this, ResourceActivity.class);
         startActivity(intent);
     }

@@ -2,7 +2,7 @@
     <string name="app_name">JavaCapstoneApp</string>
 
     <string name="section01_Name">Workplace Safety</string>
-    <string name="section02_Name">Ocupational Health and Safety</string>
+    <string name="section02_Name">Occupational Health and Safety</string>
     <string name="section03_Name">Human Rights</string>
     <string name="section04_Name">Employment Standards</string>
     <string name="section05_Name">Navigating the System</string>
@@ -35,7 +35,7 @@
         <a href="http://www.workershealthcentre.ca/">Alberta Worker Health Center</a>
     </string>
     <string name="Resources_linkCalgary">
-<a href="http://www.helpwrc.org/">Calgary Workers Resource Centre</a>
+        <a href="http://www.helpwrc.org/">Calgary Workers Resource Centre</a>
     </string>
     <string name="resources">Resources</string>
     <string name="para1">The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:</string>
@@ -56,6 +56,6 @@
     <string name="intro_message">In Alberta, workers have 4 basic rights that relate to health safety (information from Alberta Workers Health Centre</string>
     <string name="ohs_message">Current Legislation</string>
     <string name="ohs_link">OHS Act, Regulation and Code</string>
-    <string name="sectionName_ES">Employment Standards</string>
+
 
 </resources>
