@@ -1,11 +1,13 @@
 package com.javagroup.javacapstoneapp;
 
-import android.app.Activity;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class WSActivity extends Activity {
+public class WSActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
