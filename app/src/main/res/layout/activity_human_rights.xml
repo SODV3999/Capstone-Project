@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".EmploymentStandardsActivity">
-
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".HumanRightsActivity">
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@android:color/darker_gray"
         android:gravity="center_vertical"
         android:padding="16dp"
-        android:text="@string/section04_Name"
+        android:text="@string/section03_Name"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,11 +31,13 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:text="Workers and employers in Alberta are subject to the Employment Standards Code and Employment Standards Regulation: "
+        android:justificationMode="inter_word"
+        android:text="In addition to workplace safety, hazards, rights, and standards, Alberta has legislation that relates to the rights of all people and their dignity, regardless of background such as ethnocultural group, source of income,participation in a labour union,gender, age, sexual orientation, or immigration status:"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textlink"
@@ -44,56 +46,41 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="@string/ES"
-        android:textColorLink="#8BC34A"
+        android:text="@string/linktosite_humanrights"
+        android:textColorLink="@android:color/holo_green_dark"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:id="@+id/employmentcode"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/ES1"
-        android:textColorLink="#8BC34A"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:justificationMode="inter_word"
+        android:text="Human Rights in Alberta relate to the idea that everyone should be free from discrimination, and apply to employers and workers. Employers cannot sign away their employees’ human rights. In cases of human rights breaches, specific steps need to be taken see"
         android:textSize="20dp"
-        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textlink" />
 
     <TextView
-        android:id="@+id/EmploymentRegulations"
+        android:id="@+id/human_rights_complainght"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/ES2"
-        android:textColorLink="#8BC34A"
+        android:layout_marginTop="32dp"
+        android:text="@string/linktocomplaint_humanrights"
+        android:textColorLink="@android:color/holo_green_dark"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/employmentcode" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:justificationMode="inter_word"
-        android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters.The Employment Standards Code establishes Alberta’s minimum standards of employment in areasoutside of health and safety that are relevant to the workplace. These includewages, hours of work, overtime, vacation and holidays, leaves and termination of employment."
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EmploymentRegulations" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

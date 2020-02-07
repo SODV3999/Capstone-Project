@@ -7,7 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class WSActivity extends AppCompatActivity {
+public class WorkplaceSafetyActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,17 +16,17 @@ public class WSActivity extends AppCompatActivity {
     }
 
     public void navToSection2(View view) {
-        Intent intent = new Intent(this, OHSActivity.class);
+        Intent intent = new Intent(this, OccupationalHealthAndSafetyActivity.class);
         startActivity(intent);
     }
 
     public void navToSection3(View view) {
-        Intent intent = new Intent(this, OHSActivity.class);
+        Intent intent = new Intent(this, OccupationalHealthAndSafetyActivity.class);
         startActivity(intent);
     }
 
     public void navToSection4(View view) {
-        Intent intent = new Intent(this, ESActivity.class);
+        Intent intent = new Intent(this, EmploymentStandardsActivity.class);
         startActivity(intent);
     }
 

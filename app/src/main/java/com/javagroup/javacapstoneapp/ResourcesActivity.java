@@ -15,7 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class ResourceActivity extends AppCompatActivity {
+public class ResourcesActivity extends AppCompatActivity {
 
     private Button button;
     @Override

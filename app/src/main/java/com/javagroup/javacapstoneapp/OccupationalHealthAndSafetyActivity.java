@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.net.Uri;
 
-public class OHSActivity extends AppCompatActivity {
+public class OccupationalHealthAndSafetyActivity extends AppCompatActivity {
 
 
     @Override
