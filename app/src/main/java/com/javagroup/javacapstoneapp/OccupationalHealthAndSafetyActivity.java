@@ -14,7 +14,7 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class OHSActivity extends AppCompatActivity implements View.OnClickListener {
+public class OccupationalHealthAndSafetyActivity extends AppCompatActivity implements View.OnClickListener {
 
     TextView ohsActAndCodeLink, safetyRightsLink;
     WebView browser;
@@ -47,6 +47,7 @@ public class OHSActivity extends AppCompatActivity implements View.OnClickListen
         //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
         //startActivity(intent);
         browser.setWebViewClient(new WebViewClient());
+        //WebSettings
         browser.loadUrl(url);
 
     }
