@@ -1,13 +1,15 @@
 package com.javagroup.javacapstoneapp;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
+import android.view.KeyEvent;
 import android.view.View;
-import android.net.Uri;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -16,9 +18,9 @@ import android.widget.TextView;
 
 public class OccupationalHealthAndSafetyActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView ohsActAndCodeLink, safetyRightsLink;
+    TextView ohsActAndCodeLink, safetyRightsLink, clickedLink;
     WebView browser;
-    Button closeBrowser;
+    Button closeBrowser, goBack, goForward;
 
     ConstraintLayout browserScreen;
 
@@ -27,49 +29,74 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ohs);
 
+        //TO GO LINKS
         ohsActAndCodeLink = (TextView)findViewById(R.id.ohsActRegAndCodeLink);
         safetyRightsLink = (TextView)findViewById(R.id.safetyRightsLink);
 
+        //BROWSER
         browser = (WebView)findViewById(R.id.webView);
-
-        closeBrowser = (Button)findViewById((R.id.closebrowser));
-
         browserScreen = (ConstraintLayout)findViewById(R.id.browserScreen);
 
+        //BROWSER BUTTONS & TEXT
+        closeBrowser = (Button)findViewById((R.id.btn_closebrowser));
+        goBack = (Button)findViewById(R.id.btn_back);
+        goForward = (Button)findViewById(R.id.btn_forward);
+        clickedLink = (TextView)findViewById(R.id.txtview_url);
+
+        //ON CLICKS EVENTS
         ohsActAndCodeLink.setOnClickListener(this);
         safetyRightsLink.setOnClickListener(this);
+        browser.setOnClickListener(this);
         closeBrowser.setOnClickListener(this);
-
+        goBack.setOnClickListener(this);
+        goForward.setOnClickListener(this);
 
     }
 
     private void openingLink(String url){
-        //Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-        //startActivity(intent);
+        WebSettings webSettings = browser.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         browser.setWebViewClient(new WebViewClient());
-        //WebSettings
         browser.loadUrl(url);
-
+        clickedLink.setText(browser.getUrl().toString());
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+                //LINKS BUTTONS
             case R.id.ohsActRegAndCodeLink:
-                openingLink ("https://workershealthcentre.ca/4-health-and-safety-rights/");
-                browserScreen.setVisibility(View.VISIBLE);
-                break;
-            case R.id.safetyRightsLink:
                 openingLink ("https://www.alberta.ca/ohs-act-regulation-code.aspx");
                 browserScreen.setVisibility(View.VISIBLE);
                 break;
-            case R.id.closebrowser:
-                if(browserScreen.getVisibility() == View.VISIBLE)
-                {
-                    browserScreen.setVisibility(View.INVISIBLE);
-                }else{
-                    browserScreen.setVisibility(View.VISIBLE);
+            case R.id.safetyRightsLink:
+                openingLink ("https://workershealthcentre.ca/4-health-and-safety-rights/");
+                browserScreen.setVisibility(View.VISIBLE);
+                break;
+                //BROWSER BUTTONS
+            case R.id.btn_closebrowser:
+                browserScreen.setVisibility(View.INVISIBLE);
+                break;
+            case R.id.btn_back:
+                if (browser.canGoBack()) {
+                    browser.goBack();
                 }
+                break;
+            case R.id.btn_forward:
+                if(browser.canGoForward()){
+                    browser.goForward();
+                }
+                break;
+        }
+    }
+
+    @Override
+    public void onBackPressed(){
+        if(browser.canGoBack()){
+            browser.goBack();
+        }
+        else{
+            super.onBackPressed();
         }
     }
 }
