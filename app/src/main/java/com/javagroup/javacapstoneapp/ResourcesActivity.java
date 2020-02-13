@@ -17,50 +17,38 @@ import android.widget.TextView;
 
 public class ResourcesActivity extends AppCompatActivity {
 
-    private Button button;
+    private Button button1,button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources);
-        TextView text = (TextView) findViewById(R.id.txt_health_center);
-        text.setMovementMethod(LinkMovementMethod.getInstance());
+        button1 = findViewById(R.id.btn_dial1);
+        button2 = findViewById(R.id.btn_dial2);
+        button1.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                openactivity1();
+            }
 
-        TextView t = (TextView) findViewById(R.id.txt_Resource_Center);
-        t.setMovementMethod(LinkMovementMethod.getInstance());
-
-        Button dial1 = findViewById(R.id.btn_dial1);
-    }
-
-
-
-    @RequiresApi(api = Build.VERSION_CODES.M)
-           // button.setOnClickListener(new View.OnClickListener(){
-    public void OnDialButton(View v) {
-        Intent callIntent  = new Intent(Intent.ACTION_CALL);
-        callIntent.setData(Uri.parse("tel:7804869009"));
-        if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-
-            return;
-        }
-        startActivity(callIntent);
-    }
-
-}
-
-      /*  button = (Button) findViewById(R.id.btn_dial1);
-
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                Intent callIntent = new Intent(Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:0377778888"));
-
-                if (ActivityCompat.checkSelfPermission(ResourecActivity.this,
-                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                    return;
-                }
-                startActivity(callIntent);
+        });
+        button2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                openactivity2();
             }
         });
-
     }
-}*/
+    public void openactivity1(){
+        Intent intent = new Intent(this,Calling.class);
+        startActivity(intent);
+    }
+    public void openactivity2(){
+        Intent intent = new Intent(this,Calling_Two.class);
+        startActivity(intent);
+    }
+}
+
+
+
