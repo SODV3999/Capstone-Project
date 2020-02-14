@@ -1,15 +1,9 @@
 package com.javagroup.javacapstoneapp;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
-import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -46,7 +40,6 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
         //ON CLICKS EVENTS
         ohsActAndCodeLink.setOnClickListener(this);
         safetyRightsLink.setOnClickListener(this);
-        browser.setOnClickListener(this);
         closeBrowser.setOnClickListener(this);
         goBack.setOnClickListener(this);
         goForward.setOnClickListener(this);
@@ -56,9 +49,35 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
     private void openingLink(String url){
         WebSettings webSettings = browser.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        browser.setWebViewClient(new WebViewClient());
+        browser.setWebViewClient(new WebViewController());
         browser.loadUrl(url);
-        clickedLink.setText(browser.getUrl().toString());
+        clickedLink.setText("Loading. Please Wait!");
+    }
+
+    public class WebViewController extends WebViewClient {
+
+        @Override
+        public boolean shouldOverrideUrlLoading(WebView view, String url) {
+            clickedLink.setText("Loading. Please Wait!");
+            return false;
+        }
+
+        public void onPageFinished(WebView view, String url) {
+            clickedLink.setText(browser.getUrl().toString());
+            if(browser.canGoBack()){
+                goBack.setEnabled(true);
+            }
+            else{
+                goBack.setEnabled(false);
+            }
+            if(browser.canGoForward()){
+                goForward.setEnabled(true);
+            }
+            else{
+                goForward.setEnabled(false);
+            }
+        }
+
     }
 
     @Override
@@ -68,24 +87,24 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
             case R.id.ohsActRegAndCodeLink:
                 openingLink ("https://www.alberta.ca/ohs-act-regulation-code.aspx");
                 browserScreen.setVisibility(View.VISIBLE);
+                browserScreen.setTranslationY(3000);
+                browserScreen.animate().translationYBy(-3000).setDuration(1500);
                 break;
             case R.id.safetyRightsLink:
                 openingLink ("https://workershealthcentre.ca/4-health-and-safety-rights/");
                 browserScreen.setVisibility(View.VISIBLE);
+                browserScreen.setTranslationY(3000);
+                browserScreen.animate().translationYBy(-3000).setDuration(1500);
                 break;
                 //BROWSER BUTTONS
             case R.id.btn_closebrowser:
-                browserScreen.setVisibility(View.INVISIBLE);
+                browserScreen.animate().translationYBy(3000).setDuration(1500);
                 break;
             case R.id.btn_back:
-                if (browser.canGoBack()) {
-                    browser.goBack();
-                }
+                browser.goBack();
                 break;
             case R.id.btn_forward:
-                if(browser.canGoForward()){
-                    browser.goForward();
-                }
+                browser.goForward();
                 break;
         }
     }

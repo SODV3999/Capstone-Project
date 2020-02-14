@@ -12,7 +12,7 @@
 
 
     <!-- For WEB BUTTON strings -->
-    <string name="web_btn_close">X</string>
+    <string name="web_btn_close">x</string>
     <string name="web_btn_back">&lt;</string>
     <string name="web_btn_forward">&gt;</string>
 
