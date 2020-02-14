@@ -3,6 +3,8 @@ package com.javagroup.javacapstoneapp;
 import androidx.annotation.RequiresApi;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Intent;
@@ -14,9 +16,10 @@ import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ResourcesActivity extends AppCompatActivity {
-
+    private static final int REQUEST_CALL = 1;
     private Button button1,button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +44,41 @@ public class ResourcesActivity extends AppCompatActivity {
         });
     }
     public void openactivity1(){
+       /* Calling inst = new Calling();
+
         Intent intent = new Intent(this,Calling.class);
-        startActivity(intent);
+       // intent.pu
+        //inst.makePhoneCall();
+        startActivity(intent);*/
+
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }else{
+            // String dial ="tel:" +5879692301;
+            //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            String dial ="7804869009";
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:"+dial));
+            startActivity(intent);
+        }
+
     }
     public void openactivity2(){
-        Intent intent = new Intent(this,Calling_Two.class);
-        startActivity(intent);
+        /*Intent intent = new Intent(this,Calling_Two.class);
+        startActivity(intent);*/
+
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
+
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }else{
+            // String dial ="tel:" +5879692301;
+            //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            String dial1 ="4032648100";
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:"+dial1));
+            startActivity(intent);
+        }
     }
 }
-
-
-
