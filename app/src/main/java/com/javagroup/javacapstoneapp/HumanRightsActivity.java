@@ -15,11 +15,11 @@ import android.widget.TextView;
 
 public class HumanRightsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    WebView browser;
-    Button closeBrowser, goBack, goForward;
-    TextView clickedLink;
+    private WebView browser;
+    private Button closeBrowser, goBack, goForward;
+    private TextView clickedLink;
 
-    ConstraintLayout browserScreen;
+    private ConstraintLayout browserScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,38 +49,12 @@ public class HumanRightsActivity extends AppCompatActivity implements View.OnCli
         goForward.setOnClickListener(this);
     }
 
-    private void openingLink(String url){
+    private void openingPdf(String url){
         WebSettings webSettings = browser.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        browser.setWebViewClient(new WebViewController());
+        browser.setWebViewClient(new WebViewClient());
         browser.loadUrl("https://drive.google.com/viewerng/viewer?embedded=true&url=" + url);
-        clickedLink.setText("Loading. Please Wait!");
-    }
-
-    public class WebViewController extends WebViewClient {
-
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            clickedLink.setText("Loading. Please Wait!" );
-            return false;
-        }
-
-        public void onPageFinished(WebView view, String url) {
-            clickedLink.setText(browser.getUrl().toString());
-            if(browser.canGoBack()){
-                goBack.setEnabled(true);
-            }
-            else{
-                goBack.setEnabled(false);
-            }
-            if(browser.canGoForward()){
-                goForward.setEnabled(true);
-            }
-            else{
-                goForward.setEnabled(false);
-            }
-        }
-
+        clickedLink.setText(url);
     }
 
     private void browserAppearance(){
@@ -88,6 +62,7 @@ public class HumanRightsActivity extends AppCompatActivity implements View.OnCli
         browserScreen.setTranslationY(3000);
         browserScreen.animate().translationYBy(-3000).setDuration(1500);
     }
+
 
     @Override
     public void onClick(View v) {
@@ -102,13 +77,13 @@ public class HumanRightsActivity extends AppCompatActivity implements View.OnCli
             case R.id.btn_forward:
                 browser.goForward();
                 break;
-                //Opening links
+                //Opening pdf file
             case R.id.link_humanRightsAct:
-                openingLink("http://www.qp.alberta.ca/documents/Acts/A25P5.pdf");
+                openingPdf("http://www.qp.alberta.ca/documents/Acts/A25P5.pdf");
                 browserAppearance();
                 break;
             case R.id.link_humanRightsProcess:
-                openingLink("https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf");
+                openingPdf("https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf");
                 browserAppearance();
                 break;
         }

@@ -12,11 +12,11 @@ import android.widget.TextView;
 
 public class OccupationalHealthAndSafetyActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView ohsActAndCodeLink, safetyRightsLink, clickedLink;
-    WebView browser;
-    Button closeBrowser, goBack, goForward;
+    private TextView ohsActAndCodeLink, safetyRightsLink, clickedLink;
+    private WebView browser;
+    private Button closeBrowser, goBack, goForward;
 
-    ConstraintLayout browserScreen;
+    private ConstraintLayout browserScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,7 +54,7 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
         clickedLink.setText("Loading. Please Wait!");
     }
 
-    public class WebViewController extends WebViewClient {
+    private class WebViewController extends WebViewClient {
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {

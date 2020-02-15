@@ -18,7 +18,7 @@
 
     <!-- Nigam strings -->
     <string name="ES">
-        <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
+            <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
     </string>
 
     <string name="ES1">
@@ -26,7 +26,7 @@
     </string>
 
     <string name="ES2">
-        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Reguations</a>
+        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Regulations</a>
     </string>
 
 
@@ -65,5 +65,6 @@
     <string name="ohs_message">Current Legislation</string>
     <string name="ohs_link"><u><i>OHS Act, Regulation and Code</i></u></string>
     <string name="ohs_meaning">Occupational Health and Safety</string>
+    <string name="java_team">Java Team</string>
 
 </resources>
