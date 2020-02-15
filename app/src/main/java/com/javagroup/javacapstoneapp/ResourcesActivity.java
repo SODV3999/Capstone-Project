@@ -59,6 +59,18 @@ public class ResourcesActivity extends AppCompatActivity implements View.OnClick
         goForward.setOnClickListener(this);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
+           // button.setOnClickListener(new View.OnClickListener(){
+    public void OnDialButton(View v) {
+        Intent callIntent  = new Intent(Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:7804869009"));
+        if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+
+            return;
+        }
+        startActivity(callIntent);
+    }
+
     private void openingLink(String url){
         WebSettings webSettings = browser.getSettings();
         webSettings.setJavaScriptEnabled(true);
