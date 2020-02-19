@@ -1,6 +1,6 @@
 While doing the research on creating a Chatbot inside an android app , I found one interesting thing which I wanted to share with you guys.
 
-We can use IBM Watson chat service as a chatbot. I am going to share the research on Git too.
+We can use IBM Watson chat service as a chatbot by using its dependencies.
 
 I am working on linking our app with this technology.
 
