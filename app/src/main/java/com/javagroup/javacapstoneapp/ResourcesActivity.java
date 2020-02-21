@@ -12,6 +12,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
@@ -80,5 +81,25 @@ public class ResourcesActivity extends AppCompatActivity {
             intent.setData(Uri.parse("tel:"+dial1));
             startActivity(intent);
         }
+    }
+
+    public void add_to_contact(View view) {
+        Intent intent = new Intent(ContactsContract.Intents.Insert.ACTION);
+        intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+        Button  button1 = findViewById(R.id.btnAdd_Contact1);
+        intent
+                .putExtra(ContactsContract.Intents.Insert.PHONE,button1.getText())
+                .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_WORK);
+        startActivity(intent);
+    }
+
+    public void add_contact(View view) {
+        Intent intent = new Intent(ContactsContract.Intents.Insert.ACTION);
+        intent.setType(ContactsContract.RawContacts.CONTENT_TYPE);
+        Button  button2 = findViewById(R.id.btnAdd_Contact2);
+        intent
+                .putExtra(ContactsContract.Intents.Insert.PHONE,button2.getText())
+                .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_WORK);
+        startActivity(intent);
     }
 }
