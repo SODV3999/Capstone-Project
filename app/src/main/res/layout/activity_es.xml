@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/ES"
         android:textColorLink="#8BC34A"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:text="@string/ES1"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
@@ -95,5 +95,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmploymentRegulations" />
+
+    <Button
+        android:id="@+id/button_es_contact1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:onClick="es_contact_1"
+        android:text="@string/contact_es1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlink" />
+
+    <Button
+        android:id="@+id/button_es_dial1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:text="Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_es_contact1"
+        app:layout_constraintTop_toBottomOf="@+id/textlink" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

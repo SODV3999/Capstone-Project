@@ -33,7 +33,7 @@
         android:layout_marginRight="16dp"
         android:justificationMode="inter_word"
         android:text="In addition to workplace safety, hazards, rights, and standards, Alberta has legislation that relates to the rights of all people and their dignity, regardless of background such as ethnocultural group, source of income,participation in a labour union,gender, age, sexual orientation, or immigration status:"
-        android:textSize="18sp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,13 +43,16 @@
         android:id="@+id/textlink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
         android:text="@string/linktosite_humanrights"
         android:textColorLink="@android:color/holo_green_dark"
         android:textSize="20dp"
         android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -59,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:justificationMode="inter_word"
@@ -82,5 +85,38 @@
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/button_hs_contact1"
+        android:layout_width="116dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginLeft="87dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#EF5350"
+        android:onClick="hs_contact_1"
+        android:text="@string/contact_hs1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlink" />
+
+    <Button
+        android:id="@+id/button_hs_dial"
+        android:layout_width="116dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="87dp"
+        android:background="#EF5350"
+        android:text="Dial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_hs_contact1"
+        app:layout_constraintTop_toBottomOf="@+id/textlink" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
