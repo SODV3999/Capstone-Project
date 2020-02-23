@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+<<<<<<< HEAD
     tools:context=".EmploymentStandardsActivity">
 
 
@@ -17,17 +18,42 @@
         android:text="@string/section04_Name"
         android:textColor="@android:color/white"
         android:textSize="18sp"
+=======
+    tools:context=".ESActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#8BC34A"
+        android:gravity="center"
+        android:text="Employment Standards"
+        android:textColor="@android:color/white"
+        android:justificationMode="inter_word"
+        android:textSize="34dp"
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+<<<<<<< HEAD
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -36,14 +62,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
+=======
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Workers and employers in Alberta are subject to the Employment Standards Code and Employment Standards Regulation: "
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
 
     <TextView
         android:id="@+id/textlink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="10dp"
+=======
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="31dp"
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
         android:gravity="center"
         android:text="@string/ES"
         android:textColorLink="#8BC34A"
@@ -56,32 +98,54 @@
         android:id="@+id/employmentcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="14dp"
+=======
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
         android:text="@string/ES1"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
+<<<<<<< HEAD
         app:layout_constraintStart_toStartOf="@+id/EmploymentRegulations"
         app:layout_constraintTop_toBottomOf="@+id/button_es_contact1" />
+=======
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlink" />
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
 
     <TextView
         android:id="@+id/EmploymentRegulations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="10dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
+=======
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp"
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
         android:text="@string/ES2"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
+<<<<<<< HEAD
         app:layout_constraintEnd_toEndOf="@+id/textView7"
+=======
+        app:layout_constraintStart_toStartOf="parent"
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
         app:layout_constraintTop_toBottomOf="@+id/employmentcode" />
 
     <TextView
         android:id="@+id/textView7"
+<<<<<<< HEAD
         android:layout_width="312dp"
         android:layout_height="261dp"
         android:layout_marginStart="52dp"
@@ -120,5 +184,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_es_contact1"
         app:layout_constraintTop_toBottomOf="@+id/textlink" />
+=======
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="87dp"
+        android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters.The Employment Standards Code establishes Alberta’s minimum standards of employment in areasoutside of health and safety that are relevant to the workplace. These includewages, hours of work, overtime, vacation and holidays, leaves and termination of employment."
+        android:textSize="20dp"
+        android:justificationMode="inter_word"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/EmploymentRegulations" />
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
 
 </androidx.constraintlayout.widget.ConstraintLayout>

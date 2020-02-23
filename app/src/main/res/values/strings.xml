@@ -1,6 +1,7 @@
 <resources>
 
     <string name="app_name">JavaCapstoneApp</string>
+<<<<<<< HEAD
 
     section names...
     <string name="section01_Name">Workplace Safety</string>
@@ -13,6 +14,8 @@
 
 
     <!-- Nigam strings -->
+=======
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
     <string name="ES">
         <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
     </string>
@@ -24,6 +27,7 @@
     <string name="ES2">
         <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Reguations</a>
     </string>
+<<<<<<< HEAD
 
 
     <!-- Sagar strings -->
@@ -62,4 +66,6 @@
     <string name="ohs_link">OHS Act, Regulation and Code</string>
 
 
+=======
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
 </resources>

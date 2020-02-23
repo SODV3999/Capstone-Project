@@ -12,6 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
 
         <activity android:name=".NavigatingTheSystemActivity"
             android:parentActivityName=".MainActivity">
@@ -65,6 +66,9 @@
         </activity>
 
         <activity android:name=".MainActivity">
+=======
+        <activity android:name=".ESActivity">
+>>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
