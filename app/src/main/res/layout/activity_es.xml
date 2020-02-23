@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/ES"
         android:textColorLink="#8BC34A"
@@ -56,44 +56,69 @@
         android:id="@+id/employmentcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="14dp"
         android:text="@string/ES1"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textlink" />
+        app:layout_constraintStart_toStartOf="@+id/EmploymentRegulations"
+        app:layout_constraintTop_toBottomOf="@+id/button_es_contact1" />
 
     <TextView
         android:id="@+id/EmploymentRegulations"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
         android:text="@string/ES2"
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView7"
         app:layout_constraintTop_toBottomOf="@+id/employmentcode" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_width="312dp"
+        android:layout_height="261dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:justificationMode="inter_word"
         android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters.The Employment Standards Code establishes Alberta’s minimum standards of employment in areasoutside of health and safety that are relevant to the workplace. These includewages, hours of work, overtime, vacation and holidays, leaves and termination of employment."
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmploymentRegulations" />
+
+
+    <Button
+        android:id="@+id/button_es_contact1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginLeft="92dp"
+        android:onClick="es_contact_1"
+        android:text="@string/contact_es1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textlink" />
+
+    <Button
+        android:id="@+id/button_es_dial1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:text="Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_es_contact1"
+        app:layout_constraintTop_toBottomOf="@+id/textlink" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
