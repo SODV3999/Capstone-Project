@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.javagroup.javacapstoneapp">
-
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
-
+    ​
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    ​
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,74 +11,76 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<<<<<<< HEAD
 
-        <activity android:name=".NavigatingTheSystemActivity"
+        <activity
+            android:name=".NavigatingTheSystemActivity"
             android:parentActivityName=".MainActivity">
+            ​
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
-        <activity android:name=".HumanRightsActivity"
+        <activity
+            android:name=".HumanRightsActivity"
             android:parentActivityName=".MainActivity">
+            ​
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
-        <activity android:name=".WorkplaceSafetyActivity"
+        <activity
+            android:name=".WorkplaceSafetyActivity"
             android:parentActivityName=".MainActivity">
+            ​
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <activity android:name=".EmploymentStandardsActivity"
+        <activity
+            android:name=".EmploymentStandardsActivity"
             android:parentActivityName=".MainActivity">
+            ​
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-        <activity android:name=".ResourcesActivity"
+        <activity
+            android:name=".ResourcesActivity"
             android:parentActivityName=".MainActivity">
+            ​
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
-
-        <activity android:name=".OccupationalHealthAndSafetyActivity"
+        <activity
+            android:name=".OccupationalHealthAndSafetyActivity"
             android:parentActivityName=".MainActivity">
+            ​
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-
         <activity android:name=".MainActivity">
-=======
-        <activity android:name=".ESActivity">
->>>>>>> 7c08d2cffd5c3ac20beca4c2d4778faa6f0d7acf
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                ​
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        ​
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
-
+    ​
 </manifest>
+
+
+
+
