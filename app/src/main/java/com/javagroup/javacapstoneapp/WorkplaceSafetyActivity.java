@@ -21,7 +21,7 @@ public class WorkplaceSafetyActivity extends AppCompatActivity {
     }
 
     public void navToSection3(View view) {
-        Intent intent = new Intent(this, OccupationalHealthAndSafetyActivity.class);
+        Intent intent = new Intent(this, HumanRightsActivity.class);
         startActivity(intent);
     }
 
