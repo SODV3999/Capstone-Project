@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".EmploymentStandardsActivity">
 
 
@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textlink"
+        android:id="@+id/link_humanRightsAct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -64,7 +64,7 @@
         android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textlink" />
+        app:layout_constraintTop_toBottomOf="@+id/link_humanRightsAct" />
 
     <TextView
         android:id="@+id/EmploymentRegulations"
@@ -95,5 +95,82 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmploymentRegulations" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/browserScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/cardview_dark_background"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btn_closebrowser"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".4"
+                android:background="@android:color/white"
+                android:text="@string/web_btn_close"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:background="@android:color/white"
+                android:text="@string/web_btn_back"
+                android:enabled="false"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtview_url"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:ellipsize="end"
+                android:gravity="center|start"
+                android:maxLines="1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn_forward"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".3"
+                android:enabled="false"
+                android:background="@android:color/white"
+                android:text="@string/web_btn_forward"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        </WebView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
