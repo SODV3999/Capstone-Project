@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navToSection6(View view) {
-        Intent intent = new Intent(this, ResourcesActivity.class);
+        Intent intent = new Intent(this, resources.class);
         startActivity(intent);
     }
 

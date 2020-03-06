@@ -52,7 +52,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".ResourcesActivity"
+            android:name=".resources"
             android:usesCleartextTraffic="true"
             android:parentActivityName=".MainActivity">
 
