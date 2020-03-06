@@ -16,12 +16,16 @@ import android.provider.ContactsContract;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
 
 public class ResourcesActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1;
     private Button button1,button2;
+    Calling call = new Calling();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +36,7 @@ public class ResourcesActivity extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
-                openactivity1();
+                openactivity1("5879692301");
             }
 
         });
@@ -44,27 +48,17 @@ public class ResourcesActivity extends AppCompatActivity {
             }
         });
     }
-    public void openactivity1(){
-       /* Calling inst = new Calling();
-
-        Intent intent = new Intent(this,Calling.class);
-       // intent.pu
-        //inst.makePhoneCall();
-        startActivity(intent);*/
-
-
+    public void openactivity1(String number){
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
 
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
         }else{
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-            String dial ="7804869009";
             Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:"+dial));
+            intent.setData(Uri.parse("tel:"+ number));
             startActivity(intent);
         }
-
     }
     public void openactivity2(){
         /*Intent intent = new Intent(this,Calling_Two.class);
@@ -102,4 +96,6 @@ public class ResourcesActivity extends AppCompatActivity {
                 .putExtra(ContactsContract.Intents.Insert.PHONE_TYPE, ContactsContract.CommonDataKinds.Phone.TYPE_WORK);
         startActivity(intent);
     }
+
+
 }

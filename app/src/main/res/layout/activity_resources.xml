@@ -118,6 +118,7 @@
         android:background="#EF5350"
         android:text="@string/dial"
         android:textStyle="bold"
+        android:onClick="openactivity1"
         app:layout_constraintBottom_toTopOf="@+id/txt_para2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_para1"

@@ -17,8 +17,8 @@ import android.widget.Toast;
 
 
 public class Calling extends AppCompatActivity {
-private static final int REQUEST_CALL = 1;
-        private EditText mEditTextNumer;
+    private static final int REQUEST_CALL = 1;
+    private EditText mEditTextNumer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,31 +27,29 @@ private static final int REQUEST_CALL = 1;
         mEditTextNumer = findViewById(R.id.edit_text_number);
         ImageView imagecall = findViewById(R.id.image_call);
 
-        imagecall.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                makePhoneCall();
-            }
-
-
-        });
+//        imagecall.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v) {
+//                makePhoneCall();
+//            }
+//
+//
+//        });
     }
-    private void makePhoneCall()
+    public void makePhoneCall(String number_call)
     {
         String number = mEditTextNumer.getText().toString();
         if (number.trim().length()>0)
         {
+            if(ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
 
-            if(ContextCompat.checkSelfPermission(Calling.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
-
-                ActivityCompat.requestPermissions(Calling.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
             }else{
                 // String dial ="tel:" +5879692301;
                 //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-                String dial ="5879692301";
                 Intent intent = new Intent(Intent.ACTION_CALL);
-                intent.setData(Uri.parse("tel:"+dial));
+                intent.setData(Uri.parse("tel:"+number_call));
                 startActivity(intent);
             }
         }
