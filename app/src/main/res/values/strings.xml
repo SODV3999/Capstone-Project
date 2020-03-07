@@ -7,19 +7,28 @@
     <string name="section04_Name">Employment Standards</string>
     <string name="section05_Name">Navigating the System</string>
     <string name="section06_Name">Resources</string>
+
     <string name="number1">7804869009</string>
     <string name="number2">4032648100</string>
     <string name="contact_hs1">780-427-4952 </string>
     <string name="contact_es1">7804272711</string>
+
+
+    <!-- For WEB BUTTON strings -->
+    <string name="web_btn_close">x</string>
+    <string name="web_btn_back">&lt;</string>
+    <string name="web_btn_forward">&gt;</string>
+
+
     <!-- Nigam strings -->
     <string name="ES">
-        <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
+            <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
     </string>
     <string name="ES1">
         <a href="http://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code</a>
     </string>
     <string name="ES2">
-        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Reguations</a>
+        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Regulations</a>
     </string>
     <!-- Sagar strings -->
     <string name="linktosite_humanrights">
@@ -48,5 +57,13 @@
     <string name="toGoLink"><u><i>Health and Safety Rights</i></u></string>
     <string name="intro_message">In Alberta, workers have 4 basic rights that relate to health safety (information from Alberta Workers Health Centre</string>
     <string name="ohs_message">Current Legislation</string>
-    <string name="ohs_link">OHS Act, Regulation and Code</string>
+
+
+
+    <string name="ohs_link"><u><i>OHS Act, Regulation and Code</i></u></string>
+    <string name="ohs_meaning">Occupational Health and Safety</string>
+        <!--Splash Screen -->
+    <string name="splash_message">School of \n Global Access</string>
+
 </resources>
+
