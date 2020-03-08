@@ -86,7 +86,7 @@
                 android:layout_marginEnd="50dp"
                 android:layout_marginRight="50dp"
                 android:layout_marginBottom="20dp"
-                android:background="@color/btn_bg_color"
+                android:background="@drawable/dialog_rounded_btn_agree"
                 android:clickable="false"
                 android:text="@string/dialog_btn_agree"
                 android:textColor="@color/btn_text_color"
