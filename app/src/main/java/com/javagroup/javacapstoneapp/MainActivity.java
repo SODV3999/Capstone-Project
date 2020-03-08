@@ -1,14 +1,11 @@
 package com.javagroup.javacapstoneapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,5 +41,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ResourcesActivity.class);
         startActivity(intent);
     }
-
 }
