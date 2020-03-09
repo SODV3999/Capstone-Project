@@ -4,6 +4,6 @@
         android:topRightRadius="15dp"
         android:bottomLeftRadius="0dp"
         android:bottomRightRadius="0dp"/>
-    <stroke android:width="2dip" android:color="@color/btn_text_color" />
+    <stroke android:width="1dip" android:color="#A8A8A8" />
     <solid android:color="#ffffff"/>
 </shape>

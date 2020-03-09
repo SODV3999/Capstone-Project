@@ -11,7 +11,6 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -46,10 +45,10 @@ public class ResourcesActivity extends AppCompatActivity implements View.OnClick
         browserScreen = (ConstraintLayout)findViewById(R.id.browserScreen);
 
         //Browser buttons and text
-        closeBrowser = (Button)findViewById((R.id.btn_closebrowser));
+        closeBrowser = (Button)findViewById((R.id.browser_close_btn));
         goBack = (Button)findViewById(R.id.btn_back);
         goForward = (Button)findViewById(R.id.btn_forward);
-        clickedLink = (TextView)findViewById(R.id.txtview_url);
+        clickedLink = (TextView)findViewById(R.id.url_container);
 
         //On click events
         healthCenterLink.setOnClickListener(this);
@@ -116,7 +115,7 @@ public class ResourcesActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         switch (v.getId()) {
             //BROWSER BUTTONS
-            case R.id.btn_closebrowser:
+            case R.id.browser_close_btn:
                 dial1.setVisibility(View.VISIBLE);
                 dial2.setVisibility(View.VISIBLE);
                 browserScreen.animate().translationYBy(3000).setDuration(1500);

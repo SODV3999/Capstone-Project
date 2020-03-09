@@ -145,7 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:id="@+id/browser_button_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
@@ -156,7 +156,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <Button
-                android:id="@+id/btn_closebrowser"
+                android:id="@+id/browser_close_btn"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".4"
@@ -175,7 +175,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/txtview_url"
+                android:id="@+id/url_container"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
@@ -204,7 +204,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+            app:layout_constraintTop_toBottomOf="@+id/browser_button_container">
 
         </WebView>
 
