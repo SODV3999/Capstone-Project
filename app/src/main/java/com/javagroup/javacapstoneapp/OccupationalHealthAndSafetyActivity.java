@@ -2,6 +2,11 @@ package com.javagroup.javacapstoneapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -16,7 +21,7 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
     private WebView browser;
     private Button closeBrowser, goBack, goForward;
 
-    private ConstraintLayout browserScreen;
+    private ConstraintLayout browserScreen, browserContainer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +35,10 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
         //BROWSER
         browser = (WebView)findViewById(R.id.webView);
         browserScreen = (ConstraintLayout)findViewById(R.id.browserScreen);
+        browserContainer = (ConstraintLayout)findViewById(R.id.browserContainer);
 
         //BROWSER BUTTONS & TEXT
-        closeBrowser = (Button)findViewById((R.id.btn_closebrowser));
+        closeBrowser = (Button)findViewById(R.id.btn_closebrowser);
         goBack = (Button)findViewById(R.id.btn_back);
         goForward = (Button)findViewById(R.id.btn_forward);
         clickedLink = (TextView)findViewById(R.id.txtview_url);
@@ -77,7 +83,16 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
                 goForward.setEnabled(false);
             }
         }
+    }
 
+    private void browserAppearance(){
+        browserContainer.setTranslationY(3000);
+        browserContainer.animate().translationYBy(-3000).setDuration(1000);
+//        final FragmentTransaction openTheBrowser = getSupportFragmentManager().beginTransaction();
+//        final WebBrowserActivity webBrowserActivity = new WebBrowserActivity();
+//        openTheBrowser.add(R.id.browserContainer, webBrowserActivity);
+//        webBrowserActivity.setArguments(link);
+//        openTheBrowser.commit();
     }
 
     @Override
@@ -85,16 +100,19 @@ public class OccupationalHealthAndSafetyActivity extends AppCompatActivity imple
         switch (v.getId()){
                 //LINKS BUTTONS
             case R.id.ohsActRegAndCodeLink:
-                openingLink ("https://www.alberta.ca/ohs-act-regulation-code.aspx");
-                browserScreen.setVisibility(View.VISIBLE);
-                browserScreen.setTranslationY(3000);
-                browserScreen.animate().translationYBy(-3000).setDuration(1500);
+                //openingLink ("https://www.alberta.ca/ohs-act-regulation-code.aspx");
+                final FragmentTransaction openTheBrowser = getSupportFragmentManager().beginTransaction();
+                final WebBrowserActivity webBrowserActivity = new WebBrowserActivity();
+                Bundle link = new Bundle();
+                link.putString("Link", "https://www.alberta.ca/ohs-act-regulation-code.aspx");
+                webBrowserActivity.setArguments(link);
+                openTheBrowser.add(R.id.browserContainer, webBrowserActivity);
+                openTheBrowser.commit();
+                browserAppearance();
                 break;
             case R.id.safetyRightsLink:
                 openingLink ("https://workershealthcentre.ca/4-health-and-safety-rights/");
-                browserScreen.setVisibility(View.VISIBLE);
-                browserScreen.setTranslationY(3000);
-                browserScreen.animate().translationYBy(-3000).setDuration(1500);
+                browserAppearance();
                 break;
                 //BROWSER BUTTONS
             case R.id.btn_closebrowser:
