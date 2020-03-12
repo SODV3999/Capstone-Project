@@ -43,7 +43,6 @@ public class SplashScreen extends AppCompatActivity {
         disclaimerDialog.setContentView(R.layout.dialog_disclaimer);
         Button btn_agree = (Button)disclaimerDialog.findViewById(R.id.btn_agree);
         ImageButton btn_close = (ImageButton) disclaimerDialog.findViewById(R.id.btn_close);
-        final ImageView iv_logo = (ImageView)disclaimerDialog.findViewById(R.id.iv_logo);
         btn_agree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +54,7 @@ public class SplashScreen extends AppCompatActivity {
         btn_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
             }
         });
         disclaimerDialog.setCancelable(false);

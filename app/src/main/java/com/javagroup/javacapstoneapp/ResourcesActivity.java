@@ -4,6 +4,7 @@ import androidx.annotation.RequiresApi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.content.Intent;
@@ -12,50 +13,29 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class ResourcesActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private WebView browser;
-    private Button closeBrowser, goBack, goForward;
-    private TextView clickedLink;
-
-    private ConstraintLayout browserScreen;
+    private ConstraintLayout browserContainer;
 
     private Button dial1, dial2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources);
-        TextView healthCenterLink = (TextView) findViewById(R.id.txt_health_center);
-        //text.setMovementMethod(LinkMovementMethod.getInstance());
 
+        TextView healthCenterLink = (TextView) findViewById(R.id.txt_health_center);
         TextView resourceCenterLink = (TextView) findViewById(R.id.txt_Resource_Center);
-        //t.setMovementMethod(LinkMovementMethod.getInstance());
 
         dial1 = (Button)findViewById(R.id.btn_dial1);
         dial2 = (Button)findViewById(R.id.btn_dial2);
 
-        //embedded browser
-        browser = (WebView)findViewById(R.id.webView);
-        browserScreen = (ConstraintLayout)findViewById(R.id.browserScreen);
+        browserContainer = (ConstraintLayout)findViewById(R.id.browserContainer);
 
-        //Browser buttons and text
-        closeBrowser = (Button)findViewById((R.id.browser_close_btn));
-        goBack = (Button)findViewById(R.id.btn_back);
-        goForward = (Button)findViewById(R.id.btn_forward);
-        clickedLink = (TextView)findViewById(R.id.url_container);
-
-        //On click events
         healthCenterLink.setOnClickListener(this);
         resourceCenterLink.setOnClickListener(this);
-        closeBrowser.setOnClickListener(this);
-        goBack.setOnClickListener(this);
-        goForward.setOnClickListener(this);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -71,69 +51,26 @@ public class ResourcesActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void openingLink(String url){
-        WebSettings webSettings = browser.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-        browser.setWebViewClient(new WebViewController());
-        browser.loadUrl(url);
-        clickedLink.setText(url);
+        browserContainer.setTranslationY(3000);
+        browserContainer.animate().translationYBy(-3000).setDuration(700);
+        final FragmentTransaction openTheBrowser = getSupportFragmentManager().beginTransaction();
+        final WebBrowserActivity webBrowserActivity = new WebBrowserActivity();
+        Bundle link = new Bundle();
+        link.putString("url", url);
+        webBrowserActivity.setArguments(link);
+        openTheBrowser.add(R.id.browserContainer, webBrowserActivity);
+        openTheBrowser.commit();
     }
 
-    private class WebViewController extends WebViewClient {
-
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            clickedLink.setText("Loading. Please Wait!");
-            return false;
-        }
-
-        public void onPageFinished(WebView view, String url) {
-            clickedLink.setText(browser.getUrl().toString());
-            if(browser.canGoBack()){
-                goBack.setEnabled(true);
-            }
-            else{
-                goBack.setEnabled(false);
-            }
-            if(browser.canGoForward()){
-                goForward.setEnabled(true);
-            }
-            else{
-                goForward.setEnabled(false);
-            }
-        }
-    }
-
-    private void browserAppearance(){
-        dial1.setVisibility(View.INVISIBLE);
-        dial2.setVisibility(View.INVISIBLE);
-        browserScreen.setVisibility(View.VISIBLE);
-        browserScreen.setTranslationY(3000);
-        browserScreen.animate().translationYBy(-3000).setDuration(1500);
-    }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            //BROWSER BUTTONS
-            case R.id.browser_close_btn:
-                dial1.setVisibility(View.VISIBLE);
-                dial2.setVisibility(View.VISIBLE);
-                browserScreen.animate().translationYBy(3000).setDuration(1500);
-                break;
-            case R.id.btn_back:
-                browser.goBack();
-                break;
-            case R.id.btn_forward:
-                browser.goForward();
-                break;
-            //Opening Links
             case R.id.txt_health_center:
                 openingLink("https://www.workershealthcentre.ca/");
-                browserAppearance();
                 break;
             case R.id.txt_Resource_Center:
                 openingLink("https://www.helpwrc.org/");
-                browserAppearance();
                 break;
         }
     }

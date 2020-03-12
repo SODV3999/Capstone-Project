@@ -36,7 +36,7 @@ public class WebBrowserActivity extends Fragment {
         goForward = showBrowser.findViewById(R.id.btn_forward);
 
         Bundle link = getArguments();
-        openingLink(link.getString("url"));
+        openEmbeddedBrowser(link.getString("url"));
 
         closeBrowser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +62,7 @@ public class WebBrowserActivity extends Fragment {
         return showBrowser;
     }
 
-    private void openingLink(String url){
+    private void openEmbeddedBrowser(String url){
         WebSettings webSettings = browser.getSettings();
         webSettings.setJavaScriptEnabled(true);
         browser.setWebViewClient(new WebViewController());
