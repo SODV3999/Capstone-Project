@@ -66,6 +66,12 @@
     <string name="ohs_link"><u><i>OHS Act, Regulation and Code</i></u></string>
     <string name="ohs_meaning">Occupational Health and Safety</string>
         <!--Splash Screen -->
-    <string name="splash_message">School of \n Global Access</string>
+        <string name="splash_message">School of \n Global Access</string>
+        <string name="logo_contentDescription">finding your voice knowing your rights logo</string>
+        <string name="dialog_header">Welcome!</string>
+        <string name="dialog_subHeader">Disclaimer:</string>
+        <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>
+        <string name="dialog_btn_agree">I Agree!</string>
+        <string name="dialog_btn_close_contentDescription">X</string>
 
 </resources>
