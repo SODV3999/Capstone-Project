@@ -42,7 +42,7 @@
 
     <TextView
         android:id="@+id/txt_health_center"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
@@ -104,110 +104,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_Resource_Center" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/browserContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:translationZ="3dp"/>
+
     <Button
         android:id="@+id/btn_dial1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:background="#EF5350"
         android:onClick="OnDialButton"
         android:text="@string/dial"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt_para2"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_health_center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_para1" />
+        app:layout_constraintTop_toTopOf="@+id/txt_health_center" />
 
     <Button
         android:id="@+id/btn_dial2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:background="#EF5350"
         android:text="@string/dial"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txt_para3"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_Resource_Center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_para2" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/browserScreen"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/cardview_dark_background"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8">
-
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            android:orientation="horizontal"
-            android:weightSum="6"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <Button
-                android:id="@+id/btn_closebrowser"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".4"
-                android:background="@android:color/white"
-                android:text="@string/web_btn_close"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/btn_back"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".3"
-                android:background="@android:color/white"
-                android:enabled="false"
-                android:text="@string/web_btn_back"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/txtview_url"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:ellipsize="end"
-                android:gravity="center|start"
-                android:maxLines="1"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/btn_forward"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".3"
-                android:background="@android:color/white"
-                android:enabled="false"
-                android:text="@string/web_btn_forward"
-                android:textSize="20sp" />
-
-        </LinearLayout>
-
-        <WebView
-            android:id="@+id/webView"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:clickable="false"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        </WebView>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toTopOf="@+id/txt_Resource_Center" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
