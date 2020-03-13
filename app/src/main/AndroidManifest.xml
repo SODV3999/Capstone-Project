@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.javagroup.javacapstoneapp">
+    ​
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    ​
+
+<<<<<<< HEAD
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+=======
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
 
     <application
         android:allowBackup="true"
@@ -12,11 +22,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+<<<<<<< HEAD
         <activity android:name=".MainActivity">
         </activity>
         <activity
             android:name=".NavigatingTheSystemActivity"
             android:parentActivityName=".MainActivity">
+=======
+
+
+        <activity
+            android:name=".NavigatingTheSystemActivity"
+            android:parentActivityName=".MainActivity">
+            ​
+
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -25,9 +45,16 @@
         </activity>
         <activity
             android:name=".HumanRightsActivity"
+<<<<<<< HEAD
             android:parentActivityName=".MainActivity"
             android:usesCleartextTraffic="true">
 
+=======
+
+            android:parentActivityName=".MainActivity">
+            ​
+
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -52,8 +79,13 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+<<<<<<< HEAD
             android:name=".resources"
             android:usesCleartextTraffic="true"
+=======
+            android:name=".ResourcesActivity"
+
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
             android:parentActivityName=".MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
@@ -63,25 +95,47 @@
         </activity>
         <activity
             android:name=".OccupationalHealthAndSafetyActivity"
+<<<<<<< HEAD
             android:parentActivityName=".MainActivity">
+=======
+            android:parentActivityName=".MainActivity"/>
+
+            ​
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+<<<<<<< HEAD
         </activity>
         <activity android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+=======
+
+        <activity android:name=".MainActivity"/>
+
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                ​
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        ​
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
+    ​
 </manifest>
+
+
+
+

@@ -1,6 +1,7 @@
 package com.javagroup.javacapstoneapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -12,14 +13,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+=======
+
+import android.content.Intent;
+import android.os.Bundle;
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
 
+<<<<<<< HEAD
     Boolean firstTime = true;
 
     ImageView logo;
+=======
+    ImageView logo;
+
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
     TextView school;
 
     @Override
@@ -27,6 +38,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
+<<<<<<< HEAD
         logo = (ImageView) findViewById(R.id.imageView);
         school = (TextView) findViewById(R.id.school_text);
 
@@ -68,6 +80,14 @@ public class SplashScreen extends AppCompatActivity {
         logo.animate().translationY(-200).setDuration(1500);
         school.animate().alpha(1.0f).setDuration(1000);
         school.animate().translationY(-300).setDuration(2500);
+=======
+        logo = (ImageView)findViewById(R.id.imageView);
+        school = (TextView)findViewById(R.id.school_text);
+
+        logo.animate().translationY(-200).setDuration(1000);
+        school.animate().alpha(1.0f).setDuration(1000);
+        school.animate().translationY(-200).setDuration(2500);
+>>>>>>> 12a4253ea02a6a38faacd5d736156a87c6e04266
 
         Thread th = new Thread(){
             public void run(){
