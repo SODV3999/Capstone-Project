@@ -3,4 +3,11 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!--Disclaimer Dialog Colors-->
+    <color name="text_color">#707070</color>
+    <color name="main_bg_color">#0A6561</color>
+    <color name="btn_text_color">#0A6561</color>
+    <color name="text_bg_color">#90EE90</color>
+    <color name="btn_bg_color">#DFEEED</color>
 </resources>
