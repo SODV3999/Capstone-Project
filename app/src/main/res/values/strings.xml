@@ -32,12 +32,12 @@
 
     <!-- Sagar strings -->
     <string name="linktosite_humanrights">
-        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act</a>
+        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act---</a>
     </string>
     <string name="linktocomplaint_humanrights">
         <a href="https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf">The Human Rights Complaint Process</a>
     </string>
-
+    <string name="text_ResourcePara1">The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:</string>
 
     <!-- Twinkle strings -->
     <string name="Resources_linkAlberta">
@@ -73,5 +73,8 @@
         <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>
         <string name="dialog_btn_agree">I Agree!</string>
         <string name="dialog_btn_close_contentDescription">X</string>
+    <string name="employement_standards">Workers and employers in Alberta are subject to the Employment Standards Code and Employment Standards Regulation:</string>
+    <string name="employment_termination">Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters.The Employment Standards Code establishes Alberta’s minimum standards of employment in areasoutside of health and safety that are relevant to the workplace. These includewages, hours of work, overtime, vacation and holidays, leaves and termination of employment.</string>
+    <string name="employment_termination">Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters.The Employment Standards Code establishes Alberta’s minimum standards of employment in areasoutside of health and safety that are relevant to the workplace. These includewages, hours of work, overtime, vacation and holidays, leaves and termination of employment.</string>
 
 </resources>

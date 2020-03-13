@@ -42,7 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="@string/ES"
@@ -57,7 +56,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
         android:text="@string/ES1"
         android:textColorLink="#8BC34A"
@@ -71,7 +69,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
         android:text="@string/ES2"
         android:textColorLink="#8BC34A"
@@ -94,7 +91,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EmploymentRegulations" tools:targetApi="o" />
+        app:layout_constraintTop_toBottomOf="@+id/EmploymentRegulations" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/browserContainer"
