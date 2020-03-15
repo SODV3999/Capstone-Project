@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#91BD4F"
+    android:orientation="vertical">
+
+    <!--    <HorizontalScrollView-->
+    <!--        android:id="@+id/scrollView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:scrollbars="none"></HorizontalScrollView>-->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/trees_background" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="240dp"
+                android:layout_height="104dp"
+                android:layout_marginLeft="-1550dp"
+                android:layout_marginTop="400dp"
+                android:text="Know Your Rights and Workplace Safety"></Button>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="204dp"
+                android:layout_height="104dp"
+                android:layout_marginLeft="170dp"
+                android:layout_marginTop="400dp"
+                android:text="Finding Your Voice">
+
+            </Button>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="204dp"
+                android:layout_height="104dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="400dp"
+                android:text="Resources, Funders and  Disclaimer">
+
+            </Button>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+
+</LinearLayout>
