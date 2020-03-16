@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_bg_color"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:layout_gravity="center"
+        android:text="School of Global Access" />
+
+    <TextView
+        android:id="@+id/menu_workplace_safety"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:layout_marginTop="50dp"
+        android:text="Workplace Safety" />
+
+    <TextView
+        android:id="@+id/menu_human_rights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:text="Human Rights" />
+
+    <TextView
+        android:id="@+id/menu_employment_standards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:text="Employment Standards" />
+
+    <TextView
+        android:id="@+id/menu_occupation_health_safety"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:text="Occupational Health and Safety" />
+
+    <TextView
+        android:id="@+id/menu_finding_your_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:text="Finding Your Voice" />
+
+    <TextView
+        android:id="@+id/menu_resources"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:layout_marginTop="10dp"
+        android:text="Resources" />
+
+    <TextView
+        android:id="@+id/menu_disclaimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_gravity="start"
+        android:layout_marginTop="30dp"
+        android:text="Disclaimer" />
+
+</LinearLayout>

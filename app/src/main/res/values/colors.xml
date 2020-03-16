@@ -10,4 +10,11 @@
     <color name="btn_text_color">#0A6561</color>
     <color name="text_bg_color">#90EE90</color>
     <color name="btn_bg_color">#DFEEED</color>
+
+    <!--  Backdrop front layout colors  -->
+    <color name="color_grey">#FF726F6F</color>
+    <color name="color_white">#FFFFFF</color>
+
+    <!--  Backdrop back layout colors  -->
+    <color name="backdrop_color">#62EC67</color>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
@@ -9,96 +9,34 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="300dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="64dp"
-        android:background="@color/colorPrimary"
-        android:onClick="navToSection1"
-        android:text="@string/section01_Name"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Backdrop"
+        app:titleTextColor="#fff"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="300dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimary"
-        android:onClick="navToSection2"
-        android:text="@string/section02_Name"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1" />
+    <com.roacult.backdrop.BackdropLayout
+        android:id="@+id/container"
+        app:front_layout="@id/includeFront"
+        app:back_layout="@id/includeBack"
+        app:toolbarId="@id/toolbar"
+        app:peekHeight="200dp"
+        app:menuDrawable="@drawable/ic_menu_black_24dp"
+        app:animationDuration="400"
+        app:disable_when_open="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="300dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimary"
-        android:onClick="navToSection3"
-        android:text="@string/section03_Name"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        <include
+            android:id="@+id/includeBack"
+            layout="@layout/back_layout"/>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="300dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimary"
-        android:onClick="navToSection4"
-        android:text="@string/section04_Name"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+        <include
+            android:id="@+id/includeFront"
+            layout="@layout/main_activity_front_layout"/>
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="300dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:background="@color/colorPrimary"
-        android:onClick="navToSection5"
-        android:text="@string/section05_Name"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+    </com.roacult.backdrop.BackdropLayout>
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="300dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="64dp"
-        android:background="@color/colorPrimary"
-        android:onClick="navToSection6"
-        android:text="@string/section06_Name"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
