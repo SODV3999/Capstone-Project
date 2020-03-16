@@ -100,5 +100,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
+    <ImageButton
+        android:id="@+id/openNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_button_container"
+        android:contentDescription="@string/not_found"
+        android:paddingStart="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="35dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/icon_hamburger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="35dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navigationScreen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:translationZ="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
