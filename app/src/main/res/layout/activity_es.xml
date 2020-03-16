@@ -4,9 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     tools:context="com.javagroup.javacapstoneapp.EmploymentStandardsActivity">
     ​
     ​
+=======
+    tools:context=".EmploymentStandardsActivity">
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
 
     <TextView
         android:id="@+id/textView6"
@@ -68,9 +73,14 @@
         android:textColorLink="#8BC34A"
         android:textSize="20dp"
         android:textStyle="bold|italic"
+<<<<<<< HEAD
         app:layout_constraintEnd_toEndOf="@+id/button_es_dial1"
         app:layout_constraintTop_toBottomOf="@+id/link_humanRightsAct" />
     ​
+=======
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/link_humanRightsAct" />
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
 
     <TextView
         android:id="@+id/EmploymentRegulations"
@@ -97,6 +107,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmploymentRegulations" />
 
+<<<<<<< HEAD
     ​
 
     <Button
@@ -112,6 +123,8 @@
     ​
     =======
 
+=======
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/browserScreen"
         android:layout_width="0dp"
@@ -149,8 +162,13 @@
                 android:layout_height="match_parent"
                 android:layout_weight=".3"
                 android:background="@android:color/white"
+<<<<<<< HEAD
                 android:enabled="false"
                 android:text="@string/web_btn_back"
+=======
+                android:text="@string/web_btn_back"
+                android:enabled="false"
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
                 android:textSize="20sp" />
 
             <TextView
@@ -168,8 +186,13 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight=".3"
+<<<<<<< HEAD
                 android:background="@android:color/white"
                 android:enabled="false"
+=======
+                android:enabled="false"
+                android:background="@android:color/white"
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
                 android:text="@string/web_btn_forward"
                 android:textSize="20sp" />
 
@@ -182,14 +205,22 @@
             android:clickable="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout"
             app:layout_constraintVertical_bias="1.0">
+=======
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
 
         </WebView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,11 @@
     ​
 
 
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -19,11 +24,18 @@
         android:theme="@style/AppTheme">
 
 
+
         <activity
             android:name=".NavigatingTheSystemActivity"
             android:parentActivityName=".MainActivity">
             ​
 
+
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity
+            android:name=".NavigatingTheSystemActivity"
+            android:parentActivityName=".MainActivity">
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -32,6 +44,7 @@
         </activity>
         <activity
             android:name=".HumanRightsActivity"
+
 
             android:parentActivityName=".MainActivity">
             ​
@@ -60,9 +73,13 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+
             android:name=".ResourcesActivity"
 
-            android:parentActivityName=".MainActivity">
+
+            android:name=".resources"
+            android:usesCleartextTraffic="true"
+
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -71,9 +88,11 @@
         </activity>
         <activity
             android:name=".OccupationalHealthAndSafetyActivity"
+
             android:parentActivityName=".MainActivity"/>
 
             ​
+
 
             <!-- The meta-data tag is required if you support API level 15 and lower -->
             <meta-data
@@ -82,6 +101,11 @@
 
         <activity android:name=".MainActivity"/>
 
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+        </activity>
         <activity android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 

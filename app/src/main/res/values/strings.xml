@@ -20,6 +20,8 @@
     <string name="web_btn_forward">&gt;</string>
 
 
+
+
     <!-- Nigam strings -->
     <string name="ES">
             <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
@@ -32,11 +34,15 @@
     </string>
     <!-- Sagar strings -->
     <string name="linktosite_humanrights">
-        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act</a>
+        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act---</a>
     </string>
     <string name="linktocomplaint_humanrights">
         <a href="https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf">The Human Rights Complaint Process</a>
     </string>
+
+    <string name="text_ResourcePara1">The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:</string>
+
+
     <!-- Twinkle strings -->
     <string name="Resources_linkAlberta">
         <a href="http://www.workershealthcentre.ca/">Alberta Worker Health Center</a>
@@ -64,6 +70,10 @@
     <string name="ohs_meaning">Occupational Health and Safety</string>
         <!--Splash Screen -->
     <string name="splash_message">School of \n Global Access</string>
+
+
+
+
 
 </resources>
 

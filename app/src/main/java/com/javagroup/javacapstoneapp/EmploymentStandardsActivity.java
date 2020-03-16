@@ -2,6 +2,10 @@ package com.javagroup.javacapstoneapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
@@ -10,11 +14,23 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
+<<<<<<< HEAD
 public class EmploymentStandardsActivity extends AppCompatActivity implements View.OnClickListener {
     private WebView browser;
     private Button closeBrowser, goBack, goForward;
     private TextView clickedLink;
     private ConstraintLayout browserScreen;
+=======
+
+public class EmploymentStandardsActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private WebView browser;
+    private Button closeBrowser, goBack, goForward;
+    private TextView clickedLink;
+
+    private ConstraintLayout browserScreen;
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,14 +41,26 @@ public class EmploymentStandardsActivity extends AppCompatActivity implements Vi
         //t.setMovementMethod(LinkMovementMethod.getInstance());
         TextView employmentRegulationsLink = (TextView) findViewById(R.id.EmploymentRegulations);
         //te.setMovementMethod(LinkMovementMethod.getInstance());
+<<<<<<< HEAD
         //embedded browser
         browser = (WebView)findViewById(R.id.webView);
         browserScreen = (ConstraintLayout)findViewById(R.id.browserScreen);
+=======
+
+        //embedded browser
+        browser = (WebView)findViewById(R.id.webView);
+        browserScreen = (ConstraintLayout)findViewById(R.id.browserScreen);
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
         //Browser buttons and text
         closeBrowser = (Button)findViewById((R.id.btn_closebrowser));
         goBack = (Button)findViewById(R.id.btn_back);
         goForward = (Button)findViewById(R.id.btn_forward);
         clickedLink = (TextView)findViewById(R.id.txtview_url);
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
         //On click events
         humanRightsActLink.setOnClickListener(this);
         employmentCodeLink.setOnClickListener(this);
@@ -41,6 +69,10 @@ public class EmploymentStandardsActivity extends AppCompatActivity implements Vi
         goBack.setOnClickListener(this);
         goForward.setOnClickListener(this);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
     private void openingPdf(String url){
         WebSettings webSettings = browser.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -48,6 +80,10 @@ public class EmploymentStandardsActivity extends AppCompatActivity implements Vi
         browser.loadUrl("https://drive.google.com/viewerng/viewer?embedded=true&url=" + url);
         clickedLink.setText(url);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
     private void openingLink(String url){
         WebSettings webSettings = browser.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -55,12 +91,22 @@ public class EmploymentStandardsActivity extends AppCompatActivity implements Vi
         browser.loadUrl(url);
         clickedLink.setText("Loading. Please Wait!");
     }
+<<<<<<< HEAD
     private class WebViewController extends WebViewClient {
+=======
+
+    private class WebViewController extends WebViewClient {
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             clickedLink.setText("Loading. Please Wait!");
             return false;
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
         public void onPageFinished(WebView view, String url) {
             clickedLink.setText(browser.getUrl().toString());
             if(browser.canGoBack()){
@@ -76,12 +122,22 @@ public class EmploymentStandardsActivity extends AppCompatActivity implements Vi
                 goForward.setEnabled(false);
             }
         }
+<<<<<<< HEAD
     }
+=======
+
+    }
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
     private void browserAppearance(){
         browserScreen.setVisibility(View.VISIBLE);
         browserScreen.setTranslationY(3000);
         browserScreen.animate().translationYBy(-3000).setDuration(1500);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> a7ea34b38617eea2898582ff2b66597ec44eff59
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
