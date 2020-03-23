@@ -1,0 +1,89 @@
+<resources>
+
+    <string name="app_name">JavaCapstoneApp</string>
+
+    section names...
+    <string name="section01_Name">Workplace Safety</string>
+    <string name="section02_Name">Occupational Health and Safety</string>
+    <string name="section03_Name">Human Rights</string>
+    <string name="section04_Name">Employment Standards</string>
+    <string name="section05_Name">Navigating the System</string>
+    <string name="section06_Name">Resources</string>
+
+
+    <!-- For WEB BUTTON strings -->
+    <string name="web_btn_close">x</string>
+    <string name="web_btn_back">&lt;</string>
+    <string name="web_btn_forward">&gt;</string>
+
+    <!-- Nigam strings -->
+    <string name="ES">
+            <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
+    </string>
+
+    <string name="ES1">
+        <a href="http://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code</a>
+    </string>
+
+    <string name="ES2">
+        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Regulations</a>
+    </string>
+
+
+    <!-- Sagar strings -->
+    <string name="linktosite_humanrights">
+        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act</a>
+    </string>
+    <string name="linktocomplaint_humanrights">
+        <a href="https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf">The Human Rights Complaint Process</a>
+    </string>
+
+
+    <!-- Twinkle strings -->
+    <string name="Resources_linkAlberta">
+        <a href="http://www.workershealthcentre.ca/">Alberta Worker Health Center</a>
+    </string>
+    <string name="Resources_linkCalgary">
+        <a href="http://www.helpwrc.org/">Calgary Workers Resource Centre</a>
+    </string>
+    <string name="resources">Resources</string>
+    <string name="para1">The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:</string>
+    <string name="para2">Services are free of charge. Provides a first point of contact for workers facing occupational health and safety issues in their workplace. Will provide support, public legal education, and referrals.</string>
+    <string name="para3">Provides free case work and public legal education program if you are having issues accessing your rights in your workplace</string>
+    <string name="dial">Dial</string>
+
+
+    <!-- Neil strings -->
+    <string name="intro">
+        A safe workplace takes your physical, mental, and emotional safety into consideration. Your safety at work is protected by 3 pieces of legislation:
+    </string>
+
+
+    <!-- Victor strings -->
+    <string name="toGoLink"><u><i>Health and Safety Rights</i></u></string>
+    <string name="intro_message">In Alberta, workers have 4 basic rights that relate to health safety (information from Alberta Workers Health Centre</string>
+    <string name="ohs_message">Current Legislation</string>
+    <string name="ohs_link"><u><i>OHS Act, Regulation and Code</i></u></string>
+    <string name="ohs_meaning">Occupational Health and Safety</string>
+    <!--Splash Screen Strings-->
+    <string name="splash_message">School of \n Global Access</string>
+    <string name="logo_contentDescription">finding your voice knowing your rights logo</string>
+    <string name="dialog_header">Welcome!</string>
+    <string name="dialog_subHeader">Disclaimer:</string>
+    <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>
+    <string name="dialog_btn_agree">I Agree!</string>
+    <string name="dialog_btn_close_contentDescription">X</string>
+
+    <!--Navigation String -->
+    <string name="homeTxt">Home</string>
+    <string name="findYourVoiceTxt">Finding your voice</string>
+    <string name="knowYourRightsTxt">Know your Rights</string>
+    <string name="eSTxt">Employment Standards</string>
+    <string name="hRTxt">Human Rights</string>
+    <string name="oHSTxt">Occupational Health and Safety</string>
+    <string name="resourcesTxt">Resources</string>
+    <string name="fundTxt">Fund</string>
+    <string name="disclaimerTxt">Disclaimer</string>
+    <string name="not_found">not found</string>
+
+</resources>
