@@ -3,16 +3,37 @@ package com.javagroup.javacapstoneapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.widget.CompoundButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+
 public class FindingYourVoiceActivity extends AppCompatActivity {
+
+    private BottomSheetBehavior bsbFindingYourVoice;
+    private LinearLayout fyvLinearLayout;
+    private ImageView slideUp;
+    BottomSheetDialog fyvBottomSheetDialog;
 
     float x1,x2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_finding_your_voice);
+        setContentView(R.layout.activity_finding_your_voice);
+
+        init();
+
+
+    }
+
+    private void init() {
+        this.fyvLinearLayout = findViewById(R.id.btm_sheet_finding_your_voice);
+        this.bsbFindingYourVoice = BottomSheetBehavior.from(fyvLinearLayout);
+        this.slideUp = findViewById(R.id.image_slide_up);
 
     }
 
