@@ -3,24 +3,37 @@ package com.javagroup.javacapstoneapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity{
 
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
 
+    private androidx.viewpager.widget.ViewPager viewPager;
+    LinearLayout viewPagerIndicator;
+
+    SlideAdapterActivity slideAdapterActivity;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        viewPager = (ViewPager)findViewById(R.id.viewPager);
+        viewPagerIndicator = (LinearLayout)findViewById(R.id.viewPageIndicator);
+
+        slideAdapterActivity = new SlideAdapterActivity(this);
+        viewPager.setAdapter(slideAdapterActivity);
+
         navigationScreen = (ConstraintLayout)findViewById(R.id.navigationScreen);
-        openNav = (ImageButton)findViewById(R.id.openNav);
+        openNav = (ImageButton )findViewById(R.id.openNav);
 
         openNav.setOnClickListener(new View.OnClickListener() {
             @Override

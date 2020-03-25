@@ -162,14 +162,14 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="35dp"
             android:layout_marginLeft="35dp"
+            android:drawableStart="@android:drawable/ic_menu_report_image"
             android:drawableLeft="@android:drawable/ic_menu_report_image"
             android:text="@string/disclaimerTxt"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@+id/btn_fund"
             app:layout_constraintStart_toEndOf="@+id/btn_fund"
-            app:layout_constraintTop_toTopOf="@+id/btn_fund"
-            android:drawableStart="@android:drawable/ic_menu_report_image" />
+            app:layout_constraintTop_toTopOf="@+id/btn_fund" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -17,8 +17,6 @@ import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
 
-    Boolean firstTime = true;
-
     ImageView logo;
     TextView school;
 
@@ -30,11 +28,7 @@ public class SplashScreen extends AppCompatActivity {
         logo = (ImageView) findViewById(R.id.imageView);
         school = (TextView) findViewById(R.id.school_text);
 
-        if(firstTime){
-            showDisclaimerDialog();
-        }
-        else{
-        }
+        performSplashScreen();
 
     }
 
@@ -46,8 +40,9 @@ public class SplashScreen extends AppCompatActivity {
         btn_agree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                firstTime = false;
-                performSplashScreen();
+                Intent mainActivity = new Intent(SplashScreen.this, MainActivity.class);
+                startActivity(mainActivity);
+                finish();
                 disclaimerDialog.hide();
             }
         });
@@ -78,9 +73,12 @@ public class SplashScreen extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    Intent mainActivity = new Intent(SplashScreen.this, MainActivity.class);
-                    startActivity(mainActivity);
-                    finish();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            showDisclaimerDialog();
+                        }
+                    });
                 }
             }
         };
