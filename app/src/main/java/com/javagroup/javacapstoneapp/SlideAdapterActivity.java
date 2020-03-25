@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -27,7 +28,7 @@ public class SlideAdapterActivity extends PagerAdapter {
 
     private String[] btn_text = {
             "Know your Rights and \n Workplace Safety",
-            "Finding your Voice",
+            "Finding Your Voice",
             "Resources, Funders \n and Disclaimer"
     };
 
@@ -47,7 +48,7 @@ public class SlideAdapterActivity extends PagerAdapter {
         View view = layoutInflater.inflate(R.layout.activity_pager_layout, container, false);
 
         ConstraintLayout layout_bg = (ConstraintLayout)view.findViewById(R.id.layout_bg);
-        Button btn_for_menu = (Button)view.findViewById(R.id.btn_for_menu);
+        final Button btn_for_menu = (Button)view.findViewById(R.id.btn_for_menu);
 
         layout_bg.setBackgroundResource(slide_background[position]);
         btn_for_menu.setText(btn_text[position]);
