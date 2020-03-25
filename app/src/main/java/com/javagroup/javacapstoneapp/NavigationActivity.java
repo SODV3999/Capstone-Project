@@ -27,7 +27,7 @@ public class NavigationActivity extends Fragment {
         closeNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigationScreen.animate().translationYBy(-3000).translationXBy(-3000).setDuration(100);
+                navigationScreen.animate().translationYBy(-3000).translationXBy(-3000).setDuration(450);
             }
         });
 
