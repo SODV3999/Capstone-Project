@@ -17,8 +17,6 @@ import android.widget.TextView;
 
 public class SplashScreen extends AppCompatActivity {
 
-    Boolean firstTime = true;
-
     ImageView logo;
     TextView school;
 
@@ -30,36 +28,8 @@ public class SplashScreen extends AppCompatActivity {
         logo = (ImageView) findViewById(R.id.imageView);
         school = (TextView) findViewById(R.id.school_text);
 
-        if(firstTime){
-            showDisclaimerDialog();
-        }
-        else{
-        }
+        performSplashScreen();
 
-    }
-
-    public void showDisclaimerDialog(){
-        final Dialog disclaimerDialog = new Dialog(this);
-        disclaimerDialog.setContentView(R.layout.dialog_disclaimer);
-        Button btn_agree = (Button)disclaimerDialog.findViewById(R.id.btn_agree);
-        ImageButton btn_close = (ImageButton) disclaimerDialog.findViewById(R.id.btn_close);
-        btn_agree.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firstTime = false;
-                performSplashScreen();
-                disclaimerDialog.hide();
-            }
-        });
-        btn_close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-        disclaimerDialog.setCancelable(false);
-        disclaimerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        disclaimerDialog.show();
     }
 
     public void performSplashScreen(){
@@ -78,12 +48,40 @@ public class SplashScreen extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    Intent mainActivity = new Intent(SplashScreen.this, MainActivity.class);
-                    startActivity(mainActivity);
-                    finish();
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            showDisclaimerDialog();
+                        }
+                    });
                 }
             }
         };
         th.start();
+    }
+
+    public void showDisclaimerDialog(){
+        final Dialog disclaimerDialog = new Dialog(this);
+        disclaimerDialog.setContentView(R.layout.dialog_disclaimer);
+        Button btn_agree = (Button)disclaimerDialog.findViewById(R.id.btn_agree);
+        ImageButton btn_close = (ImageButton) disclaimerDialog.findViewById(R.id.btn_close);
+        btn_agree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openMainActivity = new Intent(SplashScreen.this, MainActivity.class);
+                startActivity(openMainActivity);
+                finish();
+                disclaimerDialog.dismiss();
+            }
+        });
+        btn_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        disclaimerDialog.setCancelable(false);
+        disclaimerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        disclaimerDialog.show();
     }
 }
