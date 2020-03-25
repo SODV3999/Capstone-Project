@@ -19,13 +19,13 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
      FragmentMain mainFragment = new FragmentMain();
      switch (position) {
          case 0:
-             mainFragment.mainResource = R.layout.fragment_know_your_right;
+             mainFragment.mainResource = R.layout.activity_human_rights;
              break;
          case 1:
-             mainFragment.mainResource = R.layout.fragment_finding_your_voice;
+             mainFragment.mainResource = R.layout.activity_finding_your_voice;
              break;
          case 2:
-             mainFragment.mainResource = R.layout.fragment_resources;
+             mainFragment.mainResource = R.layout.activity_resources;
              break;
          default:
              break;
