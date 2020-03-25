@@ -12,7 +12,7 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finding_your_voice);
+        setContentView(R.layout.fragment_finding_your_voice);
 
     }
 
