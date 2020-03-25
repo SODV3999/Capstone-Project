@@ -3,12 +3,15 @@ package com.javagroup.javacapstoneapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +40,12 @@ public class MainActivity extends AppCompatActivity {
                 openTheBrowser.commit();
             }
         });
+
+
+
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), 3, 3));
+        viewPager.setPageTransformer(true, new ParallaxTransformer());
     }
 
     public boolean onTouchEvent(MotionEvent motionEvent){
