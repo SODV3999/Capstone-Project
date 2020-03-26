@@ -1,6 +1,7 @@
 package com.javagroup.javacapstoneapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 }
         }
         return false;
+
     }
 
     public void navToSection1(View view) {

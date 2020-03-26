@@ -65,6 +65,7 @@
     <string name="ohs_message">Current Legislation</string>
     <string name="ohs_link"><u><i>OHS Act, Regulation and Code</i></u></string>
     <string name="ohs_meaning">Occupational Health and Safety</string>
+
     <!--Splash Screen Strings-->
     <string name="splash_message">School of \n Global Access</string>
     <string name="logo_contentDescription">finding your voice knowing your rights logo</string>
@@ -85,5 +86,6 @@
     <string name="fundTxt">Fund</string>
     <string name="disclaimerTxt">Disclaimer</string>
     <string name="not_found">not found</string>
+
 
 </resources>

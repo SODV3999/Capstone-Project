@@ -12,6 +12,7 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 public class HumanRightsActivity extends AppCompatActivity {
 
 
@@ -22,8 +23,5 @@ public class HumanRightsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_human_rights);
 
 
-
     }
-
-
 }

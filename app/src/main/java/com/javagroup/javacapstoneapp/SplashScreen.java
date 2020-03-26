@@ -32,22 +32,21 @@ public class SplashScreen extends AppCompatActivity {
 
     }
 
-    public void performSplashScreen(){
+    public void performSplashScreen() {
 
         logo.animate().alpha(1.0f).setDuration(1000);
         logo.animate().translationY(-200).setDuration(1500);
         school.animate().alpha(1.0f).setDuration(1000);
         school.animate().translationY(-300).setDuration(2500);
 
-        Thread th = new Thread(){
-            public void run(){
-                try{
+        Thread th = new Thread() {
+            public void run() {
+                try {
                     sleep(3000);
-                }
-                catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
-                }
-                finally {
+                } finally {
+
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -60,10 +59,10 @@ public class SplashScreen extends AppCompatActivity {
         th.start();
     }
 
-    public void showDisclaimerDialog(){
+    public void showDisclaimerDialog() {
         final Dialog disclaimerDialog = new Dialog(this);
         disclaimerDialog.setContentView(R.layout.dialog_disclaimer);
-        Button btn_agree = (Button)disclaimerDialog.findViewById(R.id.btn_agree);
+        Button btn_agree = (Button) disclaimerDialog.findViewById(R.id.btn_agree);
         ImageButton btn_close = (ImageButton) disclaimerDialog.findViewById(R.id.btn_close);
         btn_agree.setOnClickListener(new View.OnClickListener() {
             @Override
