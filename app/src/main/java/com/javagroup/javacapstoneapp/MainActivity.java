@@ -10,6 +10,10 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), 3, 3));
         viewPager.setPageTransformer(true, new ParallaxTransformer());
     }
+
+
 
     public boolean onTouchEvent(MotionEvent motionEvent){
         switch (motionEvent.getAction()){

@@ -10,14 +10,12 @@ import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-
-public class FyvBottomSheetDialog extends BottomSheetDialogFragment {
-
+public class ResBottomSheetDialog extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View fyv_view = inflater.inflate(R.layout.btm_sheet_finding_your_voice, null, false);
-        return fyv_view;
+        View res_view = inflater.inflate(R.layout.btm_sheet_resources, null, false);
+        return res_view;
     }
 }

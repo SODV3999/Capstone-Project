@@ -3,13 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/btm_sheet_finding_your_voice"
+    android:id="@+id/btm_sheet_resources"
     android:background="@drawable/bottom_sheet_background"
     android:orientation="vertical"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    app:behavior_peekHeight="?actionBarSize"
-  >
+    app:behavior_peekHeight="?actionBarSize">
 
     <RelativeLayout
         android:layout_width="match_parent"
