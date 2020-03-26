@@ -14,10 +14,10 @@ public class ParallaxTransformer implements ViewPager.PageTransformer {
                 try {
                     page.findViewById(R.id.parallaxContent)
                             .setTransitionAlpha(-position * page.getWidth() / 2);
-                } catch (NullPointerException ignored) {}
-
+                } catch (NullPointerException ignored) {
+                }
             }
-        }else {
+        } else {
             page.setAlpha(1);
         }
     }
