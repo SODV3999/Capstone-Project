@@ -37,8 +37,10 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         navigationScreen.setTranslationY(-3000);
                         navigationScreen.setTranslationX(-3000);
-                        navigationScreen.animate().translationYBy(3000).translationXBy(3000).setDuration(450);
-                        final FragmentTransaction openTheBrowser = getSupportFragmentManager().beginTransaction();
+                        navigationScreen.animate().translationYBy(3000)
+                                .translationXBy(3000).setDuration(450);
+                        final FragmentTransaction openTheBrowser = getSupportFragmentManager()
+                                .beginTransaction();
                         final NavigationActivity navigationActivity = new NavigationActivity();
                         openTheBrowser.add(R.id.navigationScreen, navigationActivity);
                         openTheBrowser.commit();
@@ -49,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(), 3, 3));
+        viewPager.setAdapter(
+                new ViewPagerAdapter(getSupportFragmentManager(),
+                3,
+                3));
         viewPager.setPageTransformer(true, new ParallaxTransformer());
     }
 
