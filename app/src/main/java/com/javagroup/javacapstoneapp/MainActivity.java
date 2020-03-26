@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                     public void run() {
                         navigationScreen.setTranslationY(-3000);
                         navigationScreen.setTranslationX(-3000);
-                        navigationScreen.animate().translationYBy(3000).translationXBy(3000).setDuration(100);
+                        navigationScreen.animate().translationYBy(3000).translationXBy(3000).setDuration(450);
                         final FragmentTransaction openTheBrowser = getSupportFragmentManager().beginTransaction();
                         final NavigationActivity navigationActivity = new NavigationActivity();
                         openTheBrowser.add(R.id.navigationScreen, navigationActivity);
