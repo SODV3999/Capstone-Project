@@ -21,10 +21,34 @@
         <activity android:name=".WorkplaceSafetyActivity"></activity>
         <activity android:name=".EmploymentStandardsActivity"></activity>
         <activity
+<<<<<<< HEAD
             android:name=".ResourcesActivity"
             android:usesCleartextTraffic="true"></activity>
         <activity android:name=".OccupationalHealthAndSafetyActivity"></activity>
         <activity android:name=".SplashScreen">
+=======
+            android:name=".resources"
+            android:usesCleartextTraffic="true"
+            android:parentActivityName=".MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".OccupationalHealthAndSafetyActivity"
+            android:parentActivityName=".MainActivity">
+
+            <!-- The meta-data tag is required if you support API level 15 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+>>>>>>> 4753001def8f0a8114afe2b283a353dd40d8ba10
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

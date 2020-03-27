@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,11 +24,18 @@ public class MainActivity extends AppCompatActivity {
     ImageButton openNav;
 
     float x1,x2,y1,y2;
+=======
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+    private Button button;
+>>>>>>> 4753001def8f0a8114afe2b283a353dd40d8ba10
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+<<<<<<< HEAD
 
         navigationScreen = (ConstraintLayout)findViewById(R.id.navigationScreen);
         openNav = (ImageButton)findViewById(R.id.openNav);
@@ -74,7 +82,23 @@ public class MainActivity extends AppCompatActivity {
         return false;
 
     }
+=======
+>>>>>>> 4753001def8f0a8114afe2b283a353dd40d8ba10
 
+        button=findViewById(R.id.button_homeScreen);
+        button.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                openActivity();
+            }
+        });
+    }
+    public void openActivity()
+    {
+        Intent intent = new Intent(this,HomeScreen.class);
+        startActivity(intent);
+    }
     public void navToSection1(View view) {
         Intent intent = new Intent(this, WorkplaceSafetyActivity.class);
         startActivity(intent);
@@ -101,8 +125,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void navToSection6(View view) {
-        Intent intent = new Intent(this, ResourcesActivity.class);
+        Intent intent = new Intent(this, resources.class);
         startActivity(intent);
     }
-
+    public void navToSection7(View view) {
+        Intent intent = new Intent(this, HomeScreen.class);
+        startActivity(intent);
+    }
 }
