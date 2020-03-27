@@ -12,13 +12,16 @@ public class ParallaxTransformer implements ViewPager.PageTransformer {
         if (position >= -1 && position <= 1) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 try {
+
                     page.findViewById(R.id.parallaxContent).setTransitionAlpha(-position * page.getWidth() / 2);
                 } catch (NullPointerException e) {
                     System.out.println(e.getMessage());
                 }
 
+
+
             }
-        }else {
+        } else {
             page.setAlpha(1);
         }
     }

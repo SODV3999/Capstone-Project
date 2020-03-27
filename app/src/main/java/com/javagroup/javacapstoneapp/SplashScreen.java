@@ -67,7 +67,9 @@ public class SplashScreen extends AppCompatActivity {
         btn_agree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openMainActivity = new Intent(SplashScreen.this, MainActivity.class);
+                Intent openMainActivity = new Intent(
+                        SplashScreen.this,
+                        MainActivity.class);
                 startActivity(openMainActivity);
                 finish();
                 disclaimerDialog.dismiss();

@@ -24,9 +24,14 @@ public class WebBrowserActivity extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
 
-        View showBrowser = inflater.inflate(R.layout.fragment_browser, container, false);
+        View showBrowser = inflater.inflate(
+                R.layout.fragment_browser,
+                container,
+                false);
 
         currentUrl = showBrowser.findViewById(R.id.url_container);
         browser = showBrowser.findViewById(R.id.webView);

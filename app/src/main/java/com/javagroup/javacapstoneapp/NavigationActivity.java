@@ -17,9 +17,14 @@ public class NavigationActivity extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
 
-        View showNav = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        View showNav = inflater.inflate(
+                R.layout.fragment_navigation_drawer,
+                container,
+                false);
 
         Button closeNav = showNav.findViewById(R.id.nav_close_button);
         navigationScreen = showNav.findViewById(R.id.navigationScreen);
@@ -27,7 +32,8 @@ public class NavigationActivity extends Fragment {
         closeNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                navigationScreen.animate().translationYBy(-3000).translationXBy(-3000).setDuration(100);
+                navigationScreen.animate().translationYBy(-3000)
+                        .translationXBy(-3000).setDuration(450);
             }
         });
 
