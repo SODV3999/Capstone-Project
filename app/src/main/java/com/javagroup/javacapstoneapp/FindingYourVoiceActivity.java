@@ -21,8 +21,6 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
     private ImageView slideUpDown;
     FyvBottomSheetDialog fyvBottomSheetDialog;
 
-    float x1,x2;
-
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finding_your_voice);
@@ -36,10 +34,7 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
-
 
     private void init() {
         this.fyvLinearLayout = findViewById(R.id.btm_sheet_finding_your_voice);
@@ -47,30 +42,6 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
         this.slideUpDown = findViewById(R.id.slideUpDown);
         fyvBottomSheetDialog = new FyvBottomSheetDialog();
 
-    }
-
-    public boolean onTouchEvent(MotionEvent motionEvent){
-        switch (motionEvent.getAction()){
-            case MotionEvent.ACTION_DOWN:
-                x1 = motionEvent.getX();
-                break;
-            case MotionEvent.ACTION_UP:
-                x2 = motionEvent.getX();
-                if(x1 < x2){
-                    Intent openFirstActivity = new Intent(FindingYourVoiceActivity.this, MainActivity.class);
-                    startActivity(openFirstActivity);
-                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
-                    finish();
-                }
-                else if (x1>x2){
-                    Intent openResourceActivity = new Intent(FindingYourVoiceActivity.this, ResourceAndDisclaimerActivity.class);
-                    startActivity(openResourceActivity);
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-                    finish();
-                }
-                break;
-        }
-        return false;
     }
 
 }

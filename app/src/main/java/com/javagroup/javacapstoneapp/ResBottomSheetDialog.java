@@ -13,9 +13,14 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 public class ResBottomSheetDialog extends BottomSheetDialogFragment {
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View res_view = inflater.inflate(R.layout.btm_sheet_resources, null, false);
+        View res_view = inflater.inflate(
+                R.layout.btm_sheet_resources,
+                null,
+                false);
         return res_view;
     }
 }
