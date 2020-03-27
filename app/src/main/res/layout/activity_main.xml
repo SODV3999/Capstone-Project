@@ -100,5 +100,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
+    <Button
+        android:id="@+id/button_homeScreen"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="home screen"
+        android:onClick="navToSection7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="558dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
