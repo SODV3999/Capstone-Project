@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
     private LinearLayout fyvLinearLayout;
     private ImageView slideUpDown;
     FyvBottomSheetDialog fyvBottomSheetDialog;
+
 
     float x1,x2;
 
@@ -42,6 +44,14 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
 
 
     private void init() {
+        this.fyvLinearLayout = findViewById(R.id.btm_sheet_finding_your_voice);
+        this.bsbFindingYourVoice = BottomSheetBehavior.from(fyvLinearLayout);
+        this.slideUpDown = findViewById(R.id.slideUpDown);
+        fyvBottomSheetDialog = new FyvBottomSheetDialog();
+
+    }
+
+    public void pagecalling(){
         this.fyvLinearLayout = findViewById(R.id.btm_sheet_finding_your_voice);
         this.bsbFindingYourVoice = BottomSheetBehavior.from(fyvLinearLayout);
         this.slideUpDown = findViewById(R.id.slideUpDown);
