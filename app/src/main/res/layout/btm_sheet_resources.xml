@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/btm_sheet_resources"
     android:background="@drawable/bottom_sheet_background"
     app:layout_behavior="@string/bottom_sheet_behavior"
@@ -19,6 +20,125 @@
             android:layout_centerInParent="true"
             android:background="@drawable/slide_up_down" />
 
+
     </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/title_Resource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="45dp"
+                android:gravity="center_horizontal"
+                android:text="Resources"
+                android:textColor="#0D7D78"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="135dp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/content_Resource"
+                android:layout_width="325dp"
+                android:layout_height="142dp"
+                android:layout_below="@+id/title_Resource"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center|center_horizontal"
+                android:text="The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:"
+                android:textColor="#33817B"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="58dp" />
+
+            <TextView
+                android:id="@+id/title_Alberta"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content_Resource"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Alberta Worker's Help Center"
+                android:textColor="#0D7D78"
+                android:textSize="25dp"
+                tools:layout_editor_absoluteX="109dp"
+                tools:layout_editor_absoluteY="200dp">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <!--            <ImageView-->
+                <!--                android:id="@+id/imageView4"-->
+                <!--                android:layout_width="wrap_content"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:layout_alignParentStart="true"-->
+                <!--                android:layout_alignParentLeft="true"-->
+                <!--                android:layout_alignParentBottom="true"-->
+                <!--                android:layout_marginStart="145dp"-->
+                <!--                android:layout_marginLeft="145dp"-->
+                <!--                android:layout_marginBottom="23dp"-->
+                <!--                app:srcCompat="@drawable/line" />-->
+
+
+                <Button
+                    android:id="@+id/imageButton_call"
+                    android:layout_width="75dp"
+                    android:layout_height="73dp"
+                    android:layout_below="@id/title_Alberta"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/phone"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/phone" />
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="75dp"
+                    android:layout_height="73dp"
+                    android:layout_weight="1"
+                   android:layout_marginStart="-105dp"
+                    android:layout_marginLeft="-105dp"
+                    android:layout_marginTop="64dp"
+                    android:layout_marginEnd="148dp"
+                    android:layout_marginRight="148dp"
+                    android:layout_marginBottom="86dp"
+                    android:layout_toEndOf="@+id/imageButton_call"
+                    android:layout_toRightOf="@+id/imageButton_call"
+                    app:srcCompat="@drawable/link" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageButton_call"
+                android:layout_marginTop="0dp"
+                android:text="Calgary Worker's Resource Cente"
+                android:textColor="#0D7D78"
+                android:textSize="25dp">
+
+            </TextView>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
 
 </LinearLayout>
