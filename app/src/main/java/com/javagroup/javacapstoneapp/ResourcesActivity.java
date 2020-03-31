@@ -15,6 +15,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -29,19 +30,45 @@ public class ResourcesActivity extends AppCompatActivity
 
     private static final int REQUEST_CALL = 1 ;
 
+    Button btn_funders;
+    Button btn_disclaimer;
+    MainActivity main = new MainActivity();
+
+//    public void changeActivity(Class targetClass ){
+//        Log.d("changeActivity: ", "Clicked");
+//        Intent intent = new Intent(this, targetClass);
+//        startActivity(intent);
+//    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources);
-        Button button= findViewById(R.id.imageButton_call_1);
-        button.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                makePhoneCall();
-            }
-        });
+
+        btn_funders = (Button)findViewById(R.id.btn_funders);
+        btn_disclaimer = (Button)findViewById(R.id.btn_disclaimer);
+
+
+
+//
+//        btn_disclaimer.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                changeActivity(Disclaimer.class);
+//            }
+//        });
+
+
+//        Button button= findViewById(R.id.imageButton_call_1);
+//        button.setOnClickListener(new View.OnClickListener()
+//        {
+//            @Override
+//            public void onClick(View v) {
+//                makePhoneCall();
+//            }
+//        });
     }
     private  void makePhoneCall()
     {
@@ -76,5 +103,7 @@ public class ResourcesActivity extends AppCompatActivity
             }
         }
     }
+
+
 }
 

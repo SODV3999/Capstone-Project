@@ -8,8 +8,10 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 
@@ -20,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
     ConstraintLayout bgResource;
     ImageButton openNav;
 
+//    public void changeActivity(){
+//        Log.d("changeActivity: ", "Clicked");
+//        Intent intent = new Intent(this, Funders.class);
+//    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
         navigationScreen = (ConstraintLayout)findViewById(R.id.navigationScreen);
         openNav = (ImageButton)findViewById(R.id.openNav);
+
+
 
         // TODO: Research on how to use and implement threads properly
         openNav.setOnClickListener(new View.OnClickListener() {
@@ -95,4 +104,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
+    public void launchFunders(View view) {
+        Intent intent = new Intent(this, Funders.class);
+        startActivity(intent);
+    }
+
+    public void launchDisclaimers(View view) {
+        Intent intent = new Intent(this, Disclaimer.class);
+        startActivity(intent);
+    }
 }

@@ -12,8 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".activity_disclaimer"></activity>
-        <activity android:name=".activity_funders" />
+        <activity android:name=".Disclaimer"/>
         <activity android:name=".Funders" />
         <activity android:name=".MainActivity" />
         <activity android:name=".FindingYourVoiceActivity" />

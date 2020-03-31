@@ -169,14 +169,16 @@
             </TextView>
 
             <Button
-                android:id="@+id/funder"
+                android:id="@+id/btn_funders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/funders">
+                android:background="@drawable/funders"
+                android:onClick="launchFunders">
 
             </Button>
             <Button
-                android:id="@+id/disclaimer"
+                android:id="@+id/btn_disclaimer"
+                android:onClick="launchDisclaimers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/disclaimer">
