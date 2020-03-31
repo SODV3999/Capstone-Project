@@ -19,7 +19,7 @@ public class KyrBottomSheetDialog extends BottomSheetDialogFragment {
                              @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View kyr_view = inflater.inflate(
-                R.layout.btm_sheet_know_your_right,
+                R.layout.btm_sheet_workplace_safety,
                 null,
                 false);
         return kyr_view;

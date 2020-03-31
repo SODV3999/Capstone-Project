@@ -65,34 +65,15 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setPageTransformer(true, new ParallaxTransformer());
     }
 
-    public void navToSection1(View view) {
-        Intent intent = new Intent(this, WorkplaceSafetyActivity.class);
-        startActivity(intent);
+    public void launchOccupationalHealthAndSafety(View view) {
+        startActivity(new Intent(this, OccupationalHealthAndSafetyActivity.class));
     }
 
-    public void navToSection2(View view) {
-        Intent intent = new Intent(this, OccupationalHealthAndSafetyActivity.class);
-        startActivity(intent);
+    public void launchEmploymentStandards(View view) {
+        startActivity(new Intent(this, EmploymentStandardsActivity.class));
     }
 
-    public void navToSection3(View view) {
-        Intent intent = new Intent(this, HumanRightsActivity.class);
-        startActivity(intent);
+    public void launchHumanRights(View view) {
+        startActivity(new Intent(this, HumanRightsActivity.class));
     }
-
-    public void navToSection4(View view) {
-        Intent intent = new Intent(this, EmploymentStandardsActivity.class);
-        startActivity(intent);
-    }
-
-    public void navToSection5(View view) {
-        Intent intent = new Intent(this, NavigatingTheSystemActivity.class);
-        startActivity(intent);
-    }
-
-    public void navToSection6(View view) {
-        Intent intent = new Intent(this, ResourcesActivity.class);
-        startActivity(intent);
-    }
-
 }

@@ -1,14 +1,10 @@
 package com.javagroup.javacapstoneapp;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +19,7 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finding_your_voice);
+        setContentView(R.layout.activity_mainsection_finding_your_voice);
 
         init();
         slideUpDown.setOnClickListener(new View.OnClickListener() {
