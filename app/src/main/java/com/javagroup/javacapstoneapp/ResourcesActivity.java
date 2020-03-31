@@ -24,15 +24,17 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
-public class ResourcesActivity extends AppCompatActivity {
+public class ResourcesActivity extends AppCompatActivity
+{
 
     private static final int REQUEST_CALL = 1 ;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resources);
-        Button button= findViewById(R.id.imageButton_call);
+        Button button= findViewById(R.id.imageButton_call_1);
         button.setOnClickListener(new View.OnClickListener()
         {
             @Override

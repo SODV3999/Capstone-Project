@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    tools:context=".MainActivity"
+    android:background="@drawable/bottom_sheet_background"
+    style="@style/CoordinatorLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/navigationScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:translationZ="90dp">
+
+        <TextView
+            android:id="@+id/textView_title_funders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginBottom="16dp"
+            android:text="Funders"
+            android:textColor="#0D7D78"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView_paragraph_funders"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/textView_paragraph_funders"
+            android:layout_width="314dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/funders_paragrah_one"
+            android:textColor="#33817B"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_title_funders"
+            app:layout_goneMarginRight="30dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="297dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginBottom="210dp"
+            android:text="@string/funders_paragrah_two"
+            android:textColor="#33817B"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_paragraph_funders">
+
+        </TextView>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/openNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_button_container"
+        android:contentDescription="@string/not_found"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/icon_hamburger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

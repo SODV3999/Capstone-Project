@@ -11,22 +11,23 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".FindingYourVoiceActivity"></activity>
-        <activity android:name=".NavigatingTheSystemActivity"></activity>
-        <activity android:name=".HumanRightsActivity"></activity>
-        <activity android:name=".WorkplaceSafetyActivity"></activity>
-        <activity android:name=".EmploymentStandardsActivity"></activity>
+        <activity android:name=".activity_disclaimer"></activity>
+        <activity android:name=".activity_funders" />
+        <activity android:name=".Funders" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".FindingYourVoiceActivity" />
+        <activity android:name=".NavigatingTheSystemActivity" />
+        <activity android:name=".HumanRightsActivity" />
+        <activity android:name=".WorkplaceSafetyActivity" />
+        <activity android:name=".EmploymentStandardsActivity" />
         <activity
             android:name=".ResourcesActivity"
-            android:usesCleartextTraffic="true"></activity>
-        <activity android:name=".OccupationalHealthAndSafetyActivity"></activity>
+            android:usesCleartextTraffic="true" />
+        <activity android:name=".OccupationalHealthAndSafetyActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
