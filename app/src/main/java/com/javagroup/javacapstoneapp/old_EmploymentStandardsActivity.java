@@ -6,13 +6,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.View;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class EmploymentStandardsActivity extends AppCompatActivity implements View.OnClickListener {
+public class old_EmploymentStandardsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private WebView browser;
     private Button closeBrowser, goBack, goForward;
@@ -23,7 +21,7 @@ public class EmploymentStandardsActivity extends AppCompatActivity implements Vi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_es);
+        setContentView(R.layout.old_activity_es);
 
         TextView humanRightsActLink = (TextView) findViewById(R.id.link_humanRightsAct);
         TextView employmentCodeLink = (TextView) findViewById(R.id.employmentcode);

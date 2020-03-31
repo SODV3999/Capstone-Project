@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
-    tools:context=".Disclaimer"
+    tools:context=".subsection_Resources_DisclaimerActivity"
     android:background="@drawable/bottom_sheet_background"
     style="@style/CoordinatorLayout">
 
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="33dp"
             android:layout_marginBottom="16dp"
-            android:text="Funders"
+            android:text="Disclaimer"
             android:textColor="#0D7D78"
             android:textSize="30dp"
             app:layout_constraintBottom_toTopOf="@+id/textView_paragraph_disclaimer"

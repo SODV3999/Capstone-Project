@@ -1,31 +1,20 @@
 package com.javagroup.javacapstoneapp;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
-public class ResourcesActivity extends AppCompatActivity
+
+public class mainsection_ResourcesActivity extends AppCompatActivity
 {
 
     private static final int REQUEST_CALL = 1 ;
@@ -45,7 +34,7 @@ public class ResourcesActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resources);
+        setContentView(R.layout.activity_mainsection_resources);
 
         btn_funders = (Button)findViewById(R.id.btn_funders);
         btn_disclaimer = (Button)findViewById(R.id.btn_disclaimer);
@@ -74,10 +63,10 @@ public class ResourcesActivity extends AppCompatActivity
     {
 
 
-        if(ContextCompat.checkSelfPermission(ResourcesActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        if(ContextCompat.checkSelfPermission(mainsection_ResourcesActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
         {
 
-            ActivityCompat.requestPermissions(ResourcesActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+            ActivityCompat.requestPermissions(mainsection_ResourcesActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
         }else
         {
             // String dial ="tel:" +5879692301;

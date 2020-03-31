@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
-public class NavigationActivity extends Fragment {
+public class menu_NavigationActivity extends Fragment {
 
     private ConstraintLayout navigationScreen;
 
@@ -22,7 +22,7 @@ public class NavigationActivity extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         View showNav = inflater.inflate(
-                R.layout.fragment_navigation_drawer,
+                R.layout.fragment_menu_navigation_drawer,
                 container,
                 false);
 

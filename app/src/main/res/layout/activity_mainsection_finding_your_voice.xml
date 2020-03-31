@@ -9,7 +9,7 @@
 
 
 
-    <include layout="@layout/btm_sheet_finding_your_voice" />
+    <include layout="@layout/bottomsheet_finding_your_voice" />
 
 
 

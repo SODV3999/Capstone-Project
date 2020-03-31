@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Disclaimer extends AppCompatActivity
+public class subsection_Resources_DisclaimerActivity extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)

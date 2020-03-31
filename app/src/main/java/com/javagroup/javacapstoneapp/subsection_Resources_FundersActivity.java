@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Funders extends AppCompatActivity
+public class subsection_Resources_FundersActivity extends AppCompatActivity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)

@@ -1,29 +1,24 @@
 package com.javagroup.javacapstoneapp;
 
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ToggleButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
-public class FindingYourVoiceActivity extends AppCompatActivity {
+public class mainsection_FindingYourVoiceActivity extends AppCompatActivity {
 
     private BottomSheetBehavior bsbFindingYourVoice;
     private LinearLayout fyvLinearLayout;
     private ImageView slideUpDown;
-    FyvBottomSheetDialog fyvBottomSheetDialog;
+    mainsection_FindingYourVoiceBottomSheet mainsectionFindingYourVoiceBottomSheet;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finding_your_voice);
+        setContentView(R.layout.activity_mainsection_finding_your_voice);
 
         init();
         slideUpDown.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +35,7 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
         this.fyvLinearLayout = findViewById(R.id.btm_sheet_finding_your_voice);
         this.bsbFindingYourVoice = BottomSheetBehavior.from(fyvLinearLayout);
         this.slideUpDown = findViewById(R.id.slideUpDown);
-        fyvBottomSheetDialog = new FyvBottomSheetDialog();
+        mainsectionFindingYourVoiceBottomSheet = new mainsection_FindingYourVoiceBottomSheet();
 
     }
 
