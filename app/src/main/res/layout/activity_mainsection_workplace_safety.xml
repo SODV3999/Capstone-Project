@@ -7,9 +7,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_know_your_rights"
-    tools:context=".WorkplaceSafetyActivity">
+    tools:context=".mainsection_WorkplaceSafetyActivity">
 
-<include layout="@layout/btm_sheet_workplace_safety"/>
+<include layout="@layout/bottomsheetsheet_workplace_safety"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

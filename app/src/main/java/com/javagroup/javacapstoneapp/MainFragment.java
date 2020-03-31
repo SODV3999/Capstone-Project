@@ -7,21 +7,16 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-
-public class KyrBottomSheetDialog extends BottomSheetDialogFragment {
+public class MainFragment extends Fragment {
+    public int mainResource;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
-        View kyr_view = inflater.inflate(
-                R.layout.btm_sheet_workplace_safety,
-                null,
-                false);
-        return kyr_view;
+        return inflater.inflate(mainResource, container, false);
     }
 }

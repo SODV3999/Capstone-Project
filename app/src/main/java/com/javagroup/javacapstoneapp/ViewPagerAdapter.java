@@ -16,7 +16,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-     FragmentMain mainFragment = new FragmentMain();
+     MainFragment mainFragment = new MainFragment();
      switch (position) {
          case 0:
              mainFragment.mainResource = R.layout.activity_mainsection_workplace_safety;

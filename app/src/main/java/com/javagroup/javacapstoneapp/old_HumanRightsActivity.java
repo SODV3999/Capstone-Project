@@ -8,7 +8,7 @@ package com.javagroup.javacapstoneapp;
   import android.view.View;
   import android.widget.TextView;
 
-public class HumanRightsActivity extends
+public class old_HumanRightsActivity extends
   AppCompatActivity implements View.OnClickListener {
 
   private ConstraintLayout browserContainer;

@@ -14,9 +14,9 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity android:name=".MainActivity"/>
-        <activity android:name=".FindingYourVoiceActivity"/>
-        <activity android:name=".WorkplaceSafetyActivity"/>
-        <activity android:name=".ResourcesActivity"/>
+        <activity android:name=".mainsection_FindingYourVoiceActivity"/>
+        <activity android:name=".mainsection_WorkplaceSafetyActivity"/>
+        <activity android:name=".mainsection_ResourcesActivity"/>
 
         <activity android:name=".SplashScreen">
             <intent-filter>

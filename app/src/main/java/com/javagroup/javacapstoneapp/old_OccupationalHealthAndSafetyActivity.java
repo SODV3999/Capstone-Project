@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class OccupationalHealthAndSafetyActivity extends
+public class old_OccupationalHealthAndSafetyActivity extends
         AppCompatActivity implements View.OnClickListener {
 
     private ConstraintLayout browserContainer;

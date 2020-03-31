@@ -8,7 +8,6 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -45,9 +44,9 @@ public class MainActivity extends AppCompatActivity {
                                         .translationXBy(3000).setDuration(450);
                                 final FragmentTransaction openTheBrowser =
                                         getSupportFragmentManager().beginTransaction();
-                                final NavigationActivity navigationActivity =
-                                        new NavigationActivity();
-                                openTheBrowser.add(R.id.navigationScreen, navigationActivity);
+                                final menu_NavigationActivity menuNavigationActivity =
+                                        new menu_NavigationActivity();
+                                openTheBrowser.add(R.id.navigationScreen, menuNavigationActivity);
                                 openTheBrowser.commit();
                             }
                         });
@@ -62,18 +61,17 @@ public class MainActivity extends AppCompatActivity {
                 new ViewPagerAdapter(getSupportFragmentManager(),
                 3,
                 3));
-        viewPager.setPageTransformer(true, new ParallaxTransformer());
     }
 
     public void launchOccupationalHealthAndSafety(View view) {
-        startActivity(new Intent(this, OccupationalHealthAndSafetyActivity.class));
+        startActivity(new Intent(this, old_OccupationalHealthAndSafetyActivity.class));
     }
 
     public void launchEmploymentStandards(View view) {
-        startActivity(new Intent(this, EmploymentStandardsActivity.class));
+        startActivity(new Intent(this, old_EmploymentStandardsActivity.class));
     }
 
     public void launchHumanRights(View view) {
-        startActivity(new Intent(this, HumanRightsActivity.class));
+        startActivity(new Intent(this, old_HumanRightsActivity.class));
     }
 }

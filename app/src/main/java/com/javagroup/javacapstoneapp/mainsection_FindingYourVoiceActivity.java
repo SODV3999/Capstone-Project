@@ -1,6 +1,5 @@
 package com.javagroup.javacapstoneapp;
 
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -10,12 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
-public class FindingYourVoiceActivity extends AppCompatActivity {
+public class mainsection_FindingYourVoiceActivity extends AppCompatActivity {
 
     private BottomSheetBehavior bsbFindingYourVoice;
     private LinearLayout fyvLinearLayout;
     private ImageView slideUpDown;
-    FyvBottomSheetDialog fyvBottomSheetDialog;
+    mainsection_FindingYourVoiceBottomSheet mainsectionFindingYourVoiceBottomSheet;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +35,7 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
         this.fyvLinearLayout = findViewById(R.id.btm_sheet_finding_your_voice);
         this.bsbFindingYourVoice = BottomSheetBehavior.from(fyvLinearLayout);
         this.slideUpDown = findViewById(R.id.slideUpDown);
-        fyvBottomSheetDialog = new FyvBottomSheetDialog();
+        mainsectionFindingYourVoiceBottomSheet = new mainsection_FindingYourVoiceBottomSheet();
 
     }
 
