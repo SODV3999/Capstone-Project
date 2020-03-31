@@ -19,6 +19,7 @@
         <activity android:name=".HumanRightsActivity"></activity>
         <activity android:name=".WorkplaceSafetyActivity"></activity>
         <activity android:name=".EmploymentStandardsActivity"></activity>
+        <activity android:name=".bttmsheet_humanrights"></activity>
         <activity
             android:name=".ResourcesActivity"
             android:usesCleartextTraffic="true"></activity>

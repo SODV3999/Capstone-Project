@@ -11,6 +11,14 @@
 
 <include layout="@layout/btm_sheet_know_your_right"/>
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="349dp"
+        android:layout_height="214dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="In addition to workplace safety, hazards, rights, and standards, Alberta has legislation that relates to the rights of all people and their dignity, regardless of background such as ethnocultural group, source of income, participation in a labour union, gender, age, sexual orientation, or immigration status:  " />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 

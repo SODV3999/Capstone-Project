@@ -56,27 +56,31 @@ Your safety at work is protected by 3 pieces of legislation:
         tools:layout_editor_absoluteY="58dp" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_launchOccupationalHealthAndSafety"
         android:layout_width="293dp"
         android:layout_height="51dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/ocu" />
+        app:srcCompat="@drawable/ocu"
+        android:onClick="launchOccupationalHealthAndSafety"
+      />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btn_launchEmploymentStandards"
         android:layout_width="298dp"
         android:layout_height="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/employment" />
+        app:srcCompat="@drawable/employment"
+        android:onClick="launchEmploymentStandards"/>
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btn_launchHumanRights"
         android:layout_width="298dp"
         android:layout_height="54dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="30dp"
-        app:srcCompat="@drawable/human_rights" />
+        app:srcCompat="@drawable/human_rights"
+        android:onClick="launchHumanRights"/>
 
 </LinearLayout>
