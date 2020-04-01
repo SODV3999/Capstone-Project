@@ -16,26 +16,32 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
 
     private ConstraintLayout navigationScreen;
-    ConstraintLayout bgResource;
     ImageButton openNav;
+
+//    public void changeActivity(){
+//        Log.d("changeActivity: ", "Clicked");
+//        Intent intent = new Intent(this, Funders.class);
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        navigationScreen = findViewById(R.id.navigationScreen);
+        openNav = findViewById(R.id.openNav);
 
-        navigationScreen = (ConstraintLayout)findViewById(R.id.navigationScreen);
-        openNav = (ImageButton)findViewById(R.id.openNav);
 
         openNav.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 navigationScreen.setTranslationY(-3000);
                 navigationScreen.setTranslationX(-3000);
-                navigationScreen.animate().translationYBy(3000).translationXBy(3000).setDuration(450);
-                final FragmentTransaction openTheBrowser = getSupportFragmentManager().beginTransaction();
-                final NavigationActivity navigationActivity = new NavigationActivity();
+                navigationScreen.animate().translationYBy(3000)
+                        .translationXBy(3000).setDuration(450);
+                final FragmentTransaction openTheBrowser =
+                        getSupportFragmentManager().beginTransaction();
+                final menu_NavigationActivity navigationActivity = new menu_NavigationActivity();
                 openTheBrowser.add(R.id.navigationScreen, navigationActivity);
                 openTheBrowser.commit();
                 openNav.setClickable(false);
@@ -53,37 +59,27 @@ public class MainActivity extends AppCompatActivity {
                 new ViewPagerAdapter(getSupportFragmentManager(),
                 3,
                 3));
-        viewPager.setPageTransformer(true, new ParallaxTransformer());
     }
 
-    public void navToSection1(View view) {
-        Intent intent = new Intent(this, WorkplaceSafetyActivity.class);
-        startActivity(intent);
+    public void launchOccupationalHealthAndSafety(View view) {
+        startActivity(new Intent(this,
+                old_OccupationalHealthAndSafetyActivity.class));
     }
 
-    public void navToSection2(View view) {
-        Intent intent = new Intent(this, OccupationalHealthAndSafetyActivity.class);
-        startActivity(intent);
+    public void launchEmploymentStandards(View view) {
+        startActivity(new Intent(this, old_EmploymentStandardsActivity.class));
     }
 
-    public void navToSection3(View view) {
-        Intent intent = new Intent(this, HumanRightsActivity.class);
-        startActivity(intent);
+    public void launchHumanRights(View view) {
+        startActivity(new Intent(this, old_HumanRightsActivity.class));
     }
 
-    public void navToSection4(View view) {
-        Intent intent = new Intent(this, EmploymentStandardsActivity.class);
-        startActivity(intent);
+    public void launchFunders(View view) {
+        startActivity(new Intent(this, subsection_Resources_FundersActivity.class));
     }
 
-    public void navToSection5(View view) {
-        Intent intent = new Intent(this, NavigatingTheSystemActivity.class);
-        startActivity(intent);
+    public void launchDisclaimers(View view) {
+        startActivity(new Intent(this,
+                subsection_Resources_DisclaimerActivity.class));
     }
-
-    public void navToSection6(View view) {
-        Intent intent = new Intent(this, ResourcesActivity.class);
-        startActivity(intent);
-    }
-
 }
