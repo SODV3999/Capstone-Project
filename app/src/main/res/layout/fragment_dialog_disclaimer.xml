@@ -18,7 +18,7 @@
                 android:id="@+id/txt_header"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#808000"
+                android:background="#18a375"
                 android:gravity="center"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"

@@ -6,7 +6,8 @@
     android:background="@drawable/bottom_sheet_background"
     app:layout_behavior="@string/bottom_sheet_behavior"
     app:behavior_peekHeight="?actionBarSize"
-    style="@style/CoordinatorLayout">
+    style="@style/CoordinatorLayout"
+    tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/slider"
@@ -63,16 +64,15 @@
           android:layout_height="wrap_content"
          >
 
-
-
-
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="#ffffff"
             android:textColor="@color/colorPrimary"
-            android:text="Case Study 1" />
+            android:text="Case Study 1"
+            android:onClick="launchCaseStudy1"/>
+
           <TextView
               android:layout_width="match_parent"
               android:layout_height="20dp"
@@ -91,16 +91,15 @@
             android:layout_height="wrap_content"
             >
 
-
-
-
             <Button
                 android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:textColor="@color/colorPrimary"
                 android:background="#ffffff"
-                android:text="Case Study 2" />
+                android:text="Case Study 2"
+                android:onClick="launchCaseStudy2"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -111,7 +110,6 @@
 
         </RelativeLayout>
 
-
         <RelativeLayout
             android:id="@+id/lay3"
             android:layout_marginTop="30dp"
@@ -119,16 +117,15 @@
             android:layout_height="wrap_content"
             >
 
-
-
-
             <Button
                 android:id="@+id/button3"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="#ffffff"
                 android:textColor="@color/colorPrimary"
-                android:text="Case Study 3" />
+                android:text="Case Study 3"
+                android:onClick="launchCaseStudy3"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"

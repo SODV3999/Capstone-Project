@@ -1,34 +1,30 @@
 package com.javagroup.javacapstoneapp;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.FragmentTransaction;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
+import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+public class CaseStudy3 extends AppCompatActivity {
 
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+    private ConstraintLayout browserContainer;
 
-
-public class CaseStudy3 extends BottomSheetDialogFragment {
-
-
-    RelativeLayout mlay1, mlay2,mlay3;
-    LinearLayout mll1,mll2,mll3;
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
-        View fyv_view = inflater.inflate(R.layout.casestudy3, null, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.casestudy3);
 
 
+        Intent intent = getIntent();
 
-        return fyv_view;
+
     }
+
+
+
+
 }

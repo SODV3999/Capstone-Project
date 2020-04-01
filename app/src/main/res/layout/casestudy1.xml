@@ -42,8 +42,6 @@
             >
 
 
-
-
             <Button
                 android:id="@+id/cs1button1"
                 android:layout_width="match_parent"

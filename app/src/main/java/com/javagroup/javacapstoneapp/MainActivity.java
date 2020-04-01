@@ -82,4 +82,19 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,
                 subsection_Resources_DisclaimerActivity.class));
     }
+
+    public void launchCaseStudy1(View view) {
+        startActivity(new Intent(this,
+               CaseStudy1.class));
+    }
+
+    public void launchCaseStudy2(View view) {
+        startActivity(new Intent(this,
+                CaseStudy2.class));
+    }
+
+    public void launchCaseStudy3(View view) {
+        startActivity(new Intent(this,
+                CaseStudy3.class));
+    }
 }
