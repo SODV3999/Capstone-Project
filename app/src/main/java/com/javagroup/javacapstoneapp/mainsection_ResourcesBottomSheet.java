@@ -13,7 +13,9 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 public class mainsection_ResourcesBottomSheet extends BottomSheetDialogFragment {
   @Nullable
   @Override
-  public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+  public View onCreateView(@NonNull LayoutInflater inflater,
+                           @Nullable ViewGroup container,
+                           @Nullable Bundle savedInstanceState) {
     super.onCreateView(inflater, container, savedInstanceState);
 
     return inflater.inflate(

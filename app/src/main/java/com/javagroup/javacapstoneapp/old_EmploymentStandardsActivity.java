@@ -10,7 +10,8 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class old_EmploymentStandardsActivity extends AppCompatActivity implements View.OnClickListener {
+public class old_EmploymentStandardsActivity extends AppCompatActivity
+        implements View.OnClickListener {
 
     private WebView browser;
     private Button closeBrowser, goBack, goForward;

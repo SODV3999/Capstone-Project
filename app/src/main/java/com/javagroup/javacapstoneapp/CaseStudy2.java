@@ -21,7 +21,9 @@ public class CaseStudy2 extends BottomSheetDialogFragment {
     LinearLayout mll1,mll2,mll3;
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View fyv_view = inflater.inflate(R.layout.casestudy2, null, false);
 
