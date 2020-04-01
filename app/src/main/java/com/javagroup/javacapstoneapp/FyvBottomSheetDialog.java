@@ -17,13 +17,17 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 public class FyvBottomSheetDialog extends BottomSheetDialogFragment {
 
 
-    RelativeLayout mlay1, mlay2,mlay3;
+    private RelativeLayout mlay1, mlay2,mlay3;
     LinearLayout mll1,mll2,mll3;
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             @Nullable ViewGroup container, @Nullable
+                                         Bundle savedInstanceState) {
+
         super.onCreateView(inflater, container, savedInstanceState);
-        View fyv_view = inflater.inflate(R.layout.btm_sheet_finding_your_voice, null, false);
+        View fyv_view = inflater.inflate(R.layout.bottomsheet_finding_your_voice,
+                null, false);
 
 
         mlay1 = (RelativeLayout) fyv_view.findViewById(R.id.lay1);

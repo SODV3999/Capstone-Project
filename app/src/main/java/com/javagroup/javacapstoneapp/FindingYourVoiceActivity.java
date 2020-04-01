@@ -27,7 +27,7 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_finding_your_voice);
+        setContentView(R.layout.activity_mainsection_finding_your_voice);
 
         init();
         slideUpDown.setOnClickListener(new View.OnClickListener() {
@@ -67,13 +67,17 @@ public class FindingYourVoiceActivity extends AppCompatActivity {
             case MotionEvent.ACTION_UP:
                 x2 = motionEvent.getX();
                 if(x1 < x2){
-                    Intent openFirstActivity = new Intent(FindingYourVoiceActivity.this, MainActivity.class);
+                    Intent openFirstActivity = new Intent(
+                            FindingYourVoiceActivity.this,
+                            MainActivity.class);
                     startActivity(openFirstActivity);
                     overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                     finish();
                 }
                 else if (x1>x2){
-                    Intent openResourceActivity = new Intent(FindingYourVoiceActivity.this, ResourceAndDisclaimerActivity.class);
+                    Intent openResourceActivity = new Intent(
+                            FindingYourVoiceActivity.this,
+                            subsection_Resources_DisclaimerActivity.class);
                     startActivity(openResourceActivity);
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();

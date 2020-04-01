@@ -1,8 +1,6 @@
 package com.javagroup.javacapstoneapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -61,13 +59,15 @@ public class SplashScreen extends AppCompatActivity {
 
     public void showDisclaimerDialog() {
         final Dialog disclaimerDialog = new Dialog(this);
-        disclaimerDialog.setContentView(R.layout.dialog_disclaimer);
+        disclaimerDialog.setContentView(R.layout.fragment_dialog_disclaimer);
         Button btn_agree = (Button) disclaimerDialog.findViewById(R.id.btn_agree);
         ImageButton btn_close = (ImageButton) disclaimerDialog.findViewById(R.id.btn_close);
         btn_agree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openMainActivity = new Intent(SplashScreen.this, MainActivity.class);
+                Intent openMainActivity = new Intent(
+                        SplashScreen.this,
+                        MainActivity.class);
                 startActivity(openMainActivity);
                 finish();
                 disclaimerDialog.dismiss();
