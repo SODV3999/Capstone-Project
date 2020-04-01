@@ -4,6 +4,7 @@ package com.javagroup.javacapstoneapp;
   import androidx.constraintlayout.widget.ConstraintLayout;
   import androidx.fragment.app.FragmentTransaction;
 
+  import android.content.Intent;
   import android.os.Bundle;
   import android.view.View;
   import android.widget.TextView;
@@ -25,6 +26,9 @@ public class old_HumanRightsActivity extends
 
     ohsActAndCodeLink.setOnClickListener(this);
     safetyRightsLink.setOnClickListener(this);
+
+    Intent intent = getIntent();
+
 
   }
 

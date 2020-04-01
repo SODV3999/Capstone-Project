@@ -18,6 +18,9 @@
         <activity android:name=".mainsection_FindingYourVoiceActivity"/>
         <activity android:name=".mainsection_WorkplaceSafetyActivity"/>
         <activity android:name=".mainsection_ResourcesActivity"/>
+        <activity android:name=".old_EmploymentStandardsActivity"/>
+        <activity android:name=".old_HumanRightsActivity"/>
+        <activity android:name=".old_OccupationalHealthAndSafetyActivity"/>
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
