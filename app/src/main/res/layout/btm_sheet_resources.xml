@@ -53,6 +53,7 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
+                android:justificationMode="inter_word"
                 android:gravity="center|center_horizontal"
                 android:text="The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:"
                 android:textColor="#33817B"
@@ -72,15 +73,15 @@
             </TextView>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="2"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_width="351dp"
+                android:layout_height="107dp"
                 android:layout_marginStart="30dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginEnd="30dp">
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <!--            <ImageView-->
                 <!--                android:id="@+id/imageView4"-->
@@ -100,19 +101,23 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:scaleType="fitCenter"
                     android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/phone"
-                    />
+                    android:onClick="calling_one"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/call" />
+
+
 
                 <ImageButton
                     android:id="@+id/imageButton_link1"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/link"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/alberta_worker_help_center"
+                    android:onClick="goToUrl_one"
                     android:scaleType="fitCenter"
-                    android:background="@android:color/transparent"/>
+                    app:srcCompat="@drawable/link" />
             </LinearLayout>
 
             <TextView
@@ -139,11 +144,12 @@
             <ImageButton
                 android:id="@+id/imageButton_call_2"
                 android:layout_width="0dp"
+                android:onClick="calling_two"
                 android:layout_height="50dp"
                 android:layout_weight="1"
                 android:scaleType="fitCenter"
                 android:background="@android:color/transparent"
-                app:srcCompat="@drawable/phone"
+                app:srcCompat="@drawable/call"
                 />
 
             <ImageButton
@@ -151,6 +157,7 @@
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:onClick="goToUrl_two"
                 app:srcCompat="@drawable/link"
                 android:scaleType="fitCenter"
                 android:background="@android:color/transparent"/>
@@ -162,6 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
+                android:justificationMode="inter_word"
                 android:text="Services are free of charge. Provides a first point of contact for workers facing occupational health and safety issues in their workplace. Will provide support, public legal education, and referrals."
                 android:textColor="#33817B"
                 android:textSize="20dp">
@@ -170,6 +178,8 @@
 
             <Button
                 android:id="@+id/btn_funders"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/funders"
@@ -177,6 +187,8 @@
 
             </Button>
             <Button
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
                 android:id="@+id/btn_disclaimer"
                 android:onClick="launchDisclaimers"
                 android:layout_width="wrap_content"
