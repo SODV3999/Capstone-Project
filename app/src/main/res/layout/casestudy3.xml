@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:visibility="gone"
+        android:id="@+id/casestudy3">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/bg_part1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Finding Your Voice"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="lorem ipsum dolor sit amet,
+                          consectetur adipscing elit.fuse id
+                          sapien lectus.Ut malesuada euismod
+                          dolor. Nunc euismodr."
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"/>
+        <RelativeLayout
+            android:id="@+id/c31"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+
+            <Button
+                android:id="@+id/cs3button1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:textColor="@color/colorPrimary"
+                android:text="Option 1" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cs3button1"
+                android:text=""
+                android:background="@drawable/custom_bg"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/c32"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+
+            <Button
+                android:id="@+id/cs3button2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textColor="@color/colorPrimary"
+                android:background="#ffffff"
+                android:text="Option 2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cs3button2"
+                android:text=""
+                android:background="@drawable/custom_bg"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/c33"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+
+            <Button
+                android:id="@+id/cs3button3"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textColor="@color/colorPrimary"
+                android:background="#ffffff"
+                android:text="Option 3" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cs3button3"
+                android:text=""
+                android:background="@drawable/custom_bg"
+                />
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
