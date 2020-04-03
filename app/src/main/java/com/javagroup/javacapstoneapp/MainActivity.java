@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -97,4 +98,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,
                 CaseStudy3.class));
     }
+
 }

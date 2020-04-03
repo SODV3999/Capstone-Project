@@ -18,16 +18,16 @@
     <string name="web_btn_forward">&gt;</string>
 
     <!-- Nigam strings -->
-    <string name="ES">
-            <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
+    <string name="alberta_employment_standards">
+        https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules
     </string>
 
-    <string name="ES1">
-        <a href="http://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code</a>
+    <string name="alberta_act">
+        https://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code
     </string>
 
-    <string name="ES2">
-        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Regulations</a>
+    <string name="employment_standard_regulation">
+        https://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Regulations
     </string>
 
 
