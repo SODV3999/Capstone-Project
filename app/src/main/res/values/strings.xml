@@ -9,8 +9,9 @@
     <string name="section04_Name">Employment Standards</string>
     <string name="section05_Name">Navigating the System</string>
     <string name="section06_Name">Resources</string>
-
-
+    <string name="disclaimer_paragrah">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id sapien lectus. Ut malesuada euismod dolor. Nunc euismod pulvinar nisl, ut euismod justo cursus at. Integer ut faucibus elit. Mauris mauris urna, semper ut tincidunt a, accumsan et odio. Vivamus hendrerit, ante vitae malesuada maximus, eros tortor tempus nunc, nec aliquet justo nunc ac purus. Integer sollicitudin, justo sit amet laoreet accumsan, erat quam molestie odio, sed ornare sem augue id mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque feugiat viverra turpis eget tempus. Nulla ac eros facilisis, vulputate nisi eget, finibus dui. Suspendisse pretium lorem sed nisi euismod, vitae mollis nulla consectetur</string>
+    <string name="funders_paragrah_one">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id sapien lectus. Ut malesuada euismod dolor. Nunc euismod pulvinar nisl, ut euismod justo cursus at. Integer ut faucibus elit. Mauris mauris urna, semper ut tincidunt a, accumsan et odio. Vivamus hendrerit, ante vitae malesuada maximus, eros tortor tempus nunc, nec aliquet justo nunc ac purus. Integer sollicitudin, justo sit amet laoreet accumsan, erat quam molestie odio, sed ornare sem augue id mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque feugiat viverra turpis eget tempus. Nulla ac eros facilisis, vulputate nisi eget, finibus dui. Suspendisse pretium lorem sed nisi euismod, vitae mollis nulla consectetur.</string>
+    <string name="funders_paragrah_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id sapien lectus. Ut malesuada euismod dolor. Nunc euismod pulvinar nisl, ut euismod justo cursus at. Integer ut faucibus elit. Mauris mauris urna, semper ut tincidunt a, accumsan et odio. Vivamus hendrerit, ante vitae malesuada maximus, eros tortor tempus nunc, nec aliquet justo nunc ac purus. Integer sollicitudin, justo sit amet laoreet accumsan, erat quam molestie odio, sed ornare sem augue id mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque feugiat viverra turpis eget tempus. Nulla ac eros facilisis, vulputate nisi eget, finibus dui. Suspendisse pretium lorem sed nisi euismod, vitae mollis nulla consectetur.</string>
     <!-- For WEB BUTTON strings -->
     <string name="web_btn_close">x</string>
     <string name="web_btn_back">&lt;</string>
@@ -81,7 +82,7 @@ employers.</string>
     <!--Navigation String -->
     <string name="homeTxt">Home</string>
     <string name="findYourVoiceTxt">Finding your voice</string>
-    <string name="knowYourRightsTxt">Know your Rights</string>
+    <string name="WorkplaceSafetyTxt">Workplace Safety</string>
     <string name="eSTxt">Employment Standards</string>
     <string name="hRTxt">Human Rights</string>
     <string name="oHSTxt">Occupational Health and Safety</string>

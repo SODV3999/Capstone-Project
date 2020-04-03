@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btm_sheet_resources"
+android:background="@drawable/bottom_sheet_background"
+ app:layout_behavior="@string/bottom_sheet_behavior"
+ app:behavior_peekHeight="?actionBarSize"
+  style="@style/CoordinatorLayout">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/darker_gray"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:text="@string/section02_Name"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/ohs_meaning"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+    <TextView
+
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:text="@string/intro_message"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+    <TextView
+
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/ohs_link"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <TextView
+
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/toGoLink"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ohsActRegAndCodeLink" />
+   <ImageButton
+     android:id="@+id/openNav"
+  android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+           android:background="@drawable/navigation_button_container"
+            android:contentDescription="@string/not_found"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="35dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/icon_hamburger"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+ <ScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/title_OHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ohs_meaning"
+                    android:textColor="#0D7D78"
+                    android:textSize="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center|center_horizontal"
+                    android:text="@string/intro_message"
+                    android:textColor="#33817B"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/ohsActRegAndCodeLink"
+                    android:layout_width="371dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/ohs_link"
+                    android:textSize="20sp"
+                   android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/safetyRightsLink"
+                    android:layout_width="371dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/toGoLink"
+                    android:textSize="20sp"
+                    android:textStyle="bold|italic" />
+                <Button
+                    android:id="@+id/btn_workerright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Worker's Rights" />
+                <Button
+                    android:id="@+id/btn_workplacehazard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Workplace Hazard" />
+                <Button
+                    android:id="@+id/btn_casestudylink"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Workplace Hazard" />
+
+           </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
