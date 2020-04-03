@@ -19,24 +19,24 @@
 
     <!-- Nigam strings -->
     <string name="alberta_employment_standards">
-        https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules
+        https://www.alberta.ca/alberta-employment-standards-rules.aspx
     </string>
 
     <string name="alberta_act">
-        https://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code
+        https://www.qp.alberta.ca/documents/Acts/E09.pdf
     </string>
 
     <string name="employment_standard_regulation">
-        https://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Regulations
+        https://www.qp.alberta.ca/documents/Regs/1997_014.pdf
     </string>
 
 
     <!-- Sagar strings -->
-    <string name="linktosite_humanrights">
-        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act</a>
+    <string name="hr_acts">
+        http://www.qp.alberta.ca/documents/Acts/A25P5.pdf
     </string>
-    <string name="linktocomplaint_humanrights">
-        <a href="https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf">The Human Rights Complaint Process</a>
+    <string name="hr_commission">
+      https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf
     </string>
 
 
