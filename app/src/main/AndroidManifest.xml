@@ -12,21 +12,23 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".subsection_Resources_DisclaimerActivity"/>
+        <activity android:name=".employment_standards"></activity>
+        <activity android:name=".subsection_Resources_DisclaimerActivity" />
         <activity android:name=".subsection_Resources_FundersActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".mainsection_FindingYourVoiceActivity"/>
-        <activity android:name=".mainsection_WorkplaceSafetyActivity"/>
-        <activity android:name=".mainsection_ResourcesActivity"/>
-        <activity android:name=".old_EmploymentStandardsActivity"/>
-        <activity android:name=".old_HumanRightsActivity"/>
-        <activity android:name=".old_OccupationalHealthAndSafetyActivity"/>
-        <activity android:name=".CaseStudy1"/>
-        <activity android:name=".CaseStudy2"/>
-        <activity android:name=".CaseStudy3"/>
+        <activity android:name=".mainsection_FindingYourVoiceActivity" />
+        <activity android:name=".mainsection_WorkplaceSafetyActivity" />
+        <activity android:name=".mainsection_ResourcesActivity" />
+        <activity android:name=".old_EmploymentStandardsActivity" />
+        <activity android:name=".old_HumanRightsActivity" />
+        <activity android:name=".old_OccupationalHealthAndSafetyActivity" />
+        <activity android:name=".CaseStudy1" />
+        <activity android:name=".CaseStudy2" />
+        <activity android:name=".CaseStudy3" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

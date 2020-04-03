@@ -13,8 +13,8 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
     </style>
-    <string name="alberta_worker_help_center">
-        <a href="https://www.google.com/"></a>
-    </string>
+    <style name="">
+        <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">https://www.alberta.ca/alberta-employment-standards-rules.aspx</a>
+    </style>
 
 </resources>
