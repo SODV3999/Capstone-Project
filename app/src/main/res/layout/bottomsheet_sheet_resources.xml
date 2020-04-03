@@ -100,9 +100,10 @@
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
+            android:onClick="calling_one"
           android:scaleType="fitCenter"
           android:background="@android:color/transparent"
-          app:srcCompat="@drawable/phone"
+          app:srcCompat="@drawable/call"
           />
 
         <ImageButton
@@ -110,6 +111,8 @@
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
+            android:contentDescription="@string/alberta_worker_help_center"
+            android:onClick="goToUrl_one"
           app:srcCompat="@drawable/link"
           android:scaleType="fitCenter"
           android:background="@android:color/transparent"/>
@@ -139,11 +142,12 @@
         <ImageButton
           android:id="@+id/imageButton_call_2"
           android:layout_width="0dp"
+            android:onClick="calling_two"
           android:layout_height="50dp"
           android:layout_weight="1"
           android:scaleType="fitCenter"
           android:background="@android:color/transparent"
-          app:srcCompat="@drawable/phone"
+          app:srcCompat="@drawable/call"
           />
 
         <ImageButton
@@ -151,6 +155,7 @@
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
+            android:onClick="goToUrl_two"
           app:srcCompat="@drawable/link"
           android:scaleType="fitCenter"
           android:background="@android:color/transparent"/>

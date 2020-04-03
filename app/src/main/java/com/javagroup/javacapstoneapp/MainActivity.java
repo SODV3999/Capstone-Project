@@ -105,10 +105,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calling_one(View view) {
-       makePhoneCall();
-    }
+        makePhoneCall_1();
+   }
 
-    private  void makePhoneCall()
+    private  void makePhoneCall_1()
     {
 
 
@@ -120,13 +120,11 @@ public class MainActivity extends AppCompatActivity {
         {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-            String dial ="5879692301";
+            String dial ="780-486-9009";
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:"+dial));
             startActivity(intent);
         }
-
-
     }
 
     @Override
@@ -135,25 +133,45 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == REQUEST_CALL){
             if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
             {
-                makePhoneCall();
+                makePhoneCall_1();
+                makePhoneCall_2();
             }else {
                 Toast.makeText(this,"Permission DENIED", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
+    private  void makePhoneCall_2()
+    {
+
+
+        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+
+            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }else
+        {
+            // String dial ="tel:" +5879692301;
+            //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            String dial ="403-264-8100";
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:"+dial));
+            startActivity(intent);
+        }
+    }
+
     public void calling_two(View view) {
-        makePhoneCall();
+        makePhoneCall_2();
     }
 
     public void goToUrl_one(View view) {
-        String url = "http://www.google.com";
+        String url = "https://workershealthcentre.ca/";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
     public void goToUrl_two(View view) {
-        String url = "http://www.google.com";
+        String url = "http://www.helpwrc.org/our-board/";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
