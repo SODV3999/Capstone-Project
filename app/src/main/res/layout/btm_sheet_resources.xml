@@ -114,7 +114,7 @@
                     android:layout_height="50dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
-                    android:contentDescription="@string/alberta_worker_help_center"
+                    android:contentDescription="@string/alberta_act"
                     android:onClick="goToUrl_one"
                     android:scaleType="fitCenter"
                     app:srcCompat="@drawable/link" />
@@ -178,8 +178,8 @@
 
             <Button
                 android:id="@+id/btn_funders"
-              android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
+              android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/funders"
@@ -187,8 +187,8 @@
 
             </Button>
             <Button
-               android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
+               android:layout_marginRight="50dp"
+                android:layout_marginLeft="50dp"
                 android:id="@+id/btn_disclaimer"
                 android:onClick="launchDisclaimers"
                 android:layout_width="wrap_content"

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    style="@style/CoordinatorLayout"
+    android:background="@color/design_default_color_on_primary"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/navigationScreen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/background_image"
+            android:orientation="vertical"
+
+            android:translationZ="90dp">
+
+            <TextView
+                android:layout_width="224dp"
+                android:layout_height="89dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="80dp"
+                android:text="Employment Standards"
+                android:textColor="#0D7D78"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="93dp"
+                tools:layout_editor_absoluteY="57dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="192dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:justificationMode="inter_word"
+                android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters. The Employment Standards Code establishes Alberta’s minimum standards of employment in areas outside of health and safety that are relevant to the workplace."
+                android:textColor="#33817B"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="146dp">
+
+            </TextView>
+
+            <TextView
+
+                android:layout_width="340dp"
+                android:layout_height="192dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:text="These include wages, hours of work, overtime, vacation and holidays, leaves and termination of employment. It also establishes the processes in cases where employment standards have not been met, such as wrongful termination of employment Workers and employers in Alberta are subject to the Employment Standards Code and Employment Standards Regulation:"
+                android:textColor="#33817B"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="356dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:onClick="alberta_emp_standards"
+                android:text="@string/alberta_employment_standards"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/alberta_act"
+                android:onClick="alberta_act"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:text="@string/emplpyment_standard_regulation"
+                android:textColor="@android:color/holo_red_dark"
+                android:onClick="emp_standard_regulation"
+                android:textSize="20dp">
+
+            </TextView>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/case_study_link1">
+
+            </Button>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/openNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_button_container"
+        android:contentDescription="@string/not_found"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/icon_hamburger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/navigationScreen"
+        app:layout_anchorGravity="center" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
