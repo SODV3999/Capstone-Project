@@ -98,5 +98,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,
                 CaseStudy3.class));
     }
-
+    public void alberta_emp_standards(View view) {
+        String url = "https://www.alberta.ca/alberta-employment-standards-rules.aspx";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+    public void alberta_act(View view) {
+        String url = "http://www.qp.alberta.ca/documents/Acts/E09.pdf";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+    public void emp_standard_regulation(View view) {
+        String url = "http://www.qp.alberta.ca/documents/Regs/1997_014.pdf";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
 }
