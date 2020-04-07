@@ -11,17 +11,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-
-
 public class MainActivity extends AppCompatActivity {
 
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
-
-//    public void changeActivity(){
-//        Log.d("changeActivity: ", "Clicked");
-//        Intent intent = new Intent(this, Funders.class);
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
-
 
         openNav.setOnClickListener(new View.OnClickListener() {
             @Override

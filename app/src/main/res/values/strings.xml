@@ -80,16 +80,18 @@ employers.</string>
     <string name="dialog_btn_close_contentDescription">X</string>
 
     <!--Navigation String -->
-    <string name="homeTxt">Home</string>
-    <string name="findYourVoiceTxt">Finding your voice</string>
     <string name="WorkplaceSafetyTxt">Workplace Safety</string>
-    <string name="eSTxt">Employment Standards</string>
-    <string name="hRTxt">Human Rights</string>
-    <string name="oHSTxt">Occupational Health and Safety</string>
-    <string name="resourcesTxt">Resources</string>
-    <string name="fundTxt">Fund</string>
-    <string name="disclaimerTxt">Disclaimer</string>
     <string name="not_found">not found</string>
+
+    <!--Navigation Strings that are now queried from the database -->
+    <!--    <string name="homeTxt">Home</string>-->
+    <!--    <string name="findYourVoiceTxt">Finding your voice</string>-->
+    <!--    <string name="eSTxt">Employment Standards</string>-->
+    <!--    <string name="hRTxt">Human Rights</string>-->
+    <!--    <string name="oHSTxt">Occupational Health and Safety</string>-->
+    <!--    <string name="resourcesTxt">Resources</string>-->
+    <!--    <string name="fundTxt">Fund</string>-->
+    <!--    <string name="disclaimerTxt">Disclaimer</string>-->
 
 
 </resources>
