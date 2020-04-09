@@ -8,16 +8,13 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
-    private TextView workplaceSafety;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,18 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
-
-        // TODO: figure out how to set text programmatically
-        View test = getLayoutInflater()
-                .inflate(
-                    R.layout.bottomsheetsheet_workplace_safety,
-                    null,
-                    false
-                );
-        workplaceSafety = test.findViewById(R.id.title_WorkplaceSafety);
-        String s = "Hello World";
-        workplaceSafety.setText(s);
-        Log.d("testTag", "string is: " + workplaceSafety.getText());
 
         openNav.setOnClickListener(new View.OnClickListener() {
             @Override

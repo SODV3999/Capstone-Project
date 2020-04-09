@@ -38,9 +38,9 @@
             android:id="@+id/pag1">
 
         <TextView
+            android:id="@+id/btm_sheet_title_finding_your_voice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Finding Your Voice"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
