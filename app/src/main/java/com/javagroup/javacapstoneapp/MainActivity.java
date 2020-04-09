@@ -10,18 +10,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
+import java.nio.BufferUnderflowException;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
-
-//    public void changeActivity(){
-//        Log.d("changeActivity: ", "Clicked");
-//        Intent intent = new Intent(this, Funders.class);
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +52,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
         ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(
-                new ViewPagerAdapter(getSupportFragmentManager(),
-                3,
-                3));
+        viewPager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager(),3,3));
+        
+        /*by : Victor Charl*/
+        Bundle bundle = getIntent().getExtras();
+        int viewPagerPage = 0;
+        if(bundle != null){ //check if the bundle is not null and store it in viewPagerPage variable
+            viewPagerPage = bundle.getInt("position");
+        }
+        /*setting viewPagerPage
+        by default setCurrentItem == 0*/
+        viewPager.setCurrentItem(viewPagerPage);
     }
 
     public void launchOccupationalHealthAndSafety(View view) {

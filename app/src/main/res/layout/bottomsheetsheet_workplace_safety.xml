@@ -24,17 +24,16 @@
     </RelativeLayout>
 
     <TextView
-      android:id="@+id/title_WorkplaceSafety"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:layout_marginLeft="5dp"
-      android:layout_marginTop="45dp"
-      android:gravity="center_horizontal"
-      android:text="@string/WorkplaceSafetyTxt"
-      android:textColor="#0D7D78"
-      android:textSize="30dp"
-      tools:layout_editor_absoluteX="135dp" />
+        android:id="@+id/title_WorkplaceSafety"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/WorkplaceSafetyTxt"
+        android:textColor="#0D7D78"
+        android:textSize="30dp"
+        tools:layout_editor_absoluteX="135dp" />
 
     <TextView
       android:id="@+id/content_WorkplaceSafety"

@@ -7,6 +7,8 @@
    android:background="#aff6e9"
     tools:context=".SplashScreen">
 
+    <!--Splash Screen by : Victor Charl Corpuz-->
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"

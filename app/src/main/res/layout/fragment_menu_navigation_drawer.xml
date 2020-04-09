@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     <!--
+        Navigation Drawer by : Victor Charl Corpuz
         NOTE: For now it is only suitable for Pixel 3XL device.
         TODO: Make the navigation responsive to all devices
     -->
@@ -13,6 +14,7 @@
         android:id="@+id/navigationScreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layoutMode="clipBounds"
         android:background="@drawable/navigation_button_container"
         android:clickable="true"
         android:focusable="true"

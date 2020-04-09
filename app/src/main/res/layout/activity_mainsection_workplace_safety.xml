@@ -9,7 +9,23 @@
     android:background="@drawable/bg_know_your_rights"
     tools:context=".mainsection_WorkplaceSafetyActivity">
 
-<include layout="@layout/bottomsheetsheet_workplace_safety"/>
+    <ImageButton
+        android:id="@+id/openNav4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_button_container"
+        android:contentDescription="@string/not_found"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/icon_hamburger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include layout="@layout/bottomsheetsheet_workplace_safety"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

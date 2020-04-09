@@ -8,13 +8,6 @@
     style="@style/CoordinatorLayout">
 
 
-
     <include layout="@layout/bottomsheet_finding_your_voice" />
-
-
-
-
-
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
