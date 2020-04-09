@@ -80,21 +80,19 @@ public class menu_NavigationActivity extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
-                String homeTxt = dataSnapshot.child("homeTxt").getValue().toString();
+                String homeTxt = dataSnapshot.child("homeTxt").getValue(String.class);
                 String findYourVoiceTxt = dataSnapshot
                                                 .child("findYourVoiceTxt")
-                                                .getValue()
-                                                .toString();
+                                                .getValue(String.class);
                 String knowYourRightsTxt = dataSnapshot
                                                 .child("WorkplaceSafetyTxt")
-                                                .getValue()
-                                                .toString();
-                String eSTxt = dataSnapshot.child("eSTxt").getValue().toString();
-                String hRTxt = dataSnapshot.child("hRTxt").getValue().toString();
-                String oHSTxt = dataSnapshot.child("oHSTxt").getValue().toString();
-                String resourcesTxt = dataSnapshot.child("resourcesTxt").getValue().toString();
-                String fundTxt = dataSnapshot.child("fundTxt").getValue().toString();
-                String disclaimerTxt = dataSnapshot.child("disclaimerTxt").getValue().toString();
+                                                .getValue(String.class);
+                String eSTxt = dataSnapshot.child("eSTxt").getValue(String.class);
+                String hRTxt = dataSnapshot.child("hRTxt").getValue(String.class);
+                String oHSTxt = dataSnapshot.child("oHSTxt").getValue(String.class);
+                String resourcesTxt = dataSnapshot.child("resourcesTxt").getValue(String.class);
+                String fundTxt = dataSnapshot.child("fundTxt").getValue(String.class);
+                String disclaimerTxt = dataSnapshot.child("disclaimerTxt").getValue(String.class);
 
                 home.setText(homeTxt);
                 findingYourVoice.setText(findYourVoiceTxt);
