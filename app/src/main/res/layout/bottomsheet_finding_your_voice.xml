@@ -48,13 +48,10 @@
             android:textColor="@color/colorPrimary"/>
 
             <TextView
+                android:id="@+id/content_find_your_voice"
                 android:layout_width="match_parent"
                 android:layout_height="107dp"
                 android:layout_marginTop="40dp"
-                android:text="lorem ipsum dolor sit amet,
-                          consectetur adipscing elit.fuse id
-  sapien lectus.Ut malesuada euismod
-                          dolor. Nunc euismodr."
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
       <RelativeLayout
@@ -65,18 +62,17 @@
          >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btn_one_find_your_voice"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:background="#ffffff"
             android:textColor="@color/colorPrimary"
-            android:text="Case Study 1"
             android:onClick="launchCaseStudy1"/>
 
           <TextView
               android:layout_width="match_parent"
               android:layout_height="20dp"
-              android:layout_below="@+id/button1"
+              android:layout_below="@+id/btn_one_find_your_voice"
               android:text=""
               android:background="@drawable/custom_bg"
               />
@@ -92,18 +88,17 @@
             >
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btn_two_find_your_voice"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:textColor="@color/colorPrimary"
                 android:background="#ffffff"
-                android:text="Case Study 2"
                 android:onClick="launchCaseStudy2"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_below="@+id/button2"
+                android:layout_below="@+id/btn_two_find_your_voice"
                 android:text=""
                 android:background="@drawable/custom_bg"
                 />
@@ -118,18 +113,17 @@
             >
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btn_three_find_your_voice"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="#ffffff"
                 android:textColor="@color/colorPrimary"
-                android:text="Case Study 3"
                 android:onClick="launchCaseStudy3"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:layout_below="@+id/button3"
+                android:layout_below="@+id/btn_three_find_your_voice"
                 android:text=""
                 android:background="@drawable/custom_bg"
                 />

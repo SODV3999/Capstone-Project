@@ -53,7 +53,6 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
         android:gravity="center|center_horizontal"
-        android:text="The Alberta Worker’s Health Centre and Calgary Workers Resource Centre provide free of charge help for people who have issues with health and safety and worker rights:"
         android:textColor="#33817B"
         android:textSize="20dp" />
 
@@ -64,7 +63,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
-        android:text="Alberta Worker's Help Center"
         android:textColor="#0D7D78"
         android:textSize="25dp">
 
@@ -115,11 +113,11 @@
       </LinearLayout>
 
       <TextView
+        android:id="@+id/title_calgary_workers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
-        android:text="Calgary Worker's Resource Cente"
         android:textColor="#0D7D78"
         android:textSize="25dp"
         >
@@ -157,11 +155,11 @@
       </LinearLayout>
 
       <TextView
+        android:id="@+id/content_resources_continuation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:text="Services are free of charge. Provides a first point of contact for workers facing occupational health and safety issues in their workplace. Will provide support, public legal education, and referrals."
         android:textColor="#33817B"
         android:textSize="20dp">
 
