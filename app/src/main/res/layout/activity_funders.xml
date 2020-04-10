@@ -33,7 +33,7 @@
 
 
         <TextView
-            android:id="@+id/textView_paragraph_funders"
+            android:id="@+id/funders_content_one"
             android:layout_width="314dp"
             android:layout_height="0dp"
             android:layout_marginStart="30dp"
@@ -41,10 +41,9 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="30dp"
-            android:text="@string/funders_paragrah_one"
             android:textColor="#33817B"
             android:textSize="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
+            app:layout_constraintBottom_toTopOf="@+id/funders_content_two"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.509"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,18 +53,17 @@
         </TextView>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/funders_content_two"
             android:layout_width="297dp"
             android:layout_height="0dp"
             android:layout_marginEnd="45dp"
             android:layout_marginRight="45dp"
             android:layout_marginBottom="210dp"
-            android:text="@string/funders_paragrah_two"
             android:textColor="#33817B"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_paragraph_funders">
+            app:layout_constraintTop_toBottomOf="@+id/funders_content_one">
 
         </TextView>
 
