@@ -52,6 +52,9 @@ public class MainFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(mainResource, container, false);
 
+        // check if returned views are not null
+        // then retrieve strings from db and
+        // assign it to the  text views
         if (view.findViewById(R.id.main_section_workplace_safety) != null) {
             getStringsForWorkplaceSafety();
         } else if (view.findViewById(R.id.main_btm_sheet_finding_your_voice) != null) {
