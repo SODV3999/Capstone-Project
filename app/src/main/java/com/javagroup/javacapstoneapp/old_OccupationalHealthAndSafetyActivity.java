@@ -1,5 +1,6 @@
 package com.javagroup.javacapstoneapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
@@ -9,15 +10,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
+
 public class old_OccupationalHealthAndSafetyActivity extends
         AppCompatActivity implements View.OnClickListener {
 
     private ConstraintLayout browserContainer;
+    private TextView ohsIntro;
+    private DatabaseReference ref = FirebaseOperations.strings();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.old_activity_ohs);
+
+        ohsIntro = findViewById(R.id.ohs_intro);
+        getOhsIntroString();
 
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
@@ -30,6 +41,21 @@ public class old_OccupationalHealthAndSafetyActivity extends
         Intent intent = getIntent();
 
 
+    }
+
+    private void getOhsIntroString() {
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String introduction = dataSnapshot.child("ohsIntro").getValue(String.class);
+                ohsIntro.setText(introduction);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     private void openingLink(String url){
