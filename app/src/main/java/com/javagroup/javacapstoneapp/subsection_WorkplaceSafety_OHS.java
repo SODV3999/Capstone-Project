@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class old_OccupationalHealthAndSafetyActivity extends
+public class subsection_WorkplaceSafety_OHS extends
         AppCompatActivity implements View.OnClickListener {
 
     private static final int NUM_PAGES = 4;
@@ -28,7 +28,7 @@ public class old_OccupationalHealthAndSafetyActivity extends
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.old_activity_ohs);
+        setContentView(R.layout.activity_subsection_workplacesafety_ohs);
 
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);

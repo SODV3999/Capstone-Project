@@ -7,7 +7,7 @@
     android:background="@drawable/bottom_sheet_background"
     app:behavior_peekHeight="?actionBarSize"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    tools:context=".old_OccupationalHealthAndSafetyActivity">
+    tools:context=".subsection_WorkplaceSafety_OHS">
     <ImageButton
         android:id="@+id/openNav"
         android:layout_width="wrap_content"

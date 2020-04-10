@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchOccupationalHealthAndSafety(View view) {
         startActivity(new Intent(this,
-                old_OccupationalHealthAndSafetyActivity.class));
+                subsection_WorkplaceSafety_OHS.class));
     }
 
     public void launchEmploymentStandards(View view) {
