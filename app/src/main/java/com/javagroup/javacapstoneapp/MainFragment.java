@@ -20,7 +20,7 @@ public class MainFragment extends Fragment {
     int mainResource;
     private View view;
     private static final String TAG = "MainFragment";
-    private DatabaseReference ref = FirebaseOperations.strings();
+    private DatabaseReference stringsRef = FirebaseOperations.strings();
 
     private TextView workplaceSafety, workPlaceSafetyIntro;
     private TextView findYourVoice,
@@ -63,7 +63,7 @@ public class MainFragment extends Fragment {
     }
 
     private void getStringsForWorkplaceSafety() {
-        ref.addValueEventListener(new ValueEventListener() {
+        stringsRef.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -87,7 +87,7 @@ public class MainFragment extends Fragment {
     }
 
     private void getStringsForFindingYourVoice() {
-        ref.addValueEventListener(new ValueEventListener() {
+        stringsRef.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -125,7 +125,7 @@ public class MainFragment extends Fragment {
     }
 
     private void getStringsForResources() {
-        ref.addValueEventListener(new ValueEventListener() {
+        stringsRef.addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

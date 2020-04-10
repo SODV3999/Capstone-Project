@@ -22,6 +22,7 @@ public class menu_NavigationActivity extends Fragment {
 
     private ConstraintLayout navigationScreen;
     private static final String TAG = "NavigationActivity";
+    private DatabaseReference stringsRef = FirebaseOperations.strings();
     private TextView home,
             findingYourVoice,
             knowYourRights,
@@ -70,10 +71,8 @@ public class menu_NavigationActivity extends Fragment {
         funder = showNav.findViewById(R.id.btn_fund);
         disclaimer = showNav.findViewById(R.id.btn_disclaimer);
 
-
-        DatabaseReference ref = FirebaseOperations.strings();
         // Read from the database
-        ref.addValueEventListener(new ValueEventListener() {
+        stringsRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
