@@ -5,21 +5,57 @@
     android:id="@+id/btm_sheet_finding_your_voice"
     android:background="@drawable/bottom_sheet_background"
     app:layout_behavior="@string/bottom_sheet_behavior"
-    app:behavior_peekHeight="300sp"
+    app:behavior_peekHeight="200sp"
     style="@style/CoordinatorLayout"
     tools:context=".MainActivity">
 
     <RelativeLayout
         android:id="@+id/slider"
         android:layout_width="match_parent"
-        android:layout_height="20dp">
+        android:layout_height="200sp">
 
-        <ImageView
-            android:id="@+id/slideUpDownFindingYourVoice"
-            android:layout_width="70dp"
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:background="@drawable/slide_up_down" />
+            app:cardCornerRadius="35dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/header_hdpi"
+                android:background="#FF0A7F91"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                />
+            <ImageView
+                android:id="@+id/slideUpDownWorkPlaceSafety"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/slide_up_down"
+                android:contentDescription="TopImage" />
+
+            <TextView
+                android:id="@+id/title_WorkplaceSafety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_horizontal"
+                android:text="@string/finding_your_voice_txt"
+                android:textColor="#0D7D78"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="135dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
 
     </RelativeLayout>
 
@@ -37,15 +73,6 @@
             android:padding="0dp"
             android:id="@+id/pag1">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Finding Your Voice"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimary"/>
 
             <TextView
                 android:layout_width="match_parent"
