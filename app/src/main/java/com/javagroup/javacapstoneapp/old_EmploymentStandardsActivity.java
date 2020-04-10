@@ -1,22 +1,31 @@
 package com.javagroup.javacapstoneapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
+
 public class old_EmploymentStandardsActivity extends AppCompatActivity
         implements View.OnClickListener {
 
-    private WebView browser;
-    private Button closeBrowser, goBack, goForward;
-    private TextView clickedLink;
+    private static final String TAG = "esActivity";
+    private DatabaseReference stringsRef = FirebaseOperations.strings();
+    private TextView employmentStandardsIntro, employmentStandardsDescription;
 
     private ConstraintLayout browserContainer;
 
@@ -29,6 +38,9 @@ public class old_EmploymentStandardsActivity extends AppCompatActivity
         TextView employmentCodeLink = (TextView) findViewById(R.id.employmentcode);
         TextView employmentRegulationsLink = (TextView) findViewById(R.id.EmploymentRegulations);
 
+        employmentStandardsIntro = findViewById(R.id.es_intro);
+        employmentStandardsDescription = findViewById(R.id.es_description);
+        getEmploymentStandardsStrings();
         browserContainer = (ConstraintLayout)findViewById(R.id.browserContainer);
 
         humanRightsActLink.setOnClickListener(this);
@@ -37,6 +49,28 @@ public class old_EmploymentStandardsActivity extends AppCompatActivity
 
         Intent intent = getIntent();
 
+    }
+
+    private void getEmploymentStandardsStrings() {
+        stringsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String introduction = dataSnapshot
+                                            .child("employmentStandardsIntro")
+                                            .getValue(String.class);
+                String description = dataSnapshot
+                                            .child("employmentStandardsDescription")
+                                            .getValue(String.class);
+
+                employmentStandardsIntro.setText(introduction);
+                employmentStandardsDescription.setText(description);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
     }
 
     private void openingPdf(String pdf){
