@@ -75,12 +75,10 @@ employers.</string>
     <string name="logo_contentDescription">finding your voice knowing your rights logo</string>
     <string name="dialog_header">Welcome!</string>
     <string name="dialog_subHeader">Disclaimer:</string>
-    <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>
     <string name="dialog_btn_agree">I Agree!</string>
     <string name="dialog_btn_close_contentDescription">X</string>
 
     <!--Navigation String -->
-    <string name="WorkplaceSafetyTxt">Workplace Safety</string>
     <string name="not_found">not found</string>
 
     <!--Navigation Strings that are now queried from the database -->
@@ -92,6 +90,9 @@ employers.</string>
     <!--    <string name="resourcesTxt">Resources</string>-->
     <!--    <string name="fundTxt">Fund</string>-->
     <!--    <string name="disclaimerTxt">Disclaimer</string>-->
+    <!--    <string name="WorkplaceSafetyTxt">Workplace Safety</string>-->
+    <!--    <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>-->
+
 
 
 </resources>
