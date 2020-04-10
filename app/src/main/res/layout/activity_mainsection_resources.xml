@@ -8,6 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main_btm_sheet_resources"
     android:background="@drawable/bg_third"
     tools:context=".mainsection_ResourcesActivity">
 

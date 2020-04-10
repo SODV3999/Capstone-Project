@@ -38,14 +38,13 @@
                 android:contentDescription="TopImage" />
 
             <TextView
-                android:id="@+id/title_WorkplaceSafety"
+                android:id="@+id/btm_sheet_title_finding_your_voice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
-                android:text="@string/finding_your_voice_txt"
                 android:textColor="#0D7D78"
                 android:textSize="30dp"
                 android:textStyle="bold"
