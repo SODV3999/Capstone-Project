@@ -10,10 +10,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 
 public class MainActivity extends AppCompatActivity {
+
+
+
 
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
@@ -30,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
+
+
 
 
         openNav.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +67,13 @@ public class MainActivity extends AppCompatActivity {
                 new ViewPagerAdapter(getSupportFragmentManager(),
                 3,
                 3));
+//
+//
     }
+
+
+
+
 
     public void launchOccupationalHealthAndSafety(View view) {
         startActivity(new Intent(this,
@@ -97,4 +111,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,
                 CaseStudy3.class));
     }
+
+
+
 }

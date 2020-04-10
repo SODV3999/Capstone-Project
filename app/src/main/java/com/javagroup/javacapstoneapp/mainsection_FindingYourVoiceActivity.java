@@ -34,7 +34,7 @@ public class mainsection_FindingYourVoiceActivity extends AppCompatActivity {
     private void init() {
         this.fyvLinearLayout = findViewById(R.id.btm_sheet_finding_your_voice);
         this.bsbFindingYourVoice = BottomSheetBehavior.from(fyvLinearLayout);
-        this.slideUpDown = findViewById(R.id.slideUpDown);
+        this.slideUpDown = findViewById(R.id.slideUpDownFindingYourVoice);
         mainsectionFindingYourVoiceBottomSheet = new mainsection_FindingYourVoiceBottomSheet();
 
     }

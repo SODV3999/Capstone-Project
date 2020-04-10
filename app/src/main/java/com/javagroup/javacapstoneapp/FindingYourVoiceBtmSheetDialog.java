@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 
-public class FyvBottomSheetDialog extends BottomSheetDialogFragment {
+public class FindingYourVoiceBtmSheetDialog extends BottomSheetDialogFragment {
 
 
     private RelativeLayout mlay1, mlay2,mlay3;

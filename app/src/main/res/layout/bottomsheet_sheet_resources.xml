@@ -5,7 +5,7 @@
   android:id="@+id/btm_sheet_resources"
   android:background="@drawable/bottom_sheet_background"
   app:layout_behavior="@string/bottom_sheet_behavior"
-  app:behavior_peekHeight="?actionBarSize"
+  app:behavior_peekHeight="300sp"
   style="@style/CoordinatorLayout">
 
   <RelativeLayout
@@ -14,7 +14,7 @@
     android:layout_height="20dp">
 
     <ImageView
-      android:id="@+id/slideUpDown"
+      android:id="@+id/slideUpDownResources"
       android:layout_width="70dp"
       android:layout_height="match_parent"
       android:layout_centerInParent="true"

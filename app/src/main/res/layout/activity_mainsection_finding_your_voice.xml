@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintLayout"
-    android:background="@drawable/bg_finding_your_voice"
+    android:background="@drawable/bg_second"
     tools:context=".MainActivity"
     style="@style/CoordinatorLayout">
 

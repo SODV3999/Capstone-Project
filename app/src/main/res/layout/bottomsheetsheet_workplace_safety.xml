@@ -2,39 +2,66 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/btm_sheet_resources"
+  android:id="@+id/btm_sheet_workplace_safety"
   android:background="@drawable/bottom_sheet_background"
   app:layout_behavior="@string/bottom_sheet_behavior"
-  app:behavior_peekHeight="?actionBarSize"
+  app:behavior_peekHeight="200sp"
   style="@style/CoordinatorLayout"
-    tools:context=".MainActivity">
+  >
 
     <RelativeLayout
       android:id="@+id/slider"
       android:layout_width="match_parent"
-      android:layout_height="20dp">
+      android:layout_height="200sp">
+        
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="35dp"
+            android:layout_marginBottom="30dp">
 
-        <ImageView
-          android:id="@+id/slideUpDown"
-          android:layout_width="70dp"
-          android:layout_height="match_parent"
-          android:layout_centerInParent="true"
-          android:background="@drawable/slide_up_down" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/header_hdpi"
+                android:background="#FF0A7F91"
+                android:paddingTop="1dp"
+
+                />
+            <ImageView
+                android:id="@+id/slideUpDownWorkPlaceSafety"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/slide_up_down"
+                android:contentDescription="TopImage" />
+
+            <TextView
+                android:id="@+id/title_WorkplaceSafety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="@string/WorkplaceSafetyTxt"
+                android:textColor="#0D7D78"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="135dp"
+                android:fontFamily="Nunito"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
 
     </RelativeLayout>
 
-    <TextView
-      android:id="@+id/title_WorkplaceSafety"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:layout_marginLeft="5dp"
-      android:layout_marginTop="45dp"
-      android:gravity="center_horizontal"
-      android:text="@string/WorkplaceSafetyTxt"
-      android:textColor="#0D7D78"
-      android:textSize="30dp"
-      tools:layout_editor_absoluteX="135dp" />
+
 
     <TextView
       android:id="@+id/content_WorkplaceSafety"
