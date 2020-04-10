@@ -6,6 +6,7 @@
   android:background="@drawable/bottom_sheet_background"
   app:layout_behavior="@string/bottom_sheet_behavior"
   app:behavior_peekHeight="200sp"
+    app:behavior_hideable="true"
     android:layout_height="700sp"
   style="@style/CoordinatorLayout">
 

@@ -7,8 +7,8 @@
     app:layout_behavior="@string/bottom_sheet_behavior"
     app:behavior_peekHeight="200sp"
     android:layout_height="700sp"
-    style="@style/CoordinatorLayout"
-    tools:context=".MainActivity">
+    app:behavior_hideable="true"
+    style="@style/CoordinatorLayout">
 
     <RelativeLayout
         android:id="@+id/slider"
