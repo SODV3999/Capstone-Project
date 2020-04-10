@@ -20,7 +20,7 @@ public class MainFragment extends Fragment {
     int mainResource;
     private View view;
     private static final String TAG = "MainFragment";
-    private DatabaseReference ref = FirebaseOperations.navigation();
+    private DatabaseReference ref = FirebaseOperations.strings();
 
     private TextView workplaceSafety, workPlaceSafetyIntro;
     private TextView findYourVoice,

@@ -5,9 +5,9 @@ import com.google.firebase.database.FirebaseDatabase;
 
 class FirebaseOperations {
 
-    static DatabaseReference navigation() {
+    static DatabaseReference strings() {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("navigation");
+        DatabaseReference myRef = database.getReference("strings");
         myRef.keepSynced(true);
 
         return myRef;

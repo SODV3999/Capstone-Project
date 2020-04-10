@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,7 +16,6 @@ import androidx.fragment.app.Fragment;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class menu_NavigationActivity extends Fragment {
@@ -73,7 +71,7 @@ public class menu_NavigationActivity extends Fragment {
         disclaimer = showNav.findViewById(R.id.btn_disclaimer);
 
 
-        DatabaseReference ref = FirebaseOperations.navigation();
+        DatabaseReference ref = FirebaseOperations.strings();
         // Read from the database
         ref.addValueEventListener(new ValueEventListener() {
             @Override
