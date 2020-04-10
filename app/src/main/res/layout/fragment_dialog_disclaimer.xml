@@ -56,7 +56,6 @@
                 android:layout_marginEnd="20dp"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:text="@string/dialog_context"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/txt_header"

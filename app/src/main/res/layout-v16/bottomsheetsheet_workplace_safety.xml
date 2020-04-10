@@ -65,7 +65,6 @@
     </RelativeLayout>
 
 
-
     <TextView
       android:id="@+id/content_WorkplaceSafety"
       android:layout_width="325dp"
@@ -75,7 +74,6 @@
       android:layout_marginRight="30dp"
       android:gravity="center|center_horizontal"
       android:layout_gravity="center"
-      android:text="A safe workplace takes your physical, mental, and emotional safety into consideration. Your safety at work is protected by 3 pieces of legislation:"
       android:textColor="#33817B"
       android:textSize="20dp"
       app:layout_constraintEnd_toEndOf="parent"

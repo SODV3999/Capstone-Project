@@ -13,21 +13,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
-
-//    public void changeActivity(){
-//        Log.d("changeActivity: ", "Clicked");
-//        Intent intent = new Intent(this, Funders.class);
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
-
-
 
 
         openNav.setOnClickListener(new View.OnClickListener() {
@@ -70,8 +60,6 @@ public class MainActivity extends AppCompatActivity {
 //
 //
     }
-
-
 
 
 
