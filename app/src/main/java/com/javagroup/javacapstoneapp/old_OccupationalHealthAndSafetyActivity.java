@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,9 +19,10 @@ import com.google.firebase.database.ValueEventListener;
 public class old_OccupationalHealthAndSafetyActivity extends
         AppCompatActivity implements View.OnClickListener {
 
+    private static final String TAG = "ohsActivity";
     private ConstraintLayout browserContainer;
     private TextView ohsIntro;
-    private DatabaseReference ref = FirebaseOperations.strings();
+    private DatabaseReference myStringRef = FirebaseOperations.strings();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class old_OccupationalHealthAndSafetyActivity extends
         setContentView(R.layout.old_activity_ohs);
 
         ohsIntro = findViewById(R.id.ohs_intro);
-        getOhsIntroString();
+        getOhsStrings();
 
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
@@ -43,8 +45,8 @@ public class old_OccupationalHealthAndSafetyActivity extends
 
     }
 
-    private void getOhsIntroString() {
-        ref.addValueEventListener(new ValueEventListener() {
+    private void getOhsStrings() {
+        myStringRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String introduction = dataSnapshot.child("ohsIntro").getValue(String.class);
@@ -53,7 +55,7 @@ public class old_OccupationalHealthAndSafetyActivity extends
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
             }
         });
     }
