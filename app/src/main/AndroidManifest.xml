@@ -13,8 +13,6 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".FirebaseOperations"/>
-        <activity android:name=".FirebaseHandler"/>
         <activity android:name=".MainFragment"/>
         <activity android:name=".subsection_Resources_DisclaimerActivity"/>
         <activity android:name=".subsection_Resources_FundersActivity" />
