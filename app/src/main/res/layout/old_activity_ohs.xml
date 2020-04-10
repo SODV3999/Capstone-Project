@@ -116,6 +116,7 @@
                         android:id="@+id/extxtview1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="20dp"
                         android:text="In Alberta, workers have 4 basic rightsthat relate to health safety">
 
                     </TextView>
@@ -124,35 +125,13 @@
                         android:id="@+id/viewpagerOHS"
                         android:layout_below="@id/extxtview1"
 
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                    <TextView
-                        android:id="@+id/OHS_swipe2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:visibility="invisible"
-                        android:text="swipe1">
-                    </TextView>
-                    <TextView
-                        android:id="@+id/OHS_swipe3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:visibility="invisible"
-                        android:text="swipe1">
-                    </TextView>
-                    <TextView
-                        android:id="@+id/OHS_swipe4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:visibility="invisible"
-                        android:text="swipe1">
-                    </TextView>
+                        android:layout_height="300dp"/>
 
                     <TextView
                         android:id="@+id/extxtview2"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="50dp"
                         android:layout_below="@id/viewpagerOHS"
                         android:text="sample">
                     </TextView>

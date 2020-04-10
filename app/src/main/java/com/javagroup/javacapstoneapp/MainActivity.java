@@ -11,8 +11,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-
-
 public class MainActivity extends AppCompatActivity {
 
     private ConstraintLayout navigationScreen;
@@ -30,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
 
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
-
 
         openNav.setOnClickListener(new View.OnClickListener() {
             @Override

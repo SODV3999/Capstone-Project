@@ -1,14 +1,8 @@
 package com.javagroup.javacapstoneapp;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
@@ -24,9 +18,8 @@ public class old_OccupationalHealthAndSafetyActivity extends
         AppCompatActivity implements View.OnClickListener {
 
     private static final int NUM_PAGES = 4;
-    private ViewPager2 viewPager;
-    private FragmentStateAdapter pagerAdapter;
-
+    public ViewPager viewPager;
+    public SwipeOHSCollectionAdapter adapter;
     RelativeLayout relativeLayout;
     Button Viewmore1;
     int height;
@@ -63,43 +56,11 @@ public class old_OccupationalHealthAndSafetyActivity extends
         safetyRightsLink.setOnClickListener(this);
         Intent intent = getIntent();
 
-        // Instantiate a ViewPager2 and a PagerAdapter.
-        viewPager = findViewById(R.id.view_pager);
-        pagerAdapter = new ScreenSlidePagerAdapter(this);
-        viewPager.setAdapter(pagerAdapter);
+        // for swipe in OHS
+        viewPager=findViewById(R.id.viewpagerOHS);
+        adapter=new SwipeOHSCollectionAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
 
-//        // for swipe to left and right in OHS - twinkle
-        ViewPager viewPager = findViewById(R.id.viewpagerOHS);
-        viewPager.setAdapter(
-                new ViewPagerAdapter(getSupportFragmentManager(),
-                        4,
-                        4));
-    }
-    @Override
-    public void onBackPressed() {
-        if (viewPager.getCurrentItem() == 0) {
-            // If the user is currently looking at the first step, allow the system to handle the
-            // Back button. This calls finish() on this activity and pops the back stack.
-            super.onBackPressed();
-        } else {
-            // Otherwise, select the previous step.
-            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
-        }
-    }
-    private class ScreenSlidePagerAdapter extends FragmentStateAdapter {
-        public ScreenSlidePagerAdapter(FragmentActivity fa) {
-            super(fa);
-        }
-
-        @Override
-        public Fragment createFragment(int position) {
-            return new ScreenSlidePageFragment();
-        }
-
-        @Override
-        public int getItemCount() {
-            return NUM_PAGES;
-        }
     }
 
     private void expand(RelativeLayout layout, int layoutHeight) {
