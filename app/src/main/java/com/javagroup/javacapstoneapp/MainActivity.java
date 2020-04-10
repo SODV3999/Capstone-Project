@@ -2,19 +2,20 @@ package com.javagroup.javacapstoneapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-
-
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -100,6 +101,23 @@ public class MainActivity extends AppCompatActivity {
                 CaseStudy3.class));
     }
 
-
+    public void alberta_emp_standards(View view) {
+        String url = "https://www.alberta.ca/alberta-employment-standards-rules.aspx";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+    public void alberta_act(View view) {
+        String url = "http://www.qp.alberta.ca/documents/Acts/E09.pdf";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+    public void emp_standard_regulation(View view) {
+        String url = "http://www.qp.alberta.ca/documents/Regs/1997_014.pdf";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
 
 }

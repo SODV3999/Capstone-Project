@@ -3,54 +3,53 @@
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/btm_sheet_resources"
+  style="@style/CoordinatorLayout"
+  android:layout_height="wrap_content"
+  android:layout_marginTop="60sp"
   android:background="@drawable/bottom_sheet_background"
-  app:layout_behavior="@string/bottom_sheet_behavior"
+  app:behavior_hideable="false"
   app:behavior_peekHeight="200sp"
-    app:behavior_hideable="true"
-    android:layout_height="700sp"
-  style="@style/CoordinatorLayout">
+  app:layout_behavior="@string/bottom_sheet_behavior">
 
 
   <RelativeLayout
-      android:id="@+id/slider"
-      android:layout_width="match_parent"
-      android:layout_height="200sp">
+    android:id="@+id/slider"
+    android:layout_width="match_parent"
+    android:layout_height="200sp">
 
     <androidx.cardview.widget.CardView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:cardCornerRadius="35dp">
+
+      <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="35dp"
-        >
+        android:background="#FF0A7F91"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:src="@drawable/header_hdpi" />
 
       <ImageView
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:src="@drawable/header_hdpi"
-          android:background="#FF0A7F91"
-          android:paddingTop="1dp"
-          android:paddingBottom="1dp"
-          />
-      <ImageView
-          android:id="@+id/slideUpDownWorkPlaceSafety"
-          android:layout_width="70dp"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center_horizontal"
-          android:background="@drawable/slide_up_down"
-          android:contentDescription="TopImage" />
+        android:id="@+id/slideUpDownWorkPlaceSafety"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/slide_up_down"
+        android:contentDescription="TopImage" />
 
       <TextView
-          android:id="@+id/btm_sheet_title_Resource"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_gravity="center"
-          android:layout_marginLeft="5dp"
-          android:layout_marginTop="10dp"
-          android:gravity="center_horizontal"
-          android:textColor="#0D7D78"
-          android:textSize="30dp"
-          android:textStyle="bold"
-          tools:layout_editor_absoluteX="135dp"
-          />
+        android:id="@+id/btm_sheet_title_Resource"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:textColor="#0D7D78"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="135dp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -93,13 +92,13 @@
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <!--            <ImageView-->
         <!--                android:id="@+id/imageView4"-->
@@ -119,60 +118,57 @@
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
-          android:scaleType="fitCenter"
           android:background="@android:color/transparent"
-          app:srcCompat="@drawable/phone"
-          />
+          android:scaleType="fitCenter"
+          app:srcCompat="@drawable/phone" />
 
         <ImageButton
           android:id="@+id/imageButton_link1"
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
-          app:srcCompat="@drawable/link"
+          android:background="@android:color/transparent"
           android:scaleType="fitCenter"
-          android:background="@android:color/transparent"/>
+          app:srcCompat="@drawable/link" />
       </LinearLayout>
 
       <TextView
         android:id="@+id/title_calgary_workers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:textColor="#0D7D78"
-        android:textSize="25dp"
-        >
-      </TextView>
+        android:textSize="25dp"></TextView>
+
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <ImageButton
           android:id="@+id/imageButton_call_2"
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
-          android:scaleType="fitCenter"
           android:background="@android:color/transparent"
-          app:srcCompat="@drawable/phone"
-          />
+          android:scaleType="fitCenter"
+          app:srcCompat="@drawable/phone" />
 
         <ImageButton
           android:id="@+id/imageButton_link2"
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
-          app:srcCompat="@drawable/link"
+          android:background="@android:color/transparent"
           android:scaleType="fitCenter"
-          android:background="@android:color/transparent"/>
+          app:srcCompat="@drawable/link" />
 
       </LinearLayout>
 
@@ -191,26 +187,25 @@
         android:id="@+id/btn_funders"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/funders"
-        android:onClick="launchFunders"
-          android:layout_gravity="center_horizontal">
+        android:onClick="launchFunders">
 
       </Button>
+
       <Button
         android:id="@+id/btn_disclaimer"
-        android:onClick="launchDisclaimers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/disclaimer"
-          android:layout_gravity="center_horizontal">
+        android:onClick="launchDisclaimers">
 
       </Button>
 
     </LinearLayout>
 
   </ScrollView>
-
-
 
 
 </LinearLayout>
