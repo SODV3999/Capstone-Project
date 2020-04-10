@@ -101,16 +101,6 @@ public class menu_NavigationActivity extends Fragment {
                 funder.setText(fundTxt);
                 disclaimer.setText(disclaimerTxt);
 
-                Log.d(TAG, "value is: " + homeTxt);
-                Log.d(TAG, "value is: " + findYourVoiceTxt);
-                Log.d(TAG, "value is: " + knowYourRightsTxt);
-                Log.d(TAG, "value is: " + eSTxt);
-                Log.d(TAG, "value is: " + hRTxt);
-                Log.d(TAG, "value is: " + oHSTxt);
-                Log.d(TAG, "value is: " + resourcesTxt);
-                Log.d(TAG, "value is: " + fundTxt);
-                Log.d(TAG, "value is: " + disclaimerTxt);
-
             }
 
             @Override
