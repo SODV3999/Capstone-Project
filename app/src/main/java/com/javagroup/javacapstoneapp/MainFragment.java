@@ -94,7 +94,8 @@ public class MainFragment extends Fragment {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //findYourVoice = view.findViewById(R.id.btm_sheet_title_finding_your_voice);
+                findYourVoice = view.findViewById(R.id.btm_sheet_title_finding_your_voice);
+                // TODO: uncomment this like if finding your voice intro string exist
                 //findYourVoiceIntro = view.findViewById(R.id.content_find_your_voice);
                 findYourVoiceBtnOne = view.findViewById(R.id.btn_one_find_your_voice);
                 findYourVoiceBtnTwo = view.findViewById(R.id.btn_two_find_your_voice);
@@ -113,7 +114,8 @@ public class MainFragment extends Fragment {
                                                 .getValue(String.class);
 
                 findYourVoice.setText(title);
-                findYourVoiceIntro.setText(introduction);
+                // TODO: uncomment this like if finding your voice intro string exist
+                //findYourVoiceIntro.setText(introduction);
                 findYourVoiceBtnOne.setText(findYourVoiceBtnOneString);
                 findYourVoiceBtnTwo.setText(findYourVoiceBtnTwoString);
                 findYourVoiceBtnThree.setText(findYourVoiceBtnThreeString);
@@ -132,7 +134,7 @@ public class MainFragment extends Fragment {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //resources = view.findViewById(R.id.btm_sheet_title_Resource);
+                resources = view.findViewById(R.id.btm_sheet_title_Resource);
                 resourcesIntro = view.findViewById(R.id.content_Resource);
                 resourcesAlbertaTitle = view.findViewById(R.id.title_Alberta);
                 resourcesCalgaryWorkersTitle = view.findViewById(R.id.title_calgary_workers);
