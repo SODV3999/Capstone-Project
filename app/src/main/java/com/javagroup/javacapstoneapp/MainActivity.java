@@ -12,23 +12,17 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
 import android.content.Intent;
-<<<<<<< HEAD
-=======
 import android.content.pm.PackageManager;
->>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-<<<<<<< HEAD
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-=======
 import android.widget.Toast;
 
->>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1 ;
@@ -114,8 +108,6 @@ public class MainActivity extends AppCompatActivity {
                 CaseStudy3.class));
     }
 
-<<<<<<< HEAD
-=======
     public void calling_one(View view) {
         makePhoneCall_1();
    }
@@ -195,36 +187,25 @@ public class MainActivity extends AppCompatActivity {
         startActivity(launchBrowser);
     }
 
->>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
     public void alberta_emp_standards(View view) {
         String url = "https://www.alberta.ca/alberta-employment-standards-rules.aspx";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
     public void alberta_act(View view) {
         String url = "http://www.qp.alberta.ca/documents/Acts/E09.pdf";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
     public void emp_standard_regulation(View view) {
         String url = "http://www.qp.alberta.ca/documents/Regs/1997_014.pdf";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
-<<<<<<< HEAD
 
-=======
     public void hr_acts(View view) {
         String url = "http://www.qp.alberta.ca/documents/Acts/A25P5.pdf";
         Uri uriUrl = Uri.parse(url);
@@ -237,5 +218,4 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
->>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
 }
