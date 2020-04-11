@@ -23,6 +23,7 @@
             android:layout_marginBottom="16dp"
             android:text="Disclaimer"
             android:textColor="#0D7D78"
+            android:justificationMode="inter_word"
             android:textSize="30dp"
             app:layout_constraintBottom_toTopOf="@+id/disclaimer_content"
             app:layout_constraintEnd_toEndOf="parent"

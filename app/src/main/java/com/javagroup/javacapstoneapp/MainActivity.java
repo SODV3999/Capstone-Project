@@ -1,24 +1,37 @@
 package com.javagroup.javacapstoneapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.Manifest;
 import android.content.Intent;
+<<<<<<< HEAD
+=======
+import android.content.pm.PackageManager;
+>>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+<<<<<<< HEAD
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
+=======
+import android.widget.Toast;
+
+>>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final int REQUEST_CALL = 1 ;
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
 
@@ -101,23 +114,128 @@ public class MainActivity extends AppCompatActivity {
                 CaseStudy3.class));
     }
 
+<<<<<<< HEAD
+=======
+    public void calling_one(View view) {
+        makePhoneCall_1();
+   }
+
+
+
+
+
+
+
+    private  void makePhoneCall_1()
+    {
+
+
+        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+
+            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }else
+        {
+            // String dial ="tel:" +5879692301;
+            //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            String dial ="780-486-9009";
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:"+dial));
+            startActivity(intent);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
+    {
+        if (requestCode == REQUEST_CALL){
+            if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+            {
+                makePhoneCall_1();
+                makePhoneCall_2();
+            }else {
+                Toast.makeText(this,"Permission DENIED", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private  void makePhoneCall_2()
+    {
+
+
+        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+
+            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }else
+        {
+            // String dial ="tel:" +5879692301;
+            //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            String dial ="403-264-8100";
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:"+dial));
+            startActivity(intent);
+        }
+    }
+
+    public void calling_two(View view) {
+        makePhoneCall_2();
+    }
+
+    public void goToUrl_one(View view) {
+        String url = "https://workershealthcentre.ca/";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+    public void goToUrl_two(View view) {
+        String url = "http://www.helpwrc.org/our-board/";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+
+>>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
     public void alberta_emp_standards(View view) {
         String url = "https://www.alberta.ca/alberta-employment-standards-rules.aspx";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
     public void alberta_act(View view) {
         String url = "http://www.qp.alberta.ca/documents/Acts/E09.pdf";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
     public void emp_standard_regulation(View view) {
         String url = "http://www.qp.alberta.ca/documents/Regs/1997_014.pdf";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+<<<<<<< HEAD
 
+=======
+    public void hr_acts(View view) {
+        String url = "http://www.qp.alberta.ca/documents/Acts/A25P5.pdf";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+    public void hr_commission(View view) {
+        String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf)";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+>>>>>>> fbd2f8c6e80329500ac4593721638742a4565cf4
 }

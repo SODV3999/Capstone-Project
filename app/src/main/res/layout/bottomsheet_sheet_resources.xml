@@ -73,6 +73,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
+          android:justificationMode="inter_word"
         android:gravity="center|center_horizontal"
         android:textColor="#33817B"
         android:textSize="20dp" />
@@ -84,6 +85,8 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
+          android:justificationMode="inter_word"
+        android:text="Alberta Worker's Help Center"
         android:textColor="#0D7D78"
         android:textSize="25dp">
 
@@ -118,6 +121,7 @@
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
+
           android:background="@android:color/transparent"
           android:scaleType="fitCenter"
           app:srcCompat="@drawable/phone" />
@@ -138,6 +142,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
+          android:justificationMode="inter_word"
+        android:text="Calgary Worker's Resource Cente"
         android:textColor="#0D7D78"
         android:textSize="25dp"></TextView>
 
@@ -155,6 +161,7 @@
         <ImageButton
           android:id="@+id/imageButton_call_2"
           android:layout_width="0dp"
+            android:onClick="calling_two"
           android:layout_height="50dp"
           android:layout_weight="1"
           android:background="@android:color/transparent"
@@ -185,6 +192,8 @@
 
       <Button
         android:id="@+id/btn_funders"
+          android:layout_marginLeft="50dp"
+          android:layout_marginRight="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
