@@ -4,9 +4,10 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_section_workplace_safety"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_know_your_rights"
+    android:background="@drawable/bg_first"
     tools:context=".mainsection_WorkplaceSafetyActivity">
 
 <include layout="@layout/bottomsheetsheet_workplace_safety"/>

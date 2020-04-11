@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "974936428122",
+    "firebase_url": "https://javacapstoneapp.firebaseio.com",
+    "project_id": "javacapstoneapp",
+    "storage_bucket": "javacapstoneapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974936428122:android:7ead057934225a7e8f5263",
+        "android_client_info": {
+          "package_name": "com.javagroup.javacapstoneapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974936428122-qup425m9oadll7o20rb80i7iu58g0kfh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0xuFbYctu8tGYNCgQIyz6KSKWa3cvXCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974936428122-qup425m9oadll7o20rb80i7iu58g0kfh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

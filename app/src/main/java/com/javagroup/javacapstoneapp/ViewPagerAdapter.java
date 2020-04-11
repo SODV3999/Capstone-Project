@@ -1,14 +1,16 @@
 package com.javagroup.javacapstoneapp;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
-    int pageSectionNumber;
+    private int pageSectionNumber;
 
-    public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior, int pageSectionNumber) {
+    ViewPagerAdapter(@NonNull FragmentManager fm, int behavior, int pageSectionNumber) {
         super(fm, behavior);
         this.pageSectionNumber = pageSectionNumber;
     }
@@ -16,8 +18,10 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-     MainFragment mainFragment = new MainFragment();
-     switch (position) {
+        MainFragment mainFragment = new MainFragment();
+        Bundle bundle = new Bundle();
+
+        switch (position) {
          case 0:
              mainFragment.mainResource = R.layout.activity_mainsection_workplace_safety;
              break;
@@ -31,6 +35,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
              break;
 
      }
+
      return mainFragment;
     }
 

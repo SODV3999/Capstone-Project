@@ -24,7 +24,7 @@
             android:text="Disclaimer"
             android:textColor="#0D7D78"
             android:textSize="30dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView_paragraph_disclaimer"
+            app:layout_constraintBottom_toTopOf="@+id/disclaimer_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -32,7 +32,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/textView_paragraph_disclaimer"
+            android:id="@+id/disclaimer_content"
             android:layout_width="314dp"
             android:layout_height="0dp"
             android:layout_marginStart="30dp"
@@ -40,7 +40,6 @@
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="364dp"
-            android:text="@string/disclaimer_paragrah"
             android:textColor="#33817B"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"

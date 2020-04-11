@@ -18,25 +18,25 @@
     <string name="web_btn_forward">&gt;</string>
 
     <!-- Nigam strings -->
-    <string name="ES">
-            <a href="https://www.alberta.ca/alberta-employment-standards-rules.aspx">Alberta employment standards rules</a>
+    <string name="alberta_employment_standards">
+        https://www.alberta.ca/alberta-employment-standards-rules.aspx
     </string>
 
-    <string name="ES1">
-        <a href="http://www.qp.alberta.ca/documents/Acts/E09.pdf">Employment standards Code</a>
+    <string name="alberta_act">
+        https://www.qp.alberta.ca/documents/Acts/E09.pdf
     </string>
 
-    <string name="ES2">
-        <a href="http://www.qp.alberta.ca/documents/Regs/1997_014.pdf">Employment standards Regulations</a>
+    <string name="employment_standard_regulation">
+        https://www.qp.alberta.ca/documents/Regs/1997_014.pdf
     </string>
 
 
     <!-- Sagar strings -->
-    <string name="linktosite_humanrights">
-        <a href="http://www.qp.alberta.ca/documents/Acts/A25P5.pdf">Alberta Human Rights Act</a>
+    <string name="hr_acts">
+        http://www.qp.alberta.ca/documents/Acts/A25P5.pdf
     </string>
-    <string name="linktocomplaint_humanrights">
-        <a href="https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf">The Human Rights Complaint Process</a>
+    <string name="hr_commission">
+      https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf
     </string>
 
 
@@ -75,21 +75,36 @@ employers.</string>
     <string name="logo_contentDescription">finding your voice knowing your rights logo</string>
     <string name="dialog_header">Welcome!</string>
     <string name="dialog_subHeader">Disclaimer:</string>
-    <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>
     <string name="dialog_btn_agree">I Agree!</string>
     <string name="dialog_btn_close_contentDescription">X</string>
 
     <!--Navigation String -->
     <string name="homeTxt">Home</string>
     <string name="findYourVoiceTxt">Finding your voice</string>
-    <string name="WorkplaceSafetyTxt">Workplace Safety</string>
+    <string name="WorkplaceSafetyTxt">Know Your Right and Workplace Safety</string>
     <string name="eSTxt">Employment Standards</string>
     <string name="hRTxt">Human Rights</string>
     <string name="oHSTxt">Occupational Health and Safety</string>
     <string name="resourcesTxt">Resources</string>
     <string name="fundTxt">Fund</string>
     <string name="disclaimerTxt">Disclaimer</string>
+
     <string name="not_found">not found</string>
+    <string name="finding_your_voice_txt">Finding Your Voice</string>
+    <string name="resources_txt">Resources</string>
+
+    <!--Navigation Strings that are now queried from the database -->
+    <!--    <string name="homeTxt">Home</string>-->
+    <!--    <string name="findYourVoiceTxt">Finding your voice</string>-->
+    <!--    <string name="eSTxt">Employment Standards</string>-->
+    <!--    <string name="hRTxt">Human Rights</string>-->
+    <!--    <string name="oHSTxt">Occupational Health and Safety</string>-->
+    <!--    <string name="resourcesTxt">Resources</string>-->
+    <!--    <string name="fundTxt">Fund</string>-->
+    <!--    <string name="disclaimerTxt">Disclaimer</string>-->
+    <!--    <string name="WorkplaceSafetyTxt">Workplace Safety</string>-->
+    <!--    <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>-->
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
