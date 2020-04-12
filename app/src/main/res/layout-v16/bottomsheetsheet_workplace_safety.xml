@@ -262,7 +262,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="30dp"
-        android:onClick=""
         android:text="@string/hr_acts"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="20dp">
@@ -293,7 +292,6 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="30dp"
-        android:onClick=""
         android:text="@string/hr_commission"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="20dp">
