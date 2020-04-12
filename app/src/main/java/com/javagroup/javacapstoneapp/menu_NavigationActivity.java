@@ -1,5 +1,6 @@
 package com.javagroup.javacapstoneapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,20 +20,23 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
-public class menu_NavigationActivity extends Fragment {
+/*WRITTEN BY : Victor Charl Corpuz*/
+public class menu_NavigationActivity extends Fragment implements View.OnClickListener {
 
     private ConstraintLayout navigationScreen;
     private static final String TAG = "NavigationActivity";
     private DatabaseReference stringsRef = FirebaseOperations.strings();
-    private TextView home,
-            findingYourVoice,
-            knowYourRights,
-            employmentStandard,
-            humanRights,
-            ohs,
-            resources,
-            funder,
-            disclaimer;
+    private TextView openHome,
+            openFindingYourVoice,
+            openWorkplaceSafety,
+            openEmploymentStandards,
+            openHumanRights,
+            openOHS,
+            openResources,
+            openFund,
+            openDisclaimer;
+
+    Intent selectedMenu;
 
     @Nullable
     @Override
@@ -57,19 +62,30 @@ public class menu_NavigationActivity extends Fragment {
 
         getMenuFromDatabase(showNav);
 
+        openHome = showNav.findViewById(R.id.btn_home);
+        openFindingYourVoice = showNav.findViewById(R.id.btn_finding_your_voice);
+        openWorkplaceSafety = showNav.findViewById(R.id.btn_know_your_rights);
+        openEmploymentStandards = showNav.findViewById(R.id.btn_es);
+        openHumanRights = showNav.findViewById(R.id.btn_hr);
+        openOHS = showNav.findViewById(R.id.btn_ohs);
+        openResources = showNav.findViewById(R.id.btn_resources);
+        openFund = showNav.findViewById(R.id.btn_fund);
+        openDisclaimer = showNav.findViewById(R.id.btn_disclaimer);
+
+        openHome.setOnClickListener(this);
+        openFindingYourVoice.setOnClickListener(this);
+        openWorkplaceSafety.setOnClickListener(this);
+        openEmploymentStandards.setOnClickListener(this);
+        openHumanRights.setOnClickListener(this);
+        openOHS.setOnClickListener(this);
+        openResources.setOnClickListener(this);
+        openFund.setOnClickListener(this);
+        openDisclaimer.setOnClickListener(this);
+
         return showNav;
     }
 
     private void getMenuFromDatabase(View showNav) {
-        home = showNav.findViewById(R.id.btn_home);
-        findingYourVoice = showNav.findViewById(R.id.btn_finding_your_voice);
-        knowYourRights = showNav.findViewById(R.id.btn_know_your_rights);
-        employmentStandard = showNav.findViewById(R.id.btn_es);
-        humanRights = showNav.findViewById(R.id.btn_hr);
-        ohs = showNav.findViewById(R.id.btn_ohs);
-        resources = showNav.findViewById(R.id.btn_resources);
-        funder = showNav.findViewById(R.id.btn_fund);
-        disclaimer = showNav.findViewById(R.id.btn_disclaimer);
 
         // Read from the database
         stringsRef.addValueEventListener(new ValueEventListener() {
@@ -91,15 +107,15 @@ public class menu_NavigationActivity extends Fragment {
                 String fundTxt = dataSnapshot.child("fundTxt").getValue(String.class);
                 String disclaimerTxt = dataSnapshot.child("disclaimerTxt").getValue(String.class);
 
-                home.setText(homeTxt);
-                findingYourVoice.setText(findYourVoiceTxt);
-                knowYourRights.setText(knowYourRightsTxt);
-                employmentStandard.setText(eSTxt);
-                humanRights.setText(hRTxt);
-                ohs.setText(oHSTxt);
-                resources.setText(resourcesTxt);
-                funder.setText(fundTxt);
-                disclaimer.setText(disclaimerTxt);
+                openHome.setText(homeTxt);
+                openFindingYourVoice.setText(findYourVoiceTxt);
+                openWorkplaceSafety.setText(knowYourRightsTxt);
+                openEmploymentStandards.setText(eSTxt);
+                openHumanRights.setText(hRTxt);
+                openOHS.setText(oHSTxt);
+                openResources.setText(resourcesTxt);
+                openFund.setText(fundTxt);
+                openDisclaimer.setText(disclaimerTxt);
 
             }
 
@@ -109,5 +125,45 @@ public class menu_NavigationActivity extends Fragment {
                 Log.w(TAG, "Failed to read value.", databaseError.toException());
             }
         });
+    }
+
+    /*Written by: Victor Charl*/
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_home:
+            case R.id.btn_know_your_rights:
+                openActivity(MainActivity.class, 0);
+                break;
+            case R.id.btn_finding_your_voice:
+                openActivity(MainActivity.class, 1);
+                break;
+            case R.id.btn_es:
+                Toast.makeText(getActivity(), "REVIEW THE LAYOUT FIRST", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_hr:
+                Toast.makeText(getActivity(), "REVIEW THE LAYOUT FIRST", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_ohs:
+                Toast.makeText(getActivity(), "REVIEW THE LAYOUT FIRST", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_resources:
+                openActivity(MainActivity.class, 2);
+                break;
+            case R.id.btn_fund:
+                Toast.makeText(getActivity(), "REVIEW THE LAYOUT FIRST", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btn_disclaimer:
+                Toast.makeText(getActivity(), "REVIEW THE LAYOUT FIRST", Toast.LENGTH_SHORT).show();
+                break;
+        }
+    }
+
+    private void openActivity(Class classActivity, int pos){
+        selectedMenu = new Intent(getActivity(), classActivity);
+        selectedMenu.putExtra("position", pos);
+        startActivity(selectedMenu);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        getActivity().finish();
     }
 }

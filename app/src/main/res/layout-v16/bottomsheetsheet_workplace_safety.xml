@@ -6,9 +6,9 @@
   style="@style/CoordinatorLayout"
   android:layout_height="wrap_content"
   android:layout_marginTop="60sp"
+  android:background="@drawable/bottom_sheet_background"
   app:behavior_hideable="false"
   app:behavior_peekHeight="200sp"
-  android:background="@drawable/bottom_sheet_background"
   app:layout_behavior="@string/bottom_sheet_behavior">
 
   <RelativeLayout
@@ -19,8 +19,7 @@
     <androidx.cardview.widget.CardView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      app:cardCornerRadius="35dp"
-      android:onClick="display_content">
+      app:cardCornerRadius="35dp">
 
       <ImageView
         android:layout_width="match_parent"

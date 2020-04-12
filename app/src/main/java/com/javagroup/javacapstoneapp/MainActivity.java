@@ -11,17 +11,25 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
+
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1 ;
@@ -33,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*WRITTEN BY: Victor Charl Corpuz*/
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
 
@@ -63,11 +72,17 @@ public class MainActivity extends AppCompatActivity {
                 new ViewPagerAdapter(getSupportFragmentManager(),
                 3,
                 3));
-//
-//
+
+        /*Written by: Victor Charl*/
+        Bundle bundle = getIntent().getExtras();
+        int viewPagerPage = 0;
+        if(bundle != null){ //check if the bundle is not null and store it in viewPagerPage variable
+            viewPagerPage = bundle.getInt("position");
+        }
+        /*setting viewPagerPage
+            by default setCurrentItem == 0*/
+        viewPager.setCurrentItem(viewPagerPage);
     }
-
-
 
     public void launchOccupationalHealthAndSafety(View view) {
         startActivity(new Intent(this,
@@ -110,21 +125,13 @@ public class MainActivity extends AppCompatActivity {
         makePhoneCall_1();
    }
 
-
-
-
-
-
-
     private  void makePhoneCall_1()
     {
-
-
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
         {
-
             ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
-        }else
+        }
+        else
         {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
@@ -151,8 +158,6 @@ public class MainActivity extends AppCompatActivity {
 
     private  void makePhoneCall_2()
     {
-
-
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
         {
 
@@ -210,10 +215,35 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void hr_commission(View view) {
         String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf)";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
+    }
+
+    /*WRITTEN BY : VICTOR CHARL CORPUZ*/
+    @Override
+    public void onBackPressed() {
+        final Dialog confirmDialog = new Dialog(this);
+        confirmDialog.setContentView(R.layout.fragment_confirming_exit);
+        Button btn_yes = (Button) confirmDialog.findViewById(R.id.btn_yes);
+        Button btn_no = (Button) confirmDialog.findViewById(R.id.btn_no);
+        btn_yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        btn_no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                confirmDialog.dismiss();
+            }
+        });
+        confirmDialog.setCancelable(false);
+        confirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        confirmDialog.show();
     }
 }
