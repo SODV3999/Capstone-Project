@@ -165,5 +165,7 @@ public class MainFragment extends Fragment {
                 Log.w(TAG, "Failed to read value.", databaseError.toException());
             }
         });
+
     }
+
 }

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btm_sheet_resources"
+    style="@style/CoordinatorLayout"
+    android:background="@drawable/bottom_sheet_background"
+    app:behavior_peekHeight="?actionBarSize"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    tools:context=".subsection_WorkplaceSafety_OHS">
+    <ImageButton
+        android:id="@+id/openNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navigation_button_container"
+        android:contentDescription="@string/not_found"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="15dp"
+        android:src="@drawable/icon_hamburger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title_OHS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/ohs_meaning"
+                    android:textColor="#0D7D78"
+                    android:textSize="30dp" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center|center_horizontal"
+                    android:text="@string/intro_message"
+                    android:textColor="#33817B"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/ohsActRegAndCodeLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center|center_horizontal"
+                    android:text="@string/ohs_link"
+                    android:textColor="#33817B"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/safetyRightsLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center|center_horizontal"
+                    android:text="@string/toGoLink"
+                    android:textColor="#33817B"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
+
+                <RelativeLayout
+                    android:id="@+id/lay1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/Worker_Right"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#ffffff"
+                        android:onClick="workerright"
+                        android:text="Worker's Right"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/Worker_Right"
+                        android:background="@drawable/custom_bg"
+                        android:text="" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/expandable1">
+
+                    <TextView
+                        android:id="@+id/extxtview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:text="In Alberta, workers have 4 basic rightsthat relate to health safety">
+
+                    </TextView>
+                    <androidx.viewpager.widget.ViewPager
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/viewpagerOHS"
+                        android:layout_below="@id/extxtview1"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"/>
+
+                    <TextView
+                        android:id="@+id/extxtview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@id/viewpagerOHS"
+                        android:text="sample">
+                    </TextView>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/lay2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/Workplace_Hazard"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="#ffffff"
+                        android:onClick="workplacehazard"
+                        android:text="Workplace Hazard"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/Workplace_Hazard"
+                        android:background="@drawable/custom_bg"
+                        android:text="" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/lay3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:id="@+id/CaseStudy_Link"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="#ffffff"
+                        android:onClick="casestudy"
+                        android:text="Case Study Links"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_below="@+id/CaseStudy_Link"
+                        android:background="@drawable/custom_bg"
+                        android:text="" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

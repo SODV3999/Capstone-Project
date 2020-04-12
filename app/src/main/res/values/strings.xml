@@ -106,5 +106,8 @@ employers.</string>
     <!--    <string name="dialog_context">The purpose of this app is solely to educate workers about workplace health and safety regulations, general advice and guidance on your rights, and the services available to you. None of this information is intended to be used in a legal way.</string>-->
 
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

@@ -17,6 +17,7 @@
         <activity android:name=".subsection_Resources_DisclaimerActivity"/>
         <activity android:name=".subsection_Resources_FundersActivity" />
         <activity android:name=".MainActivity" />
+
         <activity android:name=".mainsection_FindingYourVoiceActivity" />
         <activity android:name=".mainsection_WorkplaceSafetyActivity" />
         <activity android:name=".mainsection_ResourcesActivity" />

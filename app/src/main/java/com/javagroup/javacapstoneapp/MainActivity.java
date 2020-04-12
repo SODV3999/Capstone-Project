@@ -23,7 +23,6 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
-
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1 ;
     private ConstraintLayout navigationScreen;
@@ -36,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
-
 
         openNav.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchOccupationalHealthAndSafety(View view) {
         startActivity(new Intent(this,
-                old_OccupationalHealthAndSafetyActivity.class));
+                subsection_WorkplaceSafety_OHS.class));
     }
 
     public void launchEmploymentStandards(View view) {
