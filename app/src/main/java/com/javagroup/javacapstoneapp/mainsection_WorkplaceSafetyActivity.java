@@ -18,7 +18,5 @@ public class mainsection_WorkplaceSafetyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mainsection_workplace_safety);
 
-
-
     }
 }

@@ -63,9 +63,9 @@
     <!-- Victor strings -->
     <string name="toGoLink"><u><i>Health and Safety Rights</i></u></string>
     <string name="intro_message">Most workers are in Alberta are covered under the Alberta Health and Safety Act, Regulation and Code.
-Some workers, such as federal workers, live in care-givers, or farm workers may have their own separate
-legislation. The laws are the minimum standards for protecting workers, and involve both workers and
-employers.</string>
+        Some workers, such as federal workers, live in care-givers, or farm workers may have their own separate
+        legislation. The laws are the minimum standards for protecting workers, and involve both workers and
+        employers.</string>
     <string name="ohs_message">Current Legislation</string>
     <string name="ohs_link"><u><i>Current legislation: https://www.alberta.ca/ohs-act-regulation-code.aspx</i></u></string>
     <string name="ohs_meaning">Occupational Health and Safety</string>
@@ -93,6 +93,13 @@ employers.</string>
     <string name="finding_your_voice_txt">Finding Your Voice</string>
     <string name="resources_txt">Resources</string>
 
+    <!--Confirming Exit-->
+    <string name="exit_txt">EXIT?</string>
+    <string name="sure_txt">Are you sure you want to close the app?</string>
+    <string name="yes_txt">YES</string>
+    <string name="no_txt">NO</string>
+
+
     <!--Navigation Strings that are now queried from the database -->
     <!--    <string name="homeTxt">Home</string>-->
     <!--    <string name="findYourVoiceTxt">Finding your voice</string>-->
@@ -108,6 +115,8 @@ employers.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 
 
 </resources>
