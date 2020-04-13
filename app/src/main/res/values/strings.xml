@@ -69,7 +69,7 @@ employers.</string>
     <string name="ohs_message">Current Legislation</string>
     <string name="ohs_link"><u><i>Current legislation: https://www.alberta.ca/ohs-act-regulation-code.aspx</i></u></string>
     <string name="ohs_meaning">Occupational Health and Safety</string>
-
+<string name="workers_right">As workers, we have legal responsibility to follow the health and safety rules, to not cause or participate in harassment, bullying, or violence, and to report unsafe work conditions. Although it is not always easy to do so, failure to do so can have serious consequences (such as undocumented injuries, or workplaces that remain unsafe)</string>
     <!--Splash Screen Strings-->
     <string name="splash_message">School of \n Global Access</string>
     <string name="logo_contentDescription">finding your voice knowing your rights logo</string>

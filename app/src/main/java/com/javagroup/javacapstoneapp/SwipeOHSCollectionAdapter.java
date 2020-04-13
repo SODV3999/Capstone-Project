@@ -18,7 +18,18 @@ public class SwipeOHSCollectionAdapter extends FragmentStatePagerAdapter {
         SwipeOHSFragment swipeOHSFragment= new SwipeOHSFragment();
         Bundle bundle=new Bundle();
         position=position+1;
-        bundle.putString("message","hello from page :"+position);
+       if(position==1){
+           bundle.putString("message","Right to Know about the dangers of our jobs and how we are protected:"+position);
+       }
+       if(position==2){
+            bundle.putString("message","Right to Participate in activities affecting our Health and Safety:"+position);
+       }
+       if(position==3){
+           bundle.putString("message","Right to Refusework we feel may be dangerous to ourselves or others:"+position);
+       }
+       if(position==4){
+           bundle.putString("message","Right to Be Free from Reprisal(disciplined or fired) for using our Health and Safety rights:"+position);
+       }
         swipeOHSFragment.setArguments(bundle);
         return swipeOHSFragment;
     }

@@ -22,7 +22,6 @@ public class SwipeOHSFragment extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -36,8 +35,7 @@ public class SwipeOHSFragment extends Fragment {
         String first = tokens.nextToken();
         String second=tokens.nextToken();
         textView1.setText(second);
-
-        textView2.setText(message);
+        textView2.setText(first);
         return view;
     }
 }

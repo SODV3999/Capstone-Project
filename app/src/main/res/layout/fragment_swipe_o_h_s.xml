@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".SwipeOHSFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -12,26 +13,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="200dp"
-        android:textSize="24dp"
-        android:text="something">
+       android:paddingTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textSize="50dp">
 
     </TextView>
     <TextView
         android:id="@+id/txt_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="80dp"
+        android:textColor="#0D7D78"
         android:textSize="24dp"
-        android:textStyle="bold"
-        android:text="@string/hello_blank_fragment" />
+        android:paddingTop="20dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:textStyle="bold" />
 
 </FrameLayout>
