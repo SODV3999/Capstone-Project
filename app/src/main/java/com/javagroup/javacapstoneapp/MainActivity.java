@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.icu.text.UnicodeSetSpanner;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -85,8 +86,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchOccupationalHealthAndSafety(View view) {
-        startActivity(new Intent(this,
-                subsection_WorkplaceSafety_OHS.class));
+        //startActivity(new Intent(this, subsection_WorkplaceSafety_OHS.class));
+
     }
 
     public void launchEmploymentStandards(View view) {
