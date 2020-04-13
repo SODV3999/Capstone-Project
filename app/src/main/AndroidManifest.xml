@@ -23,7 +23,6 @@
         <activity android:name=".mainsection_ResourcesActivity" />
         <activity android:name=".old_EmploymentStandardsActivity" />
         <activity android:name=".old_HumanRightsActivity" />
-        <activity android:name=".old_OccupationalHealthAndSafetyActivity" />
         <activity android:name=".CaseStudy1" />
         <activity android:name=".CaseStudy2" />
         <activity android:name=".CaseStudy3" />

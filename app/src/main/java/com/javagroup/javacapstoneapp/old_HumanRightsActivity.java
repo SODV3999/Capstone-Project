@@ -30,16 +30,16 @@ public class old_HumanRightsActivity extends
     setContentView(R.layout.activity_subsection_workplacesafety_ohs);
 
     TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
-    TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
+   // TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
 
     // TODO: change the id if human rights layout exist
-    humanRightsIntro = findViewById(R.id.ohs_intro);
+    humanRightsIntro = findViewById(R.id.es_intro);
     getHumanRightsStrings();
 
     browserContainer = (ConstraintLayout)findViewById(R.id.browserContainer);
 
     ohsActAndCodeLink.setOnClickListener(this);
-    safetyRightsLink.setOnClickListener(this);
+    //safetyRightsLink.setOnClickListener(this);
 
     Intent intent = getIntent();
 
@@ -81,9 +81,9 @@ public class old_HumanRightsActivity extends
       case R.id.ohsActRegAndCodeLink:
         openingLink("https://www.alberta.ca/ohs-act-regulation-code.aspx");
         break;
-      case R.id.safetyRightsLink:
-        openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
-        break;
+//      case R.id.safetyRightsLink:
+//        openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
+//        break;
     }
   }
 }
