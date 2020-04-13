@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     tools:context=".subsection_WorkplaceSafety_OHS">
 
+    <!-- Twinkle Implemented this -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
