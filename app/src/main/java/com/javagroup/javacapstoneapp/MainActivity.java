@@ -246,4 +246,5 @@ public class MainActivity extends AppCompatActivity {
         confirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         confirmDialog.show();
     }
+
 }

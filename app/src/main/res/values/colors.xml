@@ -12,4 +12,5 @@
     <color name="btn_bg_color">#DFEEED</color>
 
     <color name="menu_text_color">#D5CFCF</color>
+    <color name="menu_background">#40000000</color>
 </resources>
