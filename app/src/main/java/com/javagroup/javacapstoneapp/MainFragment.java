@@ -1,5 +1,6 @@
 package com.javagroup.javacapstoneapp;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,12 +10,16 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
+
+import org.xml.sax.helpers.AttributesImpl;
 
 public class MainFragment extends Fragment {
     int mainResource;
@@ -45,6 +50,7 @@ public class MainFragment extends Fragment {
     public MainFragment() {
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -55,12 +61,22 @@ public class MainFragment extends Fragment {
         // check if returned views are not null
         // then retrieve strings from db and
         // assign it to the  text views
+        //TODO: collapse opened bottomsheet when swiped.
         if (view.findViewById(R.id.btm_sheet_workplace_safety) != null) {
             getStringsForWorkplaceSafety();
+            Log.d(TAG,
+                    "onCreateView1: " + mainResource);
         } else if (view.findViewById(R.id.btm_sheet_finding_your_voice) != null) {
+            int test =
+                    BottomSheetBehavior.from(view.findViewById(R.id.btm_sheet_finding_your_voice)).getExpandedOffset();
             getStringsForFindingYourVoice();
+            Log.d(TAG,
+                    "onCreateView1: " + test);
         } else if (view.findViewById(R.id.btm_sheet_resources) != null) {
+            int test =
+                    BottomSheetBehavior.from(view.findViewById(R.id.btm_sheet_resources)).getExpandedOffset();
             getStringsForResources();
+            Log.d(TAG, "onCreateView3: " + test);
         }
         return view;
     }
