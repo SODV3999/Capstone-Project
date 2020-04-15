@@ -72,6 +72,7 @@
                     android:gravity="center|center_horizontal"
                     android:padding="20dp"
                     android:text="@string/ohs_link"
+                    android:onClick="Albertaohsact"
                     android:textColor="#EC40A7"
                     android:textSize="20dp" />
                 <!--                <androidx.cardview.widget.CardView-->
@@ -148,6 +149,7 @@
                         android:gravity="center|center_horizontal"
                         android:text="https://workershealthcentre.ca/4-health-and-safety-rights/"
                         android:textColor="#EC40A7"
+                        android:onClick="ohsrights"
                         android:textSize="15dp" />
 
                     <androidx.viewpager.widget.ViewPager
