@@ -72,6 +72,7 @@
                     android:gravity="center|center_horizontal"
                     android:padding="20dp"
                     android:text="@string/ohs_link"
+                    android:onClick="Albertaohsact"
                     android:textColor="#EC40A7"
                     android:textSize="20dp" />
                 <!--                <androidx.cardview.widget.CardView-->
@@ -84,8 +85,8 @@
                     android:layout_height="wrap_content"
                     android:background="@color/btn_bg_color"
                     android:paddingLeft="40dp"
-                    android:paddingRight="40dp"
-                    android:paddingTop="40dp">
+                    android:paddingTop="40dp"
+                    android:paddingRight="40dp">
 
                     <Button
                         android:id="@+id/Worker_Right"
@@ -95,6 +96,7 @@
                         android:background="#ACD3CF"
                         android:onClick="workerright"
                         android:text="Worker's Right"
+                        android:textSize="20dp"
                         android:textColor="@color/colorPrimary" />
 
                     <TextView
@@ -147,6 +149,7 @@
                         android:gravity="center|center_horizontal"
                         android:text="https://workershealthcentre.ca/4-health-and-safety-rights/"
                         android:textColor="#EC40A7"
+                        android:onClick="ohsrights"
                         android:textSize="15dp" />
 
                     <androidx.viewpager.widget.ViewPager
@@ -163,9 +166,9 @@
                         android:layout_height="250dp"
                         android:layout_below="@id/viewpagerOHS"
                         android:layout_margin="30dp"
-                        android:textSize="20dp"
+                        android:text="@string/workers_right"
                         android:textColor="#33817B"
-                        android:text="@string/workers_right"></TextView>
+                        android:textSize="20dp"></TextView>
 
                 </RelativeLayout>
 
@@ -174,9 +177,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/btn_bg_color"
+                    android:paddingLeft="40dp"
                     android:paddingTop="40dp"
-                    android:paddingRight="40dp"
-                    android:paddingLeft="40dp">
+                    android:paddingRight="40dp">
 
                     <Button
                         android:id="@+id/Workplace_Hazard"
@@ -184,6 +187,7 @@
                         android:layout_height="55dp"
                         android:background="#ACD3CF"
                         android:onClick="workplacehazard"
+                        android:textSize="20dp"
                         android:text="Workplace Hazard"
                         android:textColor="@color/colorPrimary" />
 
@@ -197,31 +201,201 @@
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/lay3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/btn_bg_color"
-                    android:paddingTop="40dp"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp">
-
-                    <Button
-                        android:id="@+id/CaseStudy_Link"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:background="#ACD3CF"
-                        android:onClick="casestudy"
-                        android:text="Case Study Links"
-                        android:textColor="@color/colorPrimary" />
+                    android:id="@+id/expandable2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1650dp"
+                    android:background="@color/btn_bg_color">
 
                     <TextView
+                        android:id="@+id/expand2txtview1"
                         android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@+id/CaseStudy_Link"
-                        android:background="@drawable/custom_bg"
-                        android:text="" />
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:text="There are 4 hazards that relate to workplace health and safety"
+                        android:textSize="20dp"
+                        android:textStyle="bold"></TextView>
+                    <!-- for physical hazard-->
+                    <TextView
+                        android:id="@+id/expand2txtview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2txtview1"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:text="Pysical Hazard"
+                        android:textColor="#33817B"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
+                    <ImageView
+                        android:id="@+id/expand2imageview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/expand2txtview2"
+                        android:src="@drawable/physical_hazard_hdpi" >
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/expand2txtview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2imageview1"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Description of Hazard"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
+<!--                    <TextView-->
+<!--                        android:id="@+id/expand2txtview4"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="100dp" >-->
+<!--                    </TextView>-->
+
+                    <TextView
+                        android:id="@+id/expand2txtview5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2txtview3"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:text="Chemical Hazards"
+                        android:textColor="#33817B"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
+                    <ImageView
+                        android:id="@+id/expand2imageview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/expand2txtview5"
+                        android:src="@drawable/chemical_hazard_hdpi" >
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/expand2txtview6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2imageview2"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Description of Hazard"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/expand2txtview8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2txtview6"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:text="Biological Hazards"
+                        android:textColor="#33817B"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
+                    <ImageView
+                        android:id="@+id/expand2imageview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/expand2txtview8"
+                        android:src="@drawable/biological_hazard_hdpi" >
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/expand2txtview9"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2imageview3"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Description of Hazard"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/expand2txtview11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2txtview9"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+
+                        android:text="Psychological Hazards"
+                        android:textColor="#33817B"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
+                    <ImageView
+                        android:id="@+id/expand2imageview4"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_below="@id/expand2txtview11"
+                        android:src="@drawable/psychological_hazard_hdpi" >
+                    </ImageView>
+                    <TextView
+                        android:id="@+id/expand2txtview12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/expand2imageview4"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="10dp"
+                        android:text="Description of Hazard"
+                        android:textSize="24dp"
+                        android:textStyle="bold"></TextView>
 
                 </RelativeLayout>
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/lay3"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="@color/btn_bg_color"-->
+<!--                    android:paddingLeft="40dp"-->
+<!--                    android:paddingTop="40dp"-->
+<!--                    android:paddingRight="40dp">-->
+
+<!--                    <Button-->
+<!--                        android:id="@+id/CaseStudy_Link"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="55dp"-->
+<!--                        android:background="#ACD3CF"-->
+<!--                        android:onClick="casestudy"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:text="Case Study Links"-->
+<!--                        android:textColor="@color/colorPrimary" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="20dp"-->
+<!--                        android:layout_below="@+id/CaseStudy_Link"-->
+<!--                        android:background="@drawable/custom_bg"-->
+<!--                        android:text="" />-->
+
+<!--                </RelativeLayout>-->
                 <!--                </androidx.cardview.widget.CardView>-->
 
 

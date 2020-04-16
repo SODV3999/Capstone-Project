@@ -6,6 +6,7 @@ import androidx.viewpager.widget.ViewPager;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +21,9 @@ public class subsection_WorkplaceSafety_OHS extends
     private static final int NUM_PAGES = 4;
     public ViewPager viewPager;
     public SwipeOHSCollectionAdapter adapter;
-    RelativeLayout relativeLayout;
-    Button Viewmore1;
-    int height;
+    RelativeLayout relativeLayoutexpandable1, relativeLayoutexpandable2;
+    Button Viewmore1,Viewmore2;
+    int heightexpandable1,heightexpandable2;
     private ConstraintLayout browserContainer;
 
     @Override
@@ -32,21 +33,41 @@ public class subsection_WorkplaceSafety_OHS extends
 
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
-        relativeLayout=(RelativeLayout) findViewById(R.id.expandable1);
 
+        // for Worker's rights butoon
+        relativeLayoutexpandable1=(RelativeLayout) findViewById(R.id.expandable1);
         Viewmore1 = (Button) findViewById(R.id.Worker_Right);
         Viewmore1.setOnClickListener(this);
 
-        relativeLayout.getViewTreeObserver().addOnPreDrawListener(
+        relativeLayoutexpandable1.getViewTreeObserver().addOnPreDrawListener(
                 new ViewTreeObserver.OnPreDrawListener() {
                     @Override
                     public boolean onPreDraw() {
-                        relativeLayout.getViewTreeObserver().removeOnPreDrawListener(this);
-                        relativeLayout.setVisibility(View.GONE);
+                        relativeLayoutexpandable1.getViewTreeObserver().removeOnPreDrawListener(this);
+                        relativeLayoutexpandable1.setVisibility(View.GONE);
                         final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
                         final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
-                        relativeLayout.measure(widthSpec, heightSpec);
-                        height = relativeLayout.getMeasuredHeight();
+                        relativeLayoutexpandable1.measure(widthSpec, heightSpec);
+                        heightexpandable1 = relativeLayoutexpandable1.getMeasuredHeight();
+                        return true;
+                    }
+                });
+
+        // for workplace hazard button
+        relativeLayoutexpandable2=(RelativeLayout) findViewById(R.id.expandable2);
+        Viewmore2 = (Button) findViewById(R.id.Workplace_Hazard);
+        Viewmore2.setOnClickListener(this);
+
+        relativeLayoutexpandable2.getViewTreeObserver().addOnPreDrawListener(
+                new ViewTreeObserver.OnPreDrawListener() {
+                    @Override
+                    public boolean onPreDraw() {
+                        relativeLayoutexpandable2.getViewTreeObserver().removeOnPreDrawListener(this);
+                        relativeLayoutexpandable2.setVisibility(View.GONE);
+                        final int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+                        final int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
+                        relativeLayoutexpandable2.measure(widthSpec, heightSpec);
+                        heightexpandable2 = relativeLayoutexpandable2.getMeasuredHeight();
                         return true;
                     }
                 });
@@ -126,34 +147,32 @@ public class subsection_WorkplaceSafety_OHS extends
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-                //LINKS BUTTONS
-            case R.id.ohsActRegAndCodeLink:
-                openingLink("https://www.alberta.ca/ohs-act-regulation-code.aspx");
-                break;
-            case R.id.safetyRightsLink:
-                openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
-                break;
-        }
 
         switch (v.getId()) {
+            //            case R.id.ohsActRegAndCodeLink:
+//                openingLink("https://www.alberta.ca/ohs-act-regulation-code.aspx");
+//                break;
+//            case R.id.safetyRightsLink:
+//                openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
+//                break;
+
             case R.id.Worker_Right:
-                if (relativeLayout.getVisibility() == View.GONE) {
-                    expand(relativeLayout, height);
+                if (relativeLayoutexpandable1.getVisibility() == View.GONE) {
+                    expand(relativeLayoutexpandable1, heightexpandable1);
                 } else {
-                    collapse(relativeLayout);
+                    collapse(relativeLayoutexpandable1);
                 }
                 break;
 
-//            case R.id.viewmore1:
-//                if (relativeLayout1.getVisibility() == View.GONE) {
-//                    expand(relativeLayout1, height1);
-//                } else {
-//                    collapse(relativeLayout1);
-//                }
-//                break;
-//
-//            case R.id.viewmore2:
+            case R.id.Workplace_Hazard:
+                if (relativeLayoutexpandable2.getVisibility() == View.GONE) {
+                    expand(relativeLayoutexpandable2, heightexpandable2);
+                } else {
+                    collapse(relativeLayoutexpandable2);
+                }
+                break;
+
+//            case R.id.CaseStudy_Link:
 //                if (relativeLayout2.getVisibility() == View.GONE) {
 //                    expand(relativeLayout2, height2);
 //                } else {
@@ -170,5 +189,20 @@ public class subsection_WorkplaceSafety_OHS extends
     }
 
     public void casestudy(View view) {
+    }
+
+    public void Albertaohsact(View view) {
+        String url = "https://www.alberta.ca/ohs-act-regulation-code.aspx";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
+    }
+
+
+    public void ohsrights(View view) {
+        String url = "https://workershealthcentre.ca/4-health-and-safety-rights/";
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 }
