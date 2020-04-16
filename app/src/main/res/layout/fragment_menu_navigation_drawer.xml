@@ -14,8 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/navigation_button_container"
-        android:clickable="true"
-        android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -115,7 +113,7 @@
 
         <TextView
             android:id="@+id/btn_ohs"
-            android:layout_width="404dp"
+            android:layout_width="match_parent"
             android:layout_height="51dp"
             android:background="@drawable/nav_menu_border"
             android:drawableStart="@drawable/ic_subdirectory_arrow_right_white_24dp"
@@ -133,8 +131,9 @@
 
         <TextView
             android:id="@+id/btn_resources"
-            android:layout_width="383dp"
-            android:layout_height="65dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
             android:background="@drawable/nav_menu_border"
             android:padding="20dp"
             android:paddingStart="20dp"

@@ -33,6 +33,7 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class MainActivity extends AppCompatActivity {
+
     private static final int REQUEST_CALL = 1 ;
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 final FragmentTransaction openTheBrowser =
                         getSupportFragmentManager().beginTransaction();
                 final menu_NavigationActivity navigationActivity = new menu_NavigationActivity();
-                openTheBrowser.add(R.id.navigationScreen, navigationActivity);
+                openTheBrowser.replace(R.id.navigationScreen, navigationActivity);
                 openTheBrowser.commit();
                 openNav.setClickable(false);
                 openNav.postDelayed(new Runnable() {
@@ -247,4 +248,38 @@ public class MainActivity extends AppCompatActivity {
         confirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         confirmDialog.show();
     }
+
+    /*Collapsing navigation when clicked outside the
+    * navigation drawer*/
+    //NOT A GOOD IMPLEMENTATION IF THEY HAVE THE SAME FUNCTION
+    //DO THE METHOD BELOW FOR CLEANER CODE
+    /*public void collapseNavFromFYV(View view) {
+        navigationScreen.animate().translationYBy(-3000)
+                .translationXBy(-3000).setDuration(450);
+    }
+
+    public void collapseNavFromWorkplaceSafety(View view) {
+        navigationScreen.animate().translationYBy(-3000)
+                .translationXBy(-3000).setDuration(450);
+    }*/
+
+    public void collapseNavFromHere(View view) {
+        switch (view.getId()){
+            case R.id.main_section_workplace_safety:
+            case R.id.main_btm_sheet_finding_your_voice:
+            case R.id.main_btm_sheet_resources:
+            case R.id.btm_sheet_finding_your_voice:
+            case R.id.btm_sheet_workplace_safety:
+            case R.id.btm_sheet_resources:
+            case R.id.btmsheet_content_resources:
+            case R.id.bottomsheet_content_worplacesafety:
+                navigationScreen.animate().translationYBy(-3000)
+                .translationXBy(-3000).setDuration(450);
+                break;
+
+        }
+
+    }
+
+
 }
