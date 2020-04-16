@@ -45,7 +45,7 @@
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
         app:tabIndicatorHeight="0dp"
-        app:tabMaxWidth="30dp"/>
+        app:tabMaxWidth="70dp"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -15,11 +15,14 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class subsection_WorkplaceSafety_OHS extends
         AppCompatActivity implements View.OnClickListener {
 
     private static final int NUM_PAGES = 4;
     public ViewPager viewPager;
+    public TabLayout tabLayoutOhs;
     public SwipeOHSCollectionAdapter adapter;
     RelativeLayout relativeLayoutexpandable1, relativeLayoutexpandable2;
     Button Viewmore1,Viewmore2;
@@ -33,6 +36,7 @@ public class subsection_WorkplaceSafety_OHS extends
 
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
+        tabLayoutOhs = findViewById(R.id.tab_layout_ohs);
 
         // for Worker's rights butoon
         relativeLayoutexpandable1=(RelativeLayout) findViewById(R.id.expandable1);
@@ -81,7 +85,7 @@ public class subsection_WorkplaceSafety_OHS extends
         viewPager=findViewById(R.id.viewpagerOHS);
         adapter=new SwipeOHSCollectionAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-
+        tabLayoutOhs.setupWithViewPager(viewPager, true);
     }
 
     private void expand(RelativeLayout layout, int layoutHeight) {
