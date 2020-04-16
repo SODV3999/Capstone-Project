@@ -127,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 CaseStudy3.class));
     }
 
+
     public void calling_one(View view) {
         makePhoneCall_1();
    }
