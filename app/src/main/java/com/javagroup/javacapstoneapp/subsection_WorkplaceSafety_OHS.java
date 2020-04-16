@@ -6,7 +6,6 @@ import androidx.viewpager.widget.ViewPager;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -146,15 +145,17 @@ public class subsection_WorkplaceSafety_OHS extends
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()){
+                //LINKS BUTTONS
+            case R.id.ohsActRegAndCodeLink:
+                openingLink("https://www.alberta.ca/ohs-act-regulation-code.aspx");
+                break;
+            case R.id.safetyRightsLink:
+                openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
+                break;
+        }
 
         switch (v.getId()) {
-            //            case R.id.ohsActRegAndCodeLink:
-//                openingLink("https://www.alberta.ca/ohs-act-regulation-code.aspx");
-//                break;
-//            case R.id.safetyRightsLink:
-//                openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
-//                break;
-
             case R.id.Worker_Right:
                 if (relativeLayoutexpandable1.getVisibility() == View.GONE) {
                     expand(relativeLayoutexpandable1, heightexpandable1);
@@ -188,20 +189,5 @@ public class subsection_WorkplaceSafety_OHS extends
     }
 
     public void casestudy(View view) {
-    }
-
-    public void Albertaohsact(View view) {
-        String url = "https://www.alberta.ca/ohs-act-regulation-code.aspx";
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
-    }
-
-
-    public void ohsrights(View view) {
-        String url = "https://workershealthcentre.ca/4-health-and-safety-rights/";
-        Uri uriUrl = Uri.parse(url);
-        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
-        startActivity(launchBrowser);
     }
 }
