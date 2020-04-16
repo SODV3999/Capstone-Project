@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class subsection_WorkplaceSafety_OHS extends
         AppCompatActivity implements View.OnClickListener {
 
+    private static final int NUM_PAGES = 4;
     public ViewPager viewPager;
     public SwipeOHSCollectionAdapter adapter;
     RelativeLayout relativeLayoutexpandable1, relativeLayoutexpandable2;
@@ -31,12 +32,8 @@ public class subsection_WorkplaceSafety_OHS extends
 
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
-        browserContainer = (ConstraintLayout)findViewById(R.id.browserContainer);
-        ohsActAndCodeLink.setOnClickListener(this);
-        safetyRightsLink.setOnClickListener(this);
-        Intent intent = getIntent();
 
-        // for Worker's rights butoon expand
+        // for Worker's rights butoon
         relativeLayoutexpandable1=(RelativeLayout) findViewById(R.id.expandable1);
         Viewmore1 = (Button) findViewById(R.id.Worker_Right);
         Viewmore1.setOnClickListener(this);
@@ -55,7 +52,7 @@ public class subsection_WorkplaceSafety_OHS extends
                     }
                 });
 
-        // for workplace hazard button expand
+        // for workplace hazard button
         relativeLayoutexpandable2=(RelativeLayout) findViewById(R.id.expandable2);
         Viewmore2 = (Button) findViewById(R.id.Workplace_Hazard);
         Viewmore2.setOnClickListener(this);
@@ -74,6 +71,10 @@ public class subsection_WorkplaceSafety_OHS extends
                     }
                 });
 
+        browserContainer = (ConstraintLayout)findViewById(R.id.browserContainer);
+        ohsActAndCodeLink.setOnClickListener(this);
+        safetyRightsLink.setOnClickListener(this);
+        Intent intent = getIntent();
 
         // for swipe in OHS
         viewPager=findViewById(R.id.viewpagerOHS);
