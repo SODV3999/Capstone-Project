@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.icu.text.UnicodeSetSpanner;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,6 +34,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
+
     private static final int REQUEST_CALL = 1 ;
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
@@ -58,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                 final FragmentTransaction openTheBrowser =
                         getSupportFragmentManager().beginTransaction();
                 final menu_NavigationActivity navigationActivity = new menu_NavigationActivity();
-                openTheBrowser.add(R.id.navigationScreen, navigationActivity);
+                openTheBrowser.replace(R.id.navigationScreen, navigationActivity);
                 openTheBrowser.commit();
                 openNav.setClickable(false);
                 openNav.postDelayed(new Runnable() {
@@ -91,8 +93,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchOccupationalHealthAndSafety(View view) {
-        startActivity(new Intent(this,
-                subsection_WorkplaceSafety_OHS.class));
+        //startActivity(new Intent(this, subsection_WorkplaceSafety_OHS.class));
+
     }
 
     public void launchEmploymentStandards(View view) {
@@ -252,6 +254,38 @@ public class MainActivity extends AppCompatActivity {
         confirmDialog.setCancelable(false);
         confirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         confirmDialog.show();
+    }
+
+    /*Collapsing navigation when clicked outside the
+    * navigation drawer*/
+    //NOT A GOOD IMPLEMENTATION IF THEY HAVE THE SAME FUNCTION
+    //DO THE METHOD BELOW FOR CLEANER CODE
+    /*public void collapseNavFromFYV(View view) {
+        navigationScreen.animate().translationYBy(-3000)
+                .translationXBy(-3000).setDuration(450);
+    }
+
+    public void collapseNavFromWorkplaceSafety(View view) {
+        navigationScreen.animate().translationYBy(-3000)
+                .translationXBy(-3000).setDuration(450);
+    }*/
+
+    public void collapseNavFromHere(View view) {
+        switch (view.getId()){
+            case R.id.main_section_workplace_safety:
+            case R.id.main_btm_sheet_finding_your_voice:
+            case R.id.main_btm_sheet_resources:
+            case R.id.btm_sheet_finding_your_voice:
+            case R.id.btm_sheet_workplace_safety:
+            case R.id.btm_sheet_resources:
+            case R.id.btmsheet_content_resources:
+            case R.id.bottomsheet_content_worplacesafety:
+                navigationScreen.animate().translationYBy(-3000)
+                .translationXBy(-3000).setDuration(450);
+                break;
+
+        }
+
     }
 
 }
