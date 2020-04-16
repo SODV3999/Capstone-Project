@@ -30,11 +30,14 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1 ;
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
+
+    private TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tabLayout = findViewById(R.id.tab_layout);
+
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(
                 new ViewPagerAdapter(getSupportFragmentManager(),
@@ -82,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         /*setting viewPagerPage
             by default setCurrentItem == 0*/
         viewPager.setCurrentItem(viewPagerPage);
+        tabLayout.setupWithViewPager(viewPager, true);
     }
 
     public void launchOccupationalHealthAndSafety(View view) {
