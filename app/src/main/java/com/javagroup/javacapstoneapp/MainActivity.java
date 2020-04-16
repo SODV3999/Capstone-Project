@@ -256,19 +256,6 @@ public class MainActivity extends AppCompatActivity {
         confirmDialog.show();
     }
 
-    /*Collapsing navigation when clicked outside the
-    * navigation drawer*/
-    //NOT A GOOD IMPLEMENTATION IF THEY HAVE THE SAME FUNCTION
-    //DO THE METHOD BELOW FOR CLEANER CODE
-    /*public void collapseNavFromFYV(View view) {
-        navigationScreen.animate().translationYBy(-3000)
-                .translationXBy(-3000).setDuration(450);
-    }
-
-    public void collapseNavFromWorkplaceSafety(View view) {
-        navigationScreen.animate().translationYBy(-3000)
-                .translationXBy(-3000).setDuration(450);
-    }*/
 
     public void collapseNavFromHere(View view) {
         switch (view.getId()){
