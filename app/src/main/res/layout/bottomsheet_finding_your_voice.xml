@@ -4,12 +4,11 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/btm_sheet_finding_your_voice"
   style="@style/CoordinatorLayout"
-  android:layout_height="match_parent"
+  android:layout_height="wrap_content"
   android:layout_marginTop="60sp"
   android:background="@drawable/bottom_sheet_background"
-  app:behavior_hideable="true"
+  app:behavior_hideable="false"
   app:behavior_peekHeight="200sp"
-    android:onClick="collapseNavFromHere"
   app:layout_behavior="@string/bottom_sheet_behavior">
 
   <RelativeLayout
@@ -54,7 +53,6 @@
     </androidx.cardview.widget.CardView>
 
 
-
   </RelativeLayout>
 
   <LinearLayout
@@ -64,16 +62,6 @@
     android:orientation="vertical"
     android:padding="30dp">
 
-    <TextView
-
-        android:layout_width="345dp"
-        android:layout_height="93dp"
-        android:layout_gravity="center|center_horizontal"
-        android:layout_marginTop="5dp"
-        android:justificationMode="inter_word"
-        android:text="lorem ipsum dolor sit amet,consectetur adipscing elitlorem dolor sit amet.."
-        android:textColor="@color/colorPrimary"
-        android:textSize="24sp" />
     <LinearLayout
       android:id="@+id/pag1"
       android:layout_width="match_parent"
@@ -85,12 +73,12 @@
         android:id="@+id/lay1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="50dp">
 
         <Button
           android:id="@+id/btn_one_find_your_voice"
           android:layout_width="match_parent"
-          android:layout_height="40dp"
+          android:layout_height="55dp"
           android:background="#ffffff"
           android:onClick="launchCaseStudy1"
           android:textColor="@color/colorPrimary" />
@@ -109,12 +97,12 @@
         android:id="@+id/lay2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30sp">
+        android:layout_marginTop="30dp">
 
         <Button
           android:id="@+id/btn_two_find_your_voice"
           android:layout_width="match_parent"
-          android:layout_height="40dp"
+          android:layout_height="55dp"
           android:background="#ffffff"
           android:onClick="launchCaseStudy2"
           android:textColor="@color/colorPrimary" />
@@ -132,12 +120,12 @@
         android:id="@+id/lay3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30sp">
+        android:layout_marginTop="30dp">
 
         <Button
           android:id="@+id/btn_three_find_your_voice"
           android:layout_width="match_parent"
-          android:layout_height="40dp"
+          android:layout_height="55dp"
           android:background="#ffffff"
           android:onClick="launchCaseStudy3"
           android:textColor="@color/colorPrimary" />

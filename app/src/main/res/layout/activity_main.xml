@@ -19,8 +19,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:onClick="collapseNavigation" />
+        android:layout_height="match_parent"/>
 
     <ImageButton
         android:id="@+id/openNav"
@@ -37,16 +36,5 @@
         android:src="@drawable/icon_hamburger"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabGravity="center"
-        app:tabIndicatorHeight="0dp"
-        app:tabMaxWidth="30dp"
-        android:layout_marginTop="400sp"
-        app:tabBackground="@drawable/tab_selector"/>
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
