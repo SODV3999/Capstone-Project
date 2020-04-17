@@ -127,7 +127,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void calling_one(View view) {
+    public void calling_one(View view)
+    {
         makePhoneCall_1();
    }
 
@@ -228,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
 
     /*WRITTEN BY : VICTOR CHARL CORPUZ*/
     @Override

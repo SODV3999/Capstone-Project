@@ -195,6 +195,7 @@ public class subsection_WorkplaceSafety_OHS extends
     public void casestudy(View view) {
     }
 
+
     public void Albertaohsact(View view) {
         String url = "https://www.alberta.ca/ohs-act-regulation-code.aspx";
         Uri uriUrl = Uri.parse(url);

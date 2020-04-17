@@ -66,20 +66,22 @@
                     android:textColor="#33817B"
                     android:textSize="20dp" />
 
+                <!--                <androidx.cardview.widget.CardView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="30dp">-->
                 <TextView
                     android:id="@+id/ohsActRegAndCodeLink"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center|center_horizontal"
+                    android:onClick="Albertaohsact"
                     android:padding="20dp"
                     android:text="@string/ohs_link"
-                    android:onClick="Albertaohsact"
                     android:textColor="#EC40A7"
-                    android:textSize="20dp" />
-                <!--                <androidx.cardview.widget.CardView-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="30dp">-->
+                    android:textSize="20dp"
+                    tools:ignore="OnClick" />
+
                 <RelativeLayout
                     android:id="@+id/lay1"
                     android:layout_width="match_parent"
