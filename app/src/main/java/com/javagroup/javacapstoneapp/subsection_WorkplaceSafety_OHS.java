@@ -1,4 +1,5 @@
 package com.javagroup.javacapstoneapp;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentTransaction;
@@ -8,6 +9,7 @@ import android.animation.ValueAnimator;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -16,11 +18,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 public class subsection_WorkplaceSafety_OHS extends
         AppCompatActivity implements View.OnClickListener {
 
     private static final int NUM_PAGES = 4;
+    private static final String TAG = "ohsActivity";
+    private DatabaseReference stringsRef = FirebaseOperations.strings();
+
     public ViewPager viewPager;
     public TabLayout tabLayoutOhs;
     public SwipeOHSCollectionAdapter adapter;
@@ -28,6 +37,7 @@ public class subsection_WorkplaceSafety_OHS extends
     Button Viewmore1,Viewmore2;
     int heightexpandable1,heightexpandable2;
     private ConstraintLayout browserContainer;
+    private TextView ohsIntro, workersRightIntro;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +46,10 @@ public class subsection_WorkplaceSafety_OHS extends
 
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
+        ohsIntro = findViewById(R.id.textView);
+        workersRightIntro = findViewById(R.id.expandtxtview3);
+        getStrings();
+
         tabLayoutOhs = findViewById(R.id.tab_layout_ohs);
 
         // for Worker's rights butoon
@@ -86,6 +100,25 @@ public class subsection_WorkplaceSafety_OHS extends
         adapter=new SwipeOHSCollectionAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         tabLayoutOhs.setupWithViewPager(viewPager, true);
+    }
+
+    private void getStrings() {
+        stringsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String introduction = dataSnapshot.child("ohsIntro").getValue(String.class);
+                String workersRightIntroduction = dataSnapshot
+                                                        .child("workersRightIntro")
+                                                        .getValue(String.class);
+                ohsIntro.setText(introduction);
+                workersRightIntro.setText(workersRightIntroduction);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
     }
 
     private void expand(RelativeLayout layout, int layoutHeight) {
