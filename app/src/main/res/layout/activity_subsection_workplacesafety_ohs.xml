@@ -75,10 +75,7 @@
                     android:onClick="Albertaohsact"
                     android:textColor="#EC40A7"
                     android:textSize="20dp" />
-                <!--                <androidx.cardview.widget.CardView-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="30dp">-->
+
                 <RelativeLayout
                     android:id="@+id/lay1"
                     android:layout_width="match_parent"
@@ -203,7 +200,7 @@
                 <RelativeLayout
                     android:id="@+id/expandable2"
                     android:layout_width="match_parent"
-                    android:layout_height="1650dp"
+                    android:layout_height="1900dp"
                     android:background="@color/btn_bg_color">
 
                     <TextView
@@ -217,6 +214,17 @@
                         android:text="There are 4 hazards that relate to workplace health and safety"
                         android:textSize="20dp"
                         android:textStyle="bold"></TextView>
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpagerhazard"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_below="@id/expand2txtview1"
+                        android:layout_marginTop="30dp"
+                        android:background="#ACD3CF" />
+
+
                     <!-- for physical hazard-->
                     <TextView
                         android:id="@+id/expand2txtview2"
@@ -253,17 +261,26 @@
                         android:text="Description of Hazard"
                         android:textSize="24dp"
                         android:textStyle="bold"></TextView>
-<!--                    <TextView-->
-<!--                        android:id="@+id/expand2txtview4"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="100dp" >-->
-<!--                    </TextView>-->
+                    <TextView
+                        android:id="@+id/expand2txtview4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:textSize="20dp"
+                        android:layout_below="@id/expand2txtview3"
+                        android:text="sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf ">
+                    </TextView>
 
+                    <!-- for chemical hazard-->
                     <TextView
                         android:id="@+id/expand2txtview5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2txtview3"
+                        android:layout_below="@id/expand2txtview4"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="10dp"
@@ -294,17 +311,30 @@
                         android:text="Description of Hazard"
                         android:textSize="24dp"
                         android:textStyle="bold"></TextView>
+                    <TextView
+                        android:id="@+id/expand2txtview7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:textSize="20dp"
+                        android:layout_below="@id/expand2txtview6"
+                        android:text="sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf">
+                    </TextView>
 
+                    <!-- for biological hazard-->
                     <TextView
                         android:id="@+id/expand2txtview8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2txtview6"
+                        android:layout_below="@id/expand2txtview7"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
-
                         android:text="Biological Hazards"
                         android:textColor="#33817B"
                         android:textSize="24dp"
@@ -330,12 +360,26 @@
                         android:text="Description of Hazard"
                         android:textSize="24dp"
                         android:textStyle="bold"></TextView>
+                    <TextView
+                        android:id="@+id/expand2txtview10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:textSize="20dp"
+                        android:layout_below="@id/expand2txtview9"
+                        android:text="sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf">
+                    </TextView>
+
 
                     <TextView
                         android:id="@+id/expand2txtview11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2txtview9"
+                        android:layout_below="@id/expand2txtview10"
                         android:layout_gravity="center"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="10dp"
@@ -366,6 +410,19 @@
                         android:text="Description of Hazard"
                         android:textSize="24dp"
                         android:textStyle="bold"></TextView>
+                    <TextView
+                        android:id="@+id/expand2txtview13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="30dp"
+                        android:textSize="20dp"
+                        android:layout_below="@id/expand2txtview12"
+                        android:text="sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf">
+                    </TextView>
 
                 </RelativeLayout>
 
