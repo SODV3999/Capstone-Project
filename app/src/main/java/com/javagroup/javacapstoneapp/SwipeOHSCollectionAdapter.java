@@ -25,7 +25,8 @@ public class SwipeOHSCollectionAdapter extends FragmentStatePagerAdapter {
             bundle.putString("message","Right to Participate in activities affecting our Health and Safety:"+position);
        }
        if(position==3){
-           bundle.putString("message","Right to Refusework we feel may be dangerous to ourselves or others:"+position);
+           bundle.putString("message","Right to Refuse work we feel may be dangerous to ourselves" +
+                   " or others:"+position);
        }
        if(position==4){
            bundle.putString("message","Right to Be Free from Reprisal(disciplined or fired) for using our Health and Safety rights:"+position);
