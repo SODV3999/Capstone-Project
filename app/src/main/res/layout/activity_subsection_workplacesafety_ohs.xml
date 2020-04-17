@@ -216,13 +216,13 @@
                         android:textStyle="bold"></TextView>
 
 
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/viewpagerhazard"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_below="@id/expand2txtview1"
-                        android:layout_marginTop="30dp"
-                        android:background="#ACD3CF" />
+<!--                    <androidx.viewpager.widget.ViewPager-->
+<!--                        android:id="@+id/viewpagerhazard"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="250dp"-->
+<!--                        android:layout_below="@id/expand2txtview1"-->
+<!--                        android:layout_marginTop="30dp"-->
+<!--                        android:background="#ACD3CF" />-->
 
 
                     <!-- for physical hazard-->
