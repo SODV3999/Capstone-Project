@@ -5,7 +5,7 @@
     android:id="@+id/ES"
     style="@style/CoordinatorLayout"
     android:layout_height="wrap_content"
-    tools:context=".subsection_WorkplaceSafety_ES">
+    tools:context=".subsection_WorkplaceSafety_EmploymentStandards">
 
     <!-- Nigam Implemented this -->
     <ScrollView
