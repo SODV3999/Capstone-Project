@@ -4,11 +4,12 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/btm_sheet_finding_your_voice"
   style="@style/CoordinatorLayout"
-  android:layout_height="wrap_content"
+  android:layout_height="match_parent"
   android:layout_marginTop="60sp"
   android:background="@drawable/bottom_sheet_background"
-  app:behavior_hideable="false"
+  app:behavior_hideable="true"
   app:behavior_peekHeight="200sp"
+    android:onClick="collapseNavFromHere"
   app:layout_behavior="@string/bottom_sheet_behavior">
 
   <RelativeLayout
@@ -51,6 +52,7 @@
         tools:layout_editor_absoluteX="135dp" />
 
     </androidx.cardview.widget.CardView>
+
 
 
   </RelativeLayout>

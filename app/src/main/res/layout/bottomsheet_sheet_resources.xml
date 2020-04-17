@@ -7,8 +7,9 @@
   android:layout_height="wrap_content"
   android:layout_marginTop="60sp"
   android:background="@drawable/bottom_sheet_background"
-  app:behavior_hideable="false"
+  app:behavior_hideable="true"
   app:behavior_peekHeight="200sp"
+    android:onClick="collapseNavFromHere"
   app:layout_behavior="@string/bottom_sheet_behavior">
 
 
@@ -62,9 +63,11 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/btmsheet_content_resources"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:orientation="vertical">
+      android:orientation="vertical"
+        android:onClick="collapseNavFromHere">
 
       <TextView
         android:id="@+id/content_Resource"

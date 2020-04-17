@@ -30,11 +30,13 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1 ;
     private ConstraintLayout navigationScreen;
     ImageButton openNav;
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tabLayout = findViewById(R.id.tab_layout);
+
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(
                 new ViewPagerAdapter(getSupportFragmentManager(),
@@ -82,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
         /*setting viewPagerPage
             by default setCurrentItem == 0*/
         viewPager.setCurrentItem(viewPagerPage);
+        tabLayout.setupWithViewPager(viewPager, true);
     }
 
     public void launchOccupationalHealthAndSafety(View view) {
@@ -120,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,
                 CaseStudy3.class));
     }
+
 
     public void calling_one(View view) {
         makePhoneCall_1();
@@ -245,6 +251,24 @@ public class MainActivity extends AppCompatActivity {
         confirmDialog.setCancelable(false);
         confirmDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         confirmDialog.show();
+    }
+
+    public void collapseNavFromHere(View view) {
+        switch (view.getId()){
+            case R.id.main_section_workplace_safety:
+            case R.id.main_btm_sheet_finding_your_voice:
+            case R.id.main_btm_sheet_resources:
+            case R.id.btm_sheet_finding_your_voice:
+            case R.id.btm_sheet_workplace_safety:
+            case R.id.btm_sheet_resources:
+            case R.id.btmsheet_content_resources:
+            case R.id.bottomsheet_content_worplacesafety:
+                navigationScreen.animate().translationYBy(-3000)
+                        .translationXBy(-3000).setDuration(450);
+                break;
+
+        }
+
     }
 
 }
