@@ -7,8 +7,9 @@
   android:layout_height="wrap_content"
   android:layout_marginTop="60sp"
   android:background="@drawable/bottom_sheet_background"
-  app:behavior_hideable="false"
+  app:behavior_hideable="true"
   app:behavior_peekHeight="200sp"
+    android:onClick="collapseNavFromHere"
   app:layout_behavior="@string/bottom_sheet_behavior">
 
   <RelativeLayout
@@ -80,16 +81,16 @@
       app:layout_constraintStart_toStartOf="parent"
       tools:layout_editor_absoluteY="58dp" />
 
-    <ImageButton
-      android:id="@+id/btn_launchOccupationalHealthAndSafety"
-      android:layout_width="293dp"
-      android:layout_height="51dp"
-      android:layout_marginLeft="50dp"
-      android:layout_marginTop="30dp"
-      android:onClick="launchOccupationalHealthAndSafety"
-      app:srcCompat="@drawable/occupational_health_and_safety" />
+      <ImageButton
+          android:id="@+id/btn_launchOccupationalHealthAndSafety"
+          android:layout_width="293dp"
+          android:layout_height="51dp"
+          android:layout_marginLeft="50dp"
+          android:layout_marginTop="30dp"
+          android:onClick="launchOccupationalHealthAndSafety"
+          app:srcCompat="@drawable/occupational_health_and_safety" />
 
-    <ImageButton
+      <ImageButton
       android:id="@+id/btn_launchEmploymentStandards"
       android:layout_width="298dp"
       android:layout_height="50dp"
