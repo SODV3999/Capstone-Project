@@ -124,7 +124,7 @@
           android:layout_width="0dp"
           android:layout_height="50dp"
           android:layout_weight="1"
-
+          android:onClick="calling_one"
           android:background="@android:color/transparent"
           android:scaleType="fitCenter"
           app:srcCompat="@drawable/phone" />
@@ -164,7 +164,7 @@
         <ImageButton
           android:id="@+id/imageButton_call_2"
           android:layout_width="0dp"
-            android:onClick="calling_two"
+          android:onClick="calling_two"
           android:layout_height="50dp"
           android:layout_weight="1"
           android:background="@android:color/transparent"
