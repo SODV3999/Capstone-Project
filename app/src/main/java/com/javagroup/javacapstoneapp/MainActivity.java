@@ -31,10 +31,17 @@ import android.widget.Toast;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1 ;
+    private static final String TAG = "MainActivity";
+    private DatabaseReference stringsRef = FirebaseOperations.strings();
     private ConstraintLayout navigationScreen;
+    private String albertaWorkersNumber, calgaryWorkersNumber;
     ImageButton openNav;
     TabLayout tabLayout;
 
@@ -42,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        getphoneNumbers();
         /*WRITTEN BY: Victor Charl Corpuz*/
         navigationScreen = findViewById(R.id.navigationScreen);
         openNav = findViewById(R.id.openNav);
@@ -127,27 +134,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void calling_one(View view) {
-        makePhoneCall_1();
-   }
-
-    private  void makePhoneCall_1()
-    {
-        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
-        {
-            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
-        }
-        else
-        {
-            // String dial ="tel:" +5879692301;
-            //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-            String dial ="780-486-9009";
-            Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:"+dial));
-            startActivity(intent);
-        }
-    }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
     {
@@ -162,6 +148,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private  void makePhoneCall_1()
+    {
+        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
+        {
+            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+        }
+        else
+        {
+            // String dial ="tel:" +5879692301;
+            //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            Intent intent = new Intent(Intent.ACTION_CALL);
+            intent.setData(Uri.parse("tel:"+ albertaWorkersNumber));
+            startActivity(intent);
+        }
+    }
+
     private  void makePhoneCall_2()
     {
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
@@ -172,11 +174,29 @@ public class MainActivity extends AppCompatActivity {
         {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-            String dial ="403-264-8100";
             Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:"+dial));
+            intent.setData(Uri.parse("tel:"+ calgaryWorkersNumber));
             startActivity(intent);
         }
+    }
+
+    public void getphoneNumbers() {
+        stringsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                albertaWorkersNumber = dataSnapshot.child("phoneNumberOne").getValue(String.class);
+                calgaryWorkersNumber = dataSnapshot.child("phoneNumberTwo").getValue(String.class);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.w(TAG, "Failed to read value.", databaseError.toException());
+            }
+        });
+    }
+
+    public void calling_one(View view) {
+        makePhoneCall_1();
     }
 
     public void calling_two(View view) {
