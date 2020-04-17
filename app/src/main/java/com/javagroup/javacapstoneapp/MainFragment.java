@@ -61,22 +61,12 @@ public class MainFragment extends Fragment {
         // check if returned views are not null
         // then retrieve strings from db and
         // assign it to the  text views
-        //TODO: collapse opened bottomsheet when swiped.
         if (view.findViewById(R.id.btm_sheet_workplace_safety) != null) {
             getStringsForWorkplaceSafety();
-            Log.d(TAG,
-                    "onCreateView1: " + mainResource);
         } else if (view.findViewById(R.id.btm_sheet_finding_your_voice) != null) {
-            int test =
-                    BottomSheetBehavior.from(view.findViewById(R.id.btm_sheet_finding_your_voice)).getExpandedOffset();
             getStringsForFindingYourVoice();
-            Log.d(TAG,
-                    "onCreateView1: " + test);
         } else if (view.findViewById(R.id.btm_sheet_resources) != null) {
-            int test =
-                    BottomSheetBehavior.from(view.findViewById(R.id.btm_sheet_resources)).getExpandedOffset();
             getStringsForResources();
-            Log.d(TAG, "onCreateView3: " + test);
         }
         return view;
     }
