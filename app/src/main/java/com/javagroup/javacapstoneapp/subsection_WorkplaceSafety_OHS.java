@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class subsection_WorkplaceSafety_OHS extends
@@ -82,6 +83,7 @@ public class subsection_WorkplaceSafety_OHS extends
         adapter=new SwipeOHSCollectionAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
+
     }
 
     private void expand(RelativeLayout layout, int layoutHeight) {
@@ -149,12 +151,12 @@ public class subsection_WorkplaceSafety_OHS extends
     public void onClick(View v) {
 
         switch (v.getId()) {
-            //            case R.id.ohsActRegAndCodeLink:
-//                openingLink("https://www.alberta.ca/ohs-act-regulation-code.aspx");
-//                break;
-//            case R.id.safetyRightsLink:
-//                openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
-//                break;
+                        case R.id.ohsActRegAndCodeLink:
+                openingLink("https://www.alberta.ca/ohs-act-regulation-code.aspx");
+                break;
+            case R.id.safetyRightsLink:
+                openingLink("https://workershealthcentre.ca/4-health-and-safety-rights/");
+                break;
 
             case R.id.Worker_Right:
                 if (relativeLayoutexpandable1.getVisibility() == View.GONE) {
