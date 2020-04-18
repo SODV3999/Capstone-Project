@@ -129,6 +129,7 @@
           android:scaleType="fitCenter"
           app:srcCompat="@drawable/phone" />
 
+     
         <ImageButton
           android:id="@+id/imageButton_link1"
           android:layout_width="0dp"

@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -27,12 +28,17 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1;
     ImageButton openNav;
     TabLayout tabLayout;
+    WebView webView;
     private ConstraintLayout navigationScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
 
         /*WRITTEN BY: Victor Charl Corpuz*/
         navigationScreen = findViewById(R.id.navigationScreen);
