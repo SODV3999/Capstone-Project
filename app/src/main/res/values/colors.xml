@@ -13,4 +13,10 @@
 
     <color name="menu_text_color">#D5CFCF</color>
     <color name="menu_background">#40000000</color>
+
+    <!-- Colors for the tab selector - Lateef -->
+    <color name="tab_indicator_selected">#FE7CA7</color>
+    <color name="tab_indicator_default">#FFFFFF</color>
+    <color name="tab_indicator_oh_selected">#FE7CA7</color>
+    <color name="tab_indicator_ohs_default">#FFFFFF</color>
 </resources>

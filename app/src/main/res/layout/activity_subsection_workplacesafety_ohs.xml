@@ -184,6 +184,16 @@
                             android:layout_marginTop="30dp"
                             android:background="#ACD3CF" />
 
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout_ohs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="480sp"
+                            app:tabBackground="@drawable/tab_selector_ohs"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMaxWidth="30dp"/>
+
                         <TextView
                             android:id="@+id/expandtxtview3"
                             android:layout_width="match_parent"
