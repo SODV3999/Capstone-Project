@@ -40,7 +40,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -70,7 +70,7 @@
                             android:gravity="center_horizontal"
                             android:text="@string/section02_Name"
                             android:textColor="#0D7D78"
-                            android:textSize="31dp"
+                            android:textSize="31sp"
                             android:textStyle="bold"
                             tools:layout_editor_absoluteX="135dp" />
                     </androidx.cardview.widget.CardView>
@@ -121,7 +121,7 @@
                             android:onClick="workerright"
                             android:text="Worker's Right"
                             android:textColor="@color/colorPrimary"
-                            android:textSize="20dp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -193,7 +193,6 @@
                             android:text="@string/workers_right"
                             android:textColor="#33817B"
                             android:textSize="20dp"></TextView>
-
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -221,7 +220,6 @@
                             android:layout_below="@+id/Workplace_Hazard"
                             android:background="@drawable/custom_bg"
                             android:text="" />
-
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -239,25 +237,21 @@
                             android:layout_marginTop="30dp"
                             android:layout_marginRight="10dp"
                             android:text="There are 4 hazards that relate to workplace health and safety"
-                            android:textSize="20dp"
+                            android:textSize="20sp"
                             android:textStyle="bold"></TextView>
 
-
-                        <!--                    <androidx.viewpager.widget.ViewPager-->
-                        <!--                        android:id="@+id/viewpagerhazard"-->
-                        <!--                        android:layout_width="match_parent"-->
-                        <!--                        android:layout_height="250dp"-->
-                        <!--                        android:layout_below="@id/expand2txtview1"-->
-                        <!--                        android:layout_marginTop="30dp"-->
-                        <!--                        android:background="#ACD3CF" />-->
-
-
+                        <androidx.viewpager.widget.ViewPager android:id="@+id/viewpagerOHSWorkplaceHazard"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_below="@id/expand2txtview1"
+                            android:layout_marginTop="30dp"
+                            android:background="#ACD3CF" />
                         <!-- for physical hazard-->
                         <TextView
                             android:id="@+id/expand2txtview2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/expand2txtview1"
+                            android:layout_below="@id/viewpagerOHSWorkplaceHazard"
                             android:layout_gravity="center"
                             android:layout_marginLeft="40dp"
                             android:layout_marginTop="10dp"
@@ -316,7 +310,7 @@
 
                             android:text="Chemical Hazards"
                             android:textColor="#33817B"
-                            android:textSize="24dp"
+                            android:textSize="24sp"
                             android:textStyle="bold"></TextView>
 
                         <ImageView
@@ -402,7 +396,7 @@
                             android:layout_marginRight="30dp"
                             android:gravity="center_horizontal"
                             android:text="sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf"
-                            android:textSize="20dp"></TextView>
+                            android:textSize="20sp"></TextView>
 
 
                         <TextView
@@ -417,7 +411,7 @@
 
                             android:text="Psychological Hazards"
                             android:textColor="#33817B"
-                            android:textSize="24dp"
+                            android:textSize="24sp"
                             android:textStyle="bold"></TextView>
 
                         <ImageView
@@ -439,7 +433,7 @@
                             android:layout_marginRight="10dp"
                             android:gravity="center_horizontal"
                             android:text="Description of Hazard"
-                            android:textSize="24dp"
+                            android:textSize="24sp"
                             android:textStyle="bold"></TextView>
 
                         <TextView
@@ -453,7 +447,7 @@
                             android:layout_marginRight="30dp"
                             android:gravity="center_horizontal"
                             android:text="sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf"
-                            android:textSize="20dp"></TextView>
+                            android:textSize="20sp"></TextView>
 
                     </RelativeLayout>
 

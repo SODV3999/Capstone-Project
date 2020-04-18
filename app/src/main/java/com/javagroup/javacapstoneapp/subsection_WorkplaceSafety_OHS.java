@@ -20,8 +20,9 @@ public class subsection_WorkplaceSafety_OHS extends
         AppCompatActivity implements View.OnClickListener {
 
     private static final int NUM_PAGES = 4;
-    public ViewPager viewPager;
+    public ViewPager viewPager,viewPagerHazard;
     public SwipeOHSCollectionAdapter adapter;
+    public SwipeOHSWorkplaceHazardCollectionAdapter adapterHazard;
     RelativeLayout relativeLayoutexpandable1, relativeLayoutexpandable2;
     Button Viewmore1,Viewmore2;
     int heightexpandable1,heightexpandable2;
@@ -78,12 +79,15 @@ public class subsection_WorkplaceSafety_OHS extends
         safetyRightsLink.setOnClickListener(this);
         Intent intent = getIntent();
 
+
         // for swipe in OHS
         viewPager=findViewById(R.id.viewpagerOHS);
         adapter=new SwipeOHSCollectionAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
-
+        viewPagerHazard=findViewById(R.id.viewpagerOHSWorkplaceHazard);
+        adapterHazard=new SwipeOHSWorkplaceHazardCollectionAdapter(getSupportFragmentManager());
+        viewPagerHazard.setAdapter(adapterHazard);
     }
 
     private void expand(RelativeLayout layout, int layoutHeight) {
