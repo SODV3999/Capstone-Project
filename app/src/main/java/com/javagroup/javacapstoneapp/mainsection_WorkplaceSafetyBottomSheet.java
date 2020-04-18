@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +15,8 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 public class mainsection_WorkplaceSafetyBottomSheet extends BottomSheetDialogFragment {
+
+
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,
@@ -22,5 +28,7 @@ public class mainsection_WorkplaceSafetyBottomSheet extends BottomSheetDialogFra
       R.layout.bottomsheetsheet_workplace_safety,
       null,
       false);
+
+
   }
 }

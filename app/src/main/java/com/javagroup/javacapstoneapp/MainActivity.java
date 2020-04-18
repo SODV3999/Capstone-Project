@@ -1,17 +1,6 @@
 package com.javagroup.javacapstoneapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
-
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,24 +8,26 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
-    private static final int REQUEST_CALL = 1 ;
-    private ConstraintLayout navigationScreen;
+    private static final int REQUEST_CALL = 1;
     ImageButton openNav;
     TabLayout tabLayout;
+    private ConstraintLayout navigationScreen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,13 +65,14 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(
                 new ViewPagerAdapter(getSupportFragmentManager(),
-                3,
-                3));
+                        3,
+                        3));
 
         /*Written by: Victor Charl*/
         Bundle bundle = getIntent().getExtras();
         int viewPagerPage = 0;
-        if(bundle != null){ //check if the bundle is not null and store it in viewPagerPage variable
+        if (bundle != null) { //check if the bundle is not null and store it in viewPagerPage
+            // variable
             viewPagerPage = bundle.getInt("position");
         }
         /*setting viewPagerPage
@@ -95,11 +87,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchEmploymentStandards(View view) {
-        startActivity(new Intent(this, old_EmploymentStandardsActivity.class));
+        startActivity(new Intent(this, subsection_WorkplaceSafety_EmploymentStandards.class));
     }
 
     public void launchHumanRights(View view) {
-        startActivity(new Intent(this, old_HumanRightsActivity.class));
+        startActivity(new Intent(this, subsection_WorkplaceSafety_HumanRights.class));
     }
 
     public void launchFunders(View view) {
@@ -113,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchCaseStudy1(View view) {
         startActivity(new Intent(this,
-               CaseStudy1.class));
+                CaseStudy1.class));
     }
 
     public void launchCaseStudy2(View view) {
@@ -130,52 +122,46 @@ public class MainActivity extends AppCompatActivity {
     public void calling_one(View view)
     {
         makePhoneCall_1();
-   }
+    }
 
-    private  void makePhoneCall_1()
-    {
-        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
-        {
-            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
-        }
-        else
-        {
+    private void makePhoneCall_1() {
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+        } else {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-            String dial ="780-486-9009";
+            String dial = "780-486-9009";
             Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:"+dial));
+            intent.setData(Uri.parse("tel:" + dial));
             startActivity(intent);
         }
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
-    {
-        if (requestCode == REQUEST_CALL){
-            if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
-            {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        if (requestCode == REQUEST_CALL) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 makePhoneCall_1();
                 makePhoneCall_2();
-            }else {
-                Toast.makeText(this,"Permission DENIED", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Permission DENIED", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private  void makePhoneCall_2()
-    {
-        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
-        {
+    private void makePhoneCall_2() {
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 
-            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
-        }else
-        {
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+        } else {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-            String dial ="403-264-8100";
+            String dial = "403-264-8100";
             Intent intent = new Intent(Intent.ACTION_CALL);
-            intent.setData(Uri.parse("tel:"+dial));
+            intent.setData(Uri.parse("tel:" + dial));
             startActivity(intent);
         }
     }
@@ -190,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void goToUrl_two(View view) {
         String url = "http://www.helpwrc.org/our-board/";
         Uri uriUrl = Uri.parse(url);
@@ -203,12 +190,14 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void alberta_act(View view) {
         String url = "http://www.qp.alberta.ca/documents/Acts/E09.pdf";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void emp_standard_regulation(View view) {
         String url = "http://www.qp.alberta.ca/documents/Regs/1997_014.pdf";
         Uri uriUrl = Uri.parse(url);
@@ -224,7 +213,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hr_commission(View view) {
-        String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf)";
+        String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants" +
+                ".pdf)";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
@@ -256,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void collapseNavFromHere(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.main_section_workplace_safety:
             case R.id.main_btm_sheet_finding_your_voice:
             case R.id.main_btm_sheet_resources:
@@ -264,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btm_sheet_workplace_safety:
             case R.id.btm_sheet_resources:
             case R.id.btmsheet_content_resources:
-            case R.id.bottomsheet_content_worplacesafety:
+            case R.id.bottomsheet_content_workplacesafety:
                 navigationScreen.animate().translationYBy(-3000)
                         .translationXBy(-3000).setDuration(450);
                 break;
