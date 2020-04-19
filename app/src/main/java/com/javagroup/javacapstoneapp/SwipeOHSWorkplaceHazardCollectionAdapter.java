@@ -1,5 +1,6 @@
 package com.javagroup.javacapstoneapp;
 
+import android.icu.text.Transliterator;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,7 +12,9 @@ public class SwipeOHSWorkplaceHazardCollectionAdapter extends FragmentStatePager
     public SwipeOHSWorkplaceHazardCollectionAdapter( FragmentManager fm) {
         super(fm);
     }
-
+    private int[] image_src = {R.drawable.physical_hazard_hdpi,
+            R.drawable.chemical_hazard_hdpi,R.drawable.biological_hazard_hdpi,
+            R.drawable.psychological_hazard_hdpi};
     @NonNull
     @Override
     public Fragment getItem(int position) {
@@ -20,23 +23,27 @@ public class SwipeOHSWorkplaceHazardCollectionAdapter extends FragmentStatePager
         position=position+1;
         if(position==1){
             bundle.putString("header","Pysical Hazard");
-//            bundle.putString("description","Description of Hazard");
-//            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
+            bundle.putInt("image",image_src[0]);
+            bundle.putString("description","Description of Hazard");
+            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
         }
         if(position==2){
             bundle.putString("header","Chemical Hazards");
-//            bundle.putString("description","Description of Hazard");
-//            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
+            bundle.putInt("image",image_src[1]);
+            bundle.putString("description","Description of Hazard");
+            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
         }
         if(position==3){
             bundle.putString("header","Biological Hazards");
-//            bundle.putString("description","Description of Hazard");
-//            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
+            bundle.putInt("image",image_src[2]);
+            bundle.putString("description","Description of Hazard");
+            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
         }
         if(position==4){
             bundle.putString("header","Psychological Hazards");
-//            bundle.putString("description","Description of Hazard");
-//            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
+            bundle.putInt("image",image_src[3]);
+            bundle.putString("description","Description of Hazard");
+            bundle.putString("details","sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf");
         }
         swipeOhsWorkplaceHazardFragment.setArguments(bundle);
         return swipeOhsWorkplaceHazardFragment;

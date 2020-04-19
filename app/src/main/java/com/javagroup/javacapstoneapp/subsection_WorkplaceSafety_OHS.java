@@ -24,7 +24,7 @@ public class subsection_WorkplaceSafety_OHS extends
     private static final int NUM_PAGES = 4;
 
     public ViewPager viewPager,viewPagerHazard;
-    public TabLayout tabLayoutOhs;
+    public TabLayout tabLayoutOhs,tabLayoutOhsHazard;
 
     public SwipeOHSCollectionAdapter adapter;
     public SwipeOHSWorkplaceHazardCollectionAdapter adapterHazard;
@@ -41,7 +41,7 @@ public class subsection_WorkplaceSafety_OHS extends
         TextView ohsActAndCodeLink = (TextView) findViewById(R.id.ohsActRegAndCodeLink);
         TextView safetyRightsLink = (TextView) findViewById(R.id.safetyRightsLink);
         tabLayoutOhs = findViewById(R.id.tab_layout_ohs);
-
+        tabLayoutOhsHazard = findViewById(R.id.tab_layout_ohs_hazard);
         // for Worker's rights butoon
         relativeLayoutexpandable1=(RelativeLayout) findViewById(R.id.expandable1);
         Viewmore1 = (Button) findViewById(R.id.Worker_Right);
@@ -96,7 +96,7 @@ public class subsection_WorkplaceSafety_OHS extends
         viewPagerHazard.setAdapter(adapterHazard);
 
         tabLayoutOhs.setupWithViewPager(viewPager, true);
-
+        tabLayoutOhsHazard.setupWithViewPager(viewPagerHazard,true);
     }
 
     private void expand(RelativeLayout layout, int layoutHeight) {
