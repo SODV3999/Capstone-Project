@@ -1,17 +1,6 @@
 package com.javagroup.javacapstoneapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.viewpager.widget.ViewPager;
-
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -23,13 +12,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -81,13 +73,14 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(
                 new ViewPagerAdapter(getSupportFragmentManager(),
-                3,
-                3));
+                        3,
+                        3));
 
         /*Written by: Victor Charl*/
         Bundle bundle = getIntent().getExtras();
         int viewPagerPage = 0;
-        if(bundle != null){ //check if the bundle is not null and store it in viewPagerPage variable
+        if (bundle != null) { //check if the bundle is not null and store it in viewPagerPage
+            // variable
             viewPagerPage = bundle.getInt("position");
         }
         /*setting viewPagerPage
@@ -102,11 +95,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchEmploymentStandards(View view) {
-        startActivity(new Intent(this, old_EmploymentStandardsActivity.class));
+        startActivity(new Intent(this, subsection_WorkplaceSafety_EmploymentStandards.class));
     }
 
     public void launchHumanRights(View view) {
-        startActivity(new Intent(this, old_HumanRightsActivity.class));
+        startActivity(new Intent(this, subsection_WorkplaceSafety_HumanRights.class));
     }
 
     public void launchFunders(View view) {
@@ -120,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchCaseStudy1(View view) {
         startActivity(new Intent(this,
-               CaseStudy1.class));
+                CaseStudy1.class));
     }
 
     public void launchCaseStudy2(View view) {
@@ -132,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this,
                 CaseStudy3.class));
     }
-
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
@@ -148,14 +140,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private  void makePhoneCall_1()
-    {
-        if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
-        {
-            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
-        }
-        else
-        {
+    private void makePhoneCall_1() {
+        if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+        } else {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
             Intent intent = new Intent(Intent.ACTION_CALL);
@@ -169,9 +158,9 @@ public class MainActivity extends AppCompatActivity {
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
         {
 
-            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
-        }else
-        {
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+        } else {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
             Intent intent = new Intent(Intent.ACTION_CALL);
@@ -209,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void goToUrl_two(View view) {
         String url = "http://www.helpwrc.org/our-board/";
         Uri uriUrl = Uri.parse(url);
@@ -222,12 +212,14 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void alberta_act(View view) {
         String url = "http://www.qp.alberta.ca/documents/Acts/E09.pdf";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void emp_standard_regulation(View view) {
         String url = "http://www.qp.alberta.ca/documents/Regs/1997_014.pdf";
         Uri uriUrl = Uri.parse(url);
@@ -243,7 +235,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hr_commission(View view) {
-        String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf)";
+        String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants" +
+                ".pdf)";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
@@ -274,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void collapseNavFromHere(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.main_section_workplace_safety:
             case R.id.main_btm_sheet_finding_your_voice:
             case R.id.main_btm_sheet_resources:
@@ -282,7 +275,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btm_sheet_workplace_safety:
             case R.id.btm_sheet_resources:
             case R.id.btmsheet_content_resources:
-            case R.id.bottomsheet_content_worplacesafety:
+            case R.id.bottomsheet_content_workplacesafety:
                 navigationScreen.animate().translationYBy(-3000)
                         .translationXBy(-3000).setDuration(450);
                 break;
