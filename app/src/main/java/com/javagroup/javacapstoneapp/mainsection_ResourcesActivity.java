@@ -39,9 +39,9 @@ ImageButton imageButtonlink1,imageButtonlink2;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        WebView webView = new WebView(this);
-        setContentView(webView);
-        webView.loadUrl("https://workershealthcentre.ca/");
+//        WebView webView = new WebView(this);
+//        setContentView(webView);
+//        webView.loadUrl("https://workershealthcentre.ca/");
 
 //        setContentView(R.layout.btm_sheet_resources);
         setContentView(R.layout.activity_mainsection_resources);
