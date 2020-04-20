@@ -14,7 +14,6 @@ public class mainsection_FindingYourVoiceActivity extends AppCompatActivity {
     private BottomSheetBehavior bsbFindingYourVoice;
     private LinearLayout fyvLinearLayout;
     private ImageView slideUpDown;
-    mainsection_FindingYourVoiceBottomSheet mainsectionFindingYourVoiceBottomSheet;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

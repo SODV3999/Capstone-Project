@@ -1,141 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/ES"
+    android:id="@+id/mainContainer"
     style="@style/CoordinatorLayout"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".subsection_WorkplaceSafety_EmploymentStandards">
 
-    <!-- Nigam Implemented this -->
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/browserContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute">
 
-        <LinearLayout
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/ES"
+        style="@style/CoordinatorLayout"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".subsection_WorkplaceSafety_EmploymentStandards">
+
+        <!-- Nigam Implemented this -->
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:id="@+id/ohs"
-                android:layout_width="match_parent"
-                android:layout_height="200sp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#FF0A7F91"
-                        android:paddingTop="1dp"
-                        android:paddingBottom="1dp"
-                        android:src="@drawable/header_hdpi" />
-
-                    <TextView
-                        android:id="@+id/title_OHS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="Employment Standards"
-                        android:textColor="#0D7D78"
-                        android:textSize="31dp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="135dp" />
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="340dp"
-                    android:layout_height="192dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginEnd="30dp"
-                    android:layout_marginRight="30dp"
-                    android:justificationMode="inter_word"
-                    android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters. The Employment Standards Code establishes Alberta’s minimum standards of employment in areas outside of health and safety that are relevant to the workplace."
-                    android:textColor="#33817B"
-                    android:textSize="20dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    tools:layout_editor_absoluteY="146dp">
+                <RelativeLayout
+                    android:id="@+id/ohs"
+                    android:layout_width="match_parent"
+                    android:layout_height="200sp">
 
-                </TextView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FF0A7F91"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:src="@drawable/header_hdpi" />
 
-                    android:layout_width="340dp"
-                    android:layout_height="192dp"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="30dp"
-                    android:text="These include wages, hours of work, overtime, vacation and holidays, leaves and termination of employment. It also establishes the processes in cases where employment standards have not been met, such as wrongful termination of employment Workers and employers in Alberta are subject to the Employment Standards Code and Employment Standards Regulation:"
-                    android:textColor="#33817B"
-                    android:textSize="20dp"
-                    tools:layout_editor_absoluteX="36dp"
-                    tools:layout_editor_absoluteY="356dp">
+                        <TextView
+                            android:id="@+id/title_OHS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="Employment Standards"
+                            android:textColor="#0D7D78"
+                            android:textSize="31dp"
+                            android:textStyle="bold"
+                            tools:layout_editor_absoluteX="135dp" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
 
-                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="30dp"
-                    android:onClick="alberta_emp_standards"
-                    android:text="@string/alberta_employment_standards"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="20dp">
+                    <TextView
+                        android:layout_width="340dp"
+                        android:layout_height="192dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="30dp"
+                        android:justificationMode="inter_word"
+                        android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters. The Employment Standards Code establishes Alberta’s minimum standards of employment in areas outside of health and safety that are relevant to the workplace."
+                        android:textColor="#33817B"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:layout_editor_absoluteY="146dp">
 
-                </TextView>
+                    </TextView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="30dp"
-                    android:text="@string/alberta_act"
-                    android:onClick="alberta_act"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:textSize="20dp">
+                    <TextView
 
-                </TextView>
+                        android:layout_width="340dp"
+                        android:layout_height="192dp"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="30dp"
+                        android:text="These include wages, hours of work, overtime, vacation and holidays, leaves and termination of employment. It also establishes the processes in cases where employment standards have not been met, such as wrongful termination of employment Workers and employers in Alberta are subject to the Employment Standards Code and Employment Standards Regulation:"
+                        android:textColor="#33817B"
+                        android:textSize="20dp"
+                        tools:layout_editor_absoluteX="36dp"
+                        tools:layout_editor_absoluteY="356dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginRight="30dp"
-                    android:text="@string/employment_standard_regulation"
-                    android:textColor="@android:color/holo_red_dark"
-                    android:onClick="emp_standard_regulation"
-                    android:textSize="20dp">
+                    </TextView>
 
-                </TextView>
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/case_study_link1">
+                    <TextView
+                        android:id="@+id/link_es_rules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/alberta_employment_standards"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="20dp">
 
-                </Button>
+                    </TextView>
 
+                    <TextView
+                        android:id="@+id/link_es_acts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/alberta_act"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/link_es_regulations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="30dp"
+                        android:text="@string/employment_standard_regulation"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="20dp">
+
+                    </TextView>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/case_study_link1">
+
+                    </Button>
+
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
 
-</LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
