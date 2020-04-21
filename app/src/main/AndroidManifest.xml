@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.javagroup.javacapstoneapp">
+    package="com.javagroup.javacapstoneapp"
+    >
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -21,8 +22,8 @@
         <activity android:name=".mainsection_FindingYourVoiceActivity" />
         <activity android:name=".mainsection_WorkplaceSafetyActivity" />
         <activity android:name=".mainsection_ResourcesActivity" />
-        <activity android:name=".old_EmploymentStandardsActivity" />
-        <activity android:name=".old_HumanRightsActivity" />
+        <activity android:name=".subsection_WorkplaceSafety_EmploymentStandards" />
+        <activity android:name=".subsection_WorkplaceSafety_HumanRights" />
         <activity android:name=".CaseStudy1" />
         <activity android:name=".CaseStudy2" />
         <activity android:name=".CaseStudy3" />

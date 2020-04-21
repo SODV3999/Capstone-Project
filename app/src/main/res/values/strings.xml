@@ -12,13 +12,13 @@
     <string name="disclaimer_paragrah">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id sapien lectus. Ut malesuada euismod dolor. Nunc euismod pulvinar nisl, ut euismod justo cursus at. Integer ut faucibus elit. Mauris mauris urna, semper ut tincidunt a, accumsan et odio. Vivamus hendrerit, ante vitae malesuada maximus, eros tortor tempus nunc, nec aliquet justo nunc ac purus. Integer sollicitudin, justo sit amet laoreet accumsan, erat quam molestie odio, sed ornare sem augue id mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque feugiat viverra turpis eget tempus. </string>
     <string name="funders_paragrah_one">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id sapien lectus. Ut malesuada euismod dolor. Nunc euismod pulvinar nisl, ut euismod justo cursus at. Integer ut faucibus elit. Mauris mauris urna, semper ut tincidunt a, accumsan et odio. Vivamus hendrerit, ante vitae malesuada maximus, eros tortor tempus nunc, nec aliquet justo nunc ac purus. Integer sollicitudin, justo sit amet laoreet accumsan, erat quam molestie odio, sed ornare sem augue id mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque feugiat viverra turpis eget tempus. </string>
     <string name="funders_paragrah_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id sapien lectus. Ut malesuada euismod dolor. Nunc euismod pulvinar nisl, ut euismod justo cursus at. Integer ut faucibus elit. Mauris mauris urna, semper ut tincidunt a, accumsan et odio. Vivamus hendrerit, ante vitae malesuada maximus, eros tortor tempus nunc, nec aliquet justo nunc ac purus. Integer sollicitudin, justo sit amet laoreet accumsan, erat quam molestie odio, sed ornare sem augue id mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque feugiat viverra turpis eget tempus.</string>
-   <string name="alberta_employment_standards">https://www.alberta.ca/alberta-employment-standards-rules.aspx
+    <string name="alberta_employment_standards">https://www.alberta.ca/alberta-employment-standards-rules.aspx
    </string>
 
     <string name="alberta_act">http://www.qp.alberta.ca/documents/Acts/E09.pdf</string>
     <string name="emplpyment_standard_regulation">http://www.qp.alberta.ca/documents/Regs/1997_014.pdf</string>
     <string name="alberta_emp_standards">https://www.alberta.ca/alberta-employment-standards-rules.aspx</string>
-     For WEB BUTTON strings
+    For WEB BUTTON strings
     <string name="web_btn_close">x</string>
     <string name="web_btn_back">&lt;</string>
     <string name="web_btn_forward">&gt;</string>
@@ -69,7 +69,7 @@
     <string name="ohs_message">Current Legislation</string>
     <string name="ohs_link"><u><i>Current legislation: https://www.alberta.ca/ohs-act-regulation-code.aspx</i></u></string>
     <string name="ohs_meaning">Occupational Health and Safety</string>
-<string name="workers_right">As workers, we have legal responsibility to follow the health and safety rules, to not cause or participate in harassment, bullying, or violence, and to report unsafe work conditions. Although it is not always easy to do so, failure to do so can have serious consequences (such as undocumented injuries, or workplaces that remain unsafe)</string>
+    <string name="workers_right">As workers, we have legal responsibility to follow the health and safety rules, to not cause or participate in harassment, bullying, or violence, and to report unsafe work conditions. Although it is not always easy to do so, failure to do so can have serious consequences (such as undocumented injuries, or workplaces that remain unsafe)</string>
     <!--Splash Screen Strings-->
     <string name="splash_message">School of \n Global Access</string>
     <string name="logo_contentDescription">finding your voice knowing your rights logo</string>
@@ -115,8 +115,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
+    <string name="workplaceHazards_subtitle">There are 4 hazards that relate to workplace health and safety</string>
 
 
 </resources>

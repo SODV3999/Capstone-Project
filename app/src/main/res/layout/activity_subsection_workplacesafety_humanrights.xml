@@ -1,136 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
+    android:id="@+id/mainContainer"
     style="@style/CoordinatorLayout"
-    android:background="@color/design_default_color_on_primary"
-    tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".subsection_WorkplaceSafety_HumanRights">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/browserContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:translationZ="90dp"
+        tools:ignore="UnusedAttribute">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+    android:id="@+id/HS"
+    style="@style/CoordinatorLayout"
+    android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".subsection_WorkplaceSafety_HumanRights">
+
+    <!-- Nigam Implemented this -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/navigationScreen"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="60dp"
-            android:background="@drawable/background_image"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            android:translationZ="90dp">
+            <RelativeLayout
+                android:id="@+id/ohs"
+                android:layout_width="match_parent"
+                android:layout_height="200sp">
 
-            <TextView
-                android:layout_width="224dp"
-                android:layout_height="89dp"
-                android:layout_marginLeft="85dp"
-                android:layout_marginTop="60dp"
-                android:layout_marginRight="80dp"
-                android:text="Human Rights"
-                android:textColor="#0D7D78"
-                android:textSize="35dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="93dp"
-                tools:layout_editor_absoluteY="57dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            </TextView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FF0A7F91"
+                        android:paddingTop="1dp"
+                        android:paddingBottom="1dp"
+                        android:src="@drawable/header_hdpi" />
 
-            <TextView
-                android:layout_width="340dp"
-                android:layout_height="192dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:justificationMode="inter_word"
-                android:text="In addition to workplace safety, hazards, rights, and standards, Alberta has legislation that relates to the rights of all people and their dignity, regardless of background such as ethnocultural group, source of income, participation in a labour union, gender, age, sexual orientation, or immigration status: "
-                android:textColor="#33817B"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="146dp">
+                    <TextView
+                        android:id="@+id/title_OHS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="Human Rights"
+                        android:textColor="#0D7D78"
+                        android:textSize="31dp"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="135dp" />
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
 
-            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="30dp"
-                android:text="@string/hr_acts"
-                android:onClick=""
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="20dp">
+                <TextView
+                    android:layout_width="340dp"
+                    android:layout_height="192dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:justificationMode="inter_word"
+                    android:text="In addition to workplace safety, hazards, rights, and standards, Alberta has legislation that relates to the rights of all people and their dignity, regardless of background such as ethnocultural group, source of income, participation in a labour union, gender, age, sexual orientation, or immigration status: "
+                    android:textColor="#33817B"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="146dp">
 
-            </TextView>
+                </TextView>
 
-            <TextView
-                android:layout_width="340dp"
-                android:layout_height="192dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginRight="30dp"
-                android:justificationMode="inter_word"
-                android:text="Human Rights in Alberta relate to the idea that everyone should be free from discrimination, and apply to employers and workers. Employers cannot sign away their employees’ human rights. In cases of human rights breaches, specific steps need to be taken. "
-                android:textColor="#33817B"
-                android:textSize="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="146dp">
+                <TextView
+                        android:id="@+id/link_hr_acts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/hr_acts"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20dp">
 
-            </TextView>
+                </TextView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="30dp"
-                android:text="@string/hr_commission"
-                android:onClick=""
-                android:textColor="@android:color/holo_red_dark"
-                android:textSize="20dp">
+                <TextView
+                    android:layout_width="340dp"
+                    android:layout_height="192dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:justificationMode="inter_word"
+                    android:text="Human Rights in Alberta relate to the idea that everyone should be free from discrimination, and apply to employers and workers. Employers cannot sign away their employees’ human rights. In cases of human rights breaches, specific steps need to be taken. "
+                    android:textColor="#33817B"
+                    android:textSize="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="146dp">
 
-            </TextView>
+                </TextView>
+
+                <TextView
+                        android:id="@+id/link_hr_commision"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/hr_commission"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="20dp">
+
+                </TextView>
 
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/case_study_link1">
-
-            </Button>
-
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <ImageButton
-        android:id="@+id/openNav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/navigation_button_container"
-        android:contentDescription="@string/not_found"
-        android:paddingStart="20dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="15dp"
-        android:paddingEnd="35dp"
-        android:paddingRight="35dp"
-        android:paddingBottom="15dp"
-        android:src="@drawable/icon_hamburger"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_anchor="@+id/navigationScreen"
-        app:layout_anchorGravity="center" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

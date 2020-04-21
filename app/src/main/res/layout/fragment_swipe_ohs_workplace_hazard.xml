@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SwipeOhsWorkplaceHazardFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/expand2txtviewheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Biological Hazards"
+        android:textColor="#33817B"
+        android:layout_marginTop="20dp"
+        android:textSize="24dp"
+        android:textStyle="bold"></TextView>
+
+    <ImageView
+        android:id="@+id/expand2imageview"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/biological_hazard_hdpi"></ImageView>
+
+    <TextView
+        android:id="@+id/expand2txtviewdescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="340dp"
+        android:gravity="center_horizontal"
+        android:text="Description of Hazard"
+        android:textSize="24dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/expand2txtviewdetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal"
+        android:text="sjdhf sdfjsdh sdfjhkjsd kffjf sdfdsf sdfsdfekj efkjkehf dfjhjkhdf sfsdf"
+        android:textSize="20dp"></TextView>
+
+</FrameLayout>

@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="60dp"
-        android:translationZ="90dp">
+        android:translationZ="90dp"
+        tools:targetApi="lollipop">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -41,11 +42,20 @@
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400sp"
         app:tabBackground="@drawable/tab_selector"
         app:tabGravity="center"
+        android:layout_gravity="top"
+        android:layout_marginTop="10dp"
         app:tabIndicatorHeight="0dp"
-        app:tabMaxWidth="80dp"/>
+        app:tabMaxWidth="30dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/browserContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

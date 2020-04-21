@@ -4,7 +4,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/btm_sheet_resources"
   style="@style/CoordinatorLayout"
-  android:layout_height="wrap_content"
+  android:layout_height="match_parent"
   android:layout_marginTop="60sp"
   android:background="@drawable/bottom_sheet_background"
   app:behavior_hideable="false"
@@ -129,15 +129,16 @@
           android:scaleType="fitCenter"
           app:srcCompat="@drawable/phone" />
 
+
         <ImageButton
-          android:id="@+id/imageButton_link1"
-          android:layout_width="0dp"
-          android:layout_height="50dp"
-          android:layout_weight="1"
-            android:onClick="goToUrl_one"
-          android:background="@android:color/transparent"
-          android:scaleType="fitCenter"
-          app:srcCompat="@drawable/link" />
+            android:id="@+id/workershealthcentre"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="showBrowser"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/link" />
       </LinearLayout>
 
       <TextView
@@ -149,7 +150,9 @@
           android:justificationMode="inter_word"
         android:text="CalgaryWorker'sResourceCenter"
         android:textColor="#0D7D78"
-        android:textSize="25dp"></TextView>
+        android:textSize="25dp">
+
+      </TextView>
 
       <LinearLayout
         android:layout_width="match_parent"
@@ -173,11 +176,11 @@
           app:srcCompat="@drawable/phone" />
 
         <ImageButton
-            android:id="@+id/imageButton_link2"
+            android:id="@+id/helpwrc"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:onClick="goToUrl_two"
+            android:onClick="showBrowser"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/link" />

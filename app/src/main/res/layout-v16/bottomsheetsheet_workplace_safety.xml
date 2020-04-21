@@ -4,7 +4,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:id="@+id/btm_sheet_workplace_safety"
   style="@style/CoordinatorLayout"
-  android:layout_height="wrap_content"
+  android:layout_height="match_parent"
   android:layout_marginTop="60sp"
   android:background="@drawable/bottom_sheet_background"
   app:behavior_hideable="false"
@@ -13,7 +13,7 @@
   app:layout_behavior="@string/bottom_sheet_behavior">
 
   <RelativeLayout
-    android:id="@+id/bottomsheet_header_worplacesafety"
+    android:id="@+id/bottomsheet_header_workplacesafety"
     android:layout_width="match_parent"
     android:layout_height="200sp">
 
@@ -57,13 +57,13 @@
   </RelativeLayout>
 
   <ScrollView
-    android:id="@+id/bottomsheet_content_worplacesafety"
+    android:id="@+id/bottomsheet_content_workplacesafety"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <LinearLayout
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
+      android:layout_height="match_parent"
       android:orientation="vertical">
 
     <TextView
@@ -100,112 +100,6 @@
       app:srcCompat="@drawable/employment" />
 
 
-    <LinearLayout
-      android:id="@+id/content_subsection_employmentStandards"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:translationZ="90dp">
-
-
-      <TextView
-        android:layout_width="224dp"
-        android:layout_height="89dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="80dp"
-        android:text="Employment Standards"
-        android:textColor="#0D7D78"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="57dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="340dp"
-        android:layout_height="192dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:justificationMode="inter_word"
-        android:text="Employment Standards apply to all workers with a number of exemptions, such as live-in workers, truckers, farm workers and firefighters. The Employment Standards Code establishes Alberta’s minimum standards of employment in areas outside of health and safety that are relevant to the workplace."
-        android:textColor="#33817B"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="146dp">
-
-      </TextView>
-
-      <TextView
-
-        android:layout_width="340dp"
-        android:layout_height="192dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
-        android:text="These include wages, hours of work, overtime, vacation and holidays, leaves and termination of employment. It also establishes the processes in cases where employment standards have not been met, such as wrongful termination of employment Workers and employers in Alberta are subject to the Employment Standards Code and Employment Standards Regulation:"
-        android:textColor="#33817B"
-        android:textSize="20dp"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="356dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
-        android:onClick="alberta_emp_standards"
-        android:text="@string/alberta_employment_standards"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="20dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
-        android:onClick="alberta_act"
-        android:text="@string/alberta_act"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="20dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
-        android:onClick="emp_standard_regulation"
-        android:text="@string/employment_standard_regulation"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="20dp">
-
-      </TextView>
-
-      <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/case_study_link1">
-
-      </Button>
-
-    </LinearLayout>
-
-
     <ImageButton
       android:id="@+id/btn_launchHumanRights"
       android:layout_width="298dp"
@@ -213,101 +107,8 @@
       android:layout_marginLeft="50dp"
       android:layout_marginTop="30dp"
       android:onClick="launchHumanRights"
-      app:srcCompat="@drawable/human_rights" />
+        app:srcCompat="@drawable/human_rights" />
 
-
-    <LinearLayout
-      android:id="@+id/content_subsection_humanRights"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:orientation="vertical"
-      android:translationZ="90dp">
-
-      <TextView
-        android:layout_width="224dp"
-        android:layout_height="89dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="80dp"
-        android:text="Human Rights"
-        android:textColor="#0D7D78"
-        android:textSize="35dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="57dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="340dp"
-        android:layout_height="192dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:justificationMode="inter_word"
-        android:text="In addition to workplace safety, hazards, rights, and standards, Alberta has legislation that relates to the rights of all people and their dignity, regardless of background such as ethnocultural group, source of income, participation in a labour union, gender, age, sexual orientation, or immigration status: "
-        android:textColor="#33817B"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="146dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
-        android:text="@string/hr_acts"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="20dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="340dp"
-        android:layout_height="192dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:justificationMode="inter_word"
-        android:text="Human Rights in Alberta relate to the idea that everyone should be free from discrimination, and apply to employers and workers. Employers cannot sign away their employees’ human rights. In cases of human rights breaches, specific steps need to be taken. "
-        android:textColor="#33817B"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="146dp">
-
-      </TextView>
-
-      <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
-        android:text="@string/hr_commission"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="20dp">
-
-      </TextView>
-
-
-      <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:background="@drawable/case_study_link1">
-
-      </Button>
-
-    </LinearLayout>
     </LinearLayout>
   </ScrollView>
 

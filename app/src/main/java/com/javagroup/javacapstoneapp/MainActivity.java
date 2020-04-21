@@ -3,7 +3,6 @@ package com.javagroup.javacapstoneapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -11,7 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,22 +17,24 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_CALL = 1 ;
-    private ConstraintLayout navigationScreen;
+    private ConstraintLayout navigationScreen, browserContainer;
     ImageButton openNav;
     TabLayout tabLayout;
 
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         /*WRITTEN BY: Victor Charl Corpuz*/
         navigationScreen = findViewById(R.id.navigationScreen);
+        browserContainer = findViewById(R.id.browserContainer);
         openNav = findViewById(R.id.openNav);
 
         openNav.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
         /*Written by: Victor Charl*/
         Bundle bundle = getIntent().getExtras();
         int viewPagerPage = 0;
-        if(bundle != null){ //check if the bundle is not null and store it in viewPagerPage variable
+        if (bundle != null) { //check if the bundle is not null and store it in viewPagerPage
+            // variable
             viewPagerPage = bundle.getInt("position");
         }
         /*setting viewPagerPage
@@ -95,11 +97,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchEmploymentStandards(View view) {
-        startActivity(new Intent(this, old_EmploymentStandardsActivity.class));
+        startActivity(new Intent(this, subsection_WorkplaceSafety_EmploymentStandards.class));
     }
 
     public void launchHumanRights(View view) {
-        startActivity(new Intent(this, old_HumanRightsActivity.class));
+        startActivity(new Intent(this, subsection_WorkplaceSafety_HumanRights.class));
     }
 
     public void launchFunders(View view) {
@@ -126,9 +128,7 @@ public class MainActivity extends AppCompatActivity {
                 CaseStudy3.class));
     }
 
-
-    public void calling_one(View view)
-    {
+    public void calling_one(View view) {
         makePhoneCall_1();
    }
 
@@ -136,10 +136,9 @@ public class MainActivity extends AppCompatActivity {
     {
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED)
         {
-            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
-        }
-        else
-        {
+            ActivityCompat.requestPermissions(MainActivity.this,
+                    new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
+        } else {
             // String dial ="tel:" +5879692301;
             //startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
             String dial ="780-486-9009";
@@ -190,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
     public void goToUrl_two(View view) {
         String url = "http://www.helpwrc.org/our-board/";
         Uri uriUrl = Uri.parse(url);
@@ -224,11 +224,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void hr_commission(View view) {
-        String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants.pdf)";
+        String url = "https://www.albertahumanrights.ab.ca/Documents/GuideProcess_Complainants" +
+                ".pdf)";
         Uri uriUrl = Uri.parse(url);
         Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
         startActivity(launchBrowser);
     }
+
+    private void openingLink(String url)
+    {
+        browserContainer.setTranslationY(3000);
+        browserContainer.animate().translationYBy(-3000).setDuration(700);
+        final FragmentTransaction openTheBrowser = getSupportFragmentManager().beginTransaction();
+        final WebBrowserActivity webBrowserActivity = new WebBrowserActivity();
+        Bundle link = new Bundle();
+        link.putString("url", url);
+        webBrowserActivity.setArguments(link);
+        openTheBrowser.add(R.id.browserContainer, webBrowserActivity);
+        openTheBrowser.commit();
+    }
+
+    public void showBrowser(View view){
+        switch (view.getId())
+        {
+            case R.id.workershealthcentre:
+                openingLink("https://workershealthcentre.ca/");
+                break;
+            case R.id.helpwrc:
+                openingLink("https://www.helpwrc.org/our-board/");
+                break;
+        }
+    }
+
 
 
     /*WRITTEN BY : VICTOR CHARL CORPUZ*/
@@ -256,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void collapseNavFromHere(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.main_section_workplace_safety:
             case R.id.main_btm_sheet_finding_your_voice:
             case R.id.main_btm_sheet_resources:
@@ -264,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btm_sheet_workplace_safety:
             case R.id.btm_sheet_resources:
             case R.id.btmsheet_content_resources:
-            case R.id.bottomsheet_content_worplacesafety:
+            case R.id.bottomsheet_content_workplacesafety:
                 navigationScreen.animate().translationYBy(-3000)
                         .translationXBy(-3000).setDuration(450);
                 break;
