@@ -115,6 +115,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="workplaceHazards_subtitle">There are 4 hazards that relate to workplace health and safety</string>
 
 
 </resources>

@@ -190,7 +190,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
                             android:layout_below="@id/viewpagerOHS"
-                            app:tabBackground="@drawable/tab_selector_ohs"
+                            app:tabBackground="@drawable/tab_selector"
                             app:tabGravity="center"
                             app:tabIndicatorHeight="0dp"
                             app:tabMaxWidth="30dp"/>
@@ -240,6 +240,7 @@
                         android:id="@+id/expandable2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingBottom="30dp"
                         android:background="@color/btn_bg_color">
 
                         <TextView
@@ -249,9 +250,11 @@
                             android:layout_gravity="center"
                             android:layout_marginLeft="50dp"
                             android:layout_marginRight="40dp"
-                            android:text="There are 4 hazards that relate to workplace health and safety"
+                            android:text="@string/workplaceHazards_subtitle"
                             android:textSize="24sp"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginEnd="40dp" />
 
                         <androidx.viewpager.widget.ViewPager android:id="@+id/viewpagerOHSWorkplaceHazard"
                             android:layout_width="match_parent"
@@ -266,7 +269,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
                             android:layout_below="@id/viewpagerOHSWorkplaceHazard"
-                            app:tabBackground="@drawable/tab_selector_ohs"
+                            app:tabBackground="@drawable/tab_selector"
                             app:tabGravity="center"
                             app:tabIndicatorHeight="0dp"
                            android:layout_marginBottom="30dp"

@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -12,53 +13,51 @@
 
         android:id="@+id/casestudy3">
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
                 android:layout_width="match_parent"
-                android:id="@+id/imgcasestudy1"
+                android:id="@+id/imgcasestudy3"
                 android:layout_height="200dp"
                 android:src="@drawable/header_hdpi"/>
             <TextView
                 android:id="@+id/myImageViewText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignLeft="@+id/imgcasestudy1"
-                android:layout_alignTop="@+id/imgcasestudy1"
-                android:layout_alignRight="@+id/imgcasestudy1"
-                android:layout_alignBottom="@+id/imgcasestudy1"
+                android:layout_alignLeft="@+id/imgcasestudy3"
+                android:layout_alignTop="@+id/imgcasestudy3"
+                android:layout_alignRight="@+id/imgcasestudy3"
+                android:layout_alignBottom="@+id/imgcasestudy3"
                 android:layout_margin="1dp"
+                android:textStyle="italic"
                 android:gravity="center"
                 android:text="Case Study 3"
-                android:textStyle="italic"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30dp"/>
         </RelativeLayout>
 
 
         <TextView
-            android:layout_width="370dp"
-            android:layout_height="165dp"
-            android:layout_gravity="center_vertical"
-            android:layout_marginLeft="20sp"
+
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
             android:layout_marginTop="40dp"
-            android:text="                              Option 1\nlorem ipsum dolor sit amet, consectetur adipscing elit.fuse id sapien lectre epid\n
-
-                         Explanation\nlorem ipsum dolor sit amet, consetour displining elit fuse d saplen lectre"
+            android:justificationMode="inter_word"
+            android:text="                     Option 1 lorem ipsum dolor sit amet,consectetur adipscing elit.fuse id sapien lectus.Ut malesuada euismod dolor. Nunc euismodr malesuada euismod."
             android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
-
+            android:textSize="24sp" />
         <RelativeLayout
             android:id="@+id/c31"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+
             >
-
-
 
 
             <Button
@@ -67,9 +66,7 @@
                 android:layout_height="55dp"
                 android:background="#ffffff"
                 android:textColor="@color/colorPrimary"
-                android:text="Finding Your Voice"
-                android:onClick="launchFindingyourvoice"
-                android:textSize="15dp"/>
+                android:text="OPTION 1\nfuse id sapien lectus uit" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -83,9 +80,11 @@
 
         <RelativeLayout
             android:id="@+id/c32"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             >
 
 
@@ -97,9 +96,7 @@
                 android:layout_height="55dp"
                 android:textColor="@color/colorPrimary"
                 android:background="#ffffff"
-                android:text="See Human Rights"
-                android:onClick="launchHumanRights"
-                android:textSize="15dp"/>
+                android:text="OPTION 2\nfuse id sapien lectus uit" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
@@ -111,9 +108,38 @@
         </RelativeLayout>
 
 
+        <RelativeLayout
+            android:id="@+id/c33"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            >
 
 
+
+
+            <Button
+                android:id="@+id/cs3button3"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="#ffffff"
+                android:textColor="@color/colorPrimary"
+                android:text="OPTION 3\nfuse id sapien lectus uit" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/cs3button3"
+                android:text=""
+                android:background="@drawable/custom_bg"
+                />
+
+        </RelativeLayout>
 
     </LinearLayout>
+
+
+
 
 </LinearLayout>
