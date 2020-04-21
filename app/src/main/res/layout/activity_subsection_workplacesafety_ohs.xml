@@ -1,420 +1,282 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/OHS"
+    xmlns:tools="http://schemas.android.com/tools"
     style="@style/CoordinatorLayout"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".subsection_WorkplaceSafety_OHS">
 
-    <!-- Twinkle Implemented this -->
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/browserContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute">
 
-        <LinearLayout
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/OHS"
+        style="@style/CoordinatorLayout"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".subsection_WorkplaceSafety_OHS">
+
+        <!-- Twinkle Implemented this -->
+
+        <ScrollView
+            android:id="@+id/mainContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:id="@+id/ohs"
-                android:layout_width="match_parent"
-                android:layout_height="200sp">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="#FF0A7F91"
-                        android:paddingTop="1dp"
-                        android:paddingBottom="1dp"
-                        android:src="@drawable/header_hdpi" />
-
-                    <TextView
-                        android:id="@+id/title_OHS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="@string/section02_Name"
-                        android:textColor="#0D7D78"
-                        android:textSize="31dp"
-                        android:textStyle="bold"
-                        tools:layout_editor_absoluteX="135dp" />
-                </androidx.cardview.widget.CardView>
-            </RelativeLayout>
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|center_horizontal"
-                    android:justificationMode="inter_word"
-                    android:padding="30dp"
-                    android:text="@string/intro_message"
-                    android:textColor="#33817B"
-                    android:textSize="20dp" />
-
-                <!--                <androidx.cardview.widget.CardView-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="30dp">-->
-                <TextView
-                    android:id="@+id/ohsActRegAndCodeLink"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|center_horizontal"
-                    android:onClick="Albertaohsact"
-                    android:padding="20dp"
-                    android:text="@string/ohs_link"
-                    android:textColor="#EC40A7"
-                    android:textSize="20dp"
-                    tools:ignore="OnClick" />
-
                 <RelativeLayout
-                    android:id="@+id/lay1"
+                    android:id="@+id/ohs"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/btn_bg_color"
-                    android:paddingLeft="40dp"
-                    android:paddingTop="40dp"
-                    android:paddingRight="40dp">
+                    android:layout_height="200sp">
 
-                    <Button
-                        android:id="@+id/Worker_Right"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="#ACD3CF"
-                        android:onClick="workerright"
-                        android:text="Worker's Right"
-                        android:textSize="20dp"
-                        android:textColor="@color/colorPrimary" />
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@+id/Worker_Right"
-                        android:background="@drawable/custom_bg"
-                        android:text="" />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#FF0A7F91"
+                            android:paddingTop="1dp"
+                            android:paddingBottom="1dp"
+                            android:src="@drawable/header_hdpi" />
+
+                        <TextView
+                            android:id="@+id/title_OHS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="@string/section02_Name"
+                            android:textColor="#0D7D78"
+                            android:textSize="31sp"
+                            android:textStyle="bold"
+                            tools:layout_editor_absoluteX="135dp" />
+                    </androidx.cardview.widget.CardView>
                 </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/expandable1"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="780dp"
-                    android:background="@color/btn_bg_color">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/expandtxtview1"
+                        android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="In Alberta, workers have 4 basic rightsthat relate to health safety"
-                        android:textSize="30dp"
-                        android:textStyle="bold"></TextView>
-
-                    <TextView
-                        android:id="@+id/expandtxtview2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expandtxtview1"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center_horizontal"
-                        android:text="(information from Alberta Workers Health Center)"
-                        android:textColor="#EC40A7"
-                        android:textSize="15dp"></TextView>
-
-                    <TextView
-                        android:id="@+id/safetyRightsLink"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expandtxtview2"
-                        android:layout_marginTop="10dp"
                         android:gravity="center|center_horizontal"
-                        android:text="https://workershealthcentre.ca/4-health-and-safety-rights/"
+                        android:justificationMode="inter_word"
+                        android:padding="30dp"
+                        android:text="@string/intro_message"
+                        android:textColor="#33817B"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/ohsActRegAndCodeLink"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|center_horizontal"
+                        android:onClick="Albertaohsact"
+                        android:padding="20dp"
+                        android:text="@string/ohs_link"
                         android:textColor="#EC40A7"
-                        android:onClick="ohsrights"
-                        android:textSize="15dp" />
+                        android:textSize="20dp" />
 
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/viewpagerOHS"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_below="@id/safetyRightsLink"
-                        android:layout_marginTop="30dp"
-                        android:background="#ACD3CF" />
-
-                    <com.google.android.material.tabs.TabLayout
-                        android:id="@+id/tab_layout_ohs"
+                    <RelativeLayout
+                        android:id="@+id/lay1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="480sp"
-                        app:tabBackground="@drawable/tab_selector_ohs"
-                        app:tabGravity="center"
-                        app:tabIndicatorHeight="0dp"
-                        app:tabMaxWidth="30dp"/>
+                        android:background="@color/btn_bg_color"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="40dp"
+                        android:paddingRight="40dp">
 
+                        <Button
+                            android:id="@+id/Worker_Right"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#ACD3CF"
+                            android:onClick="workerright"
+                            android:text="Worker's Right"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20sp" />
 
-                    <TextView
-                        android:id="@+id/expandtxtview3"
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/Worker_Right"
+                            android:background="@drawable/custom_bg"
+                            android:text="" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandable1"
                         android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_below="@id/viewpagerOHS"
-                        android:layout_margin="30dp"
-                        android:text="@string/workers_right"
-                        android:textColor="#33817B"
-                        android:textSize="20dp"></TextView>
+                        android:layout_height="800dp"
+                        android:background="@color/btn_bg_color">
 
-                </RelativeLayout>
+                        <TextView
+                            android:id="@+id/expandtxtview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="In Alberta, workers have 4 basic rightsthat relate to health safety"
+                            android:textSize="30dp"
+                            android:textStyle="bold"></TextView>
 
-                <RelativeLayout
-                    android:id="@+id/lay2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/btn_bg_color"
-                    android:paddingLeft="40dp"
-                    android:paddingTop="40dp"
-                    android:paddingRight="40dp">
+                        <TextView
+                            android:id="@+id/expandtxtview2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/expandtxtview1"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center_horizontal"
+                            android:text="(information from Alberta Workers Health Center)"
+                            android:textColor="#EC40A7"
+                            android:textSize="15dp"></TextView>
 
-                    <Button
-                        android:id="@+id/Workplace_Hazard"
-                        android:layout_width="match_parent"
-                        android:layout_height="55dp"
-                        android:background="#ACD3CF"
-                        android:onClick="workplacehazard"
-                        android:textSize="20dp"
-                        android:text="Workplace Hazard"
-                        android:textColor="@color/colorPrimary" />
+                        <TextView
+                            android:id="@+id/safetyRightsLink"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/expandtxtview2"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center|center_horizontal"
+                            android:onClick="ohsrights"
+                            android:text="https://workershealthcentre.ca/4-health-and-safety-rights/"
+                            android:textColor="#EC40A7"
+                            android:textSize="15dp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@+id/Workplace_Hazard"
-                        android:background="@drawable/custom_bg"
-                        android:text="" />
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/viewpagerOHS"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_below="@id/safetyRightsLink"
+                            android:layout_marginTop="30dp"
+                            android:background="#ACD3CF" />
 
-                </RelativeLayout>
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout_ohs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/viewpagerOHS"
+                            app:tabBackground="@drawable/tab_selector_ohs"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabMaxWidth="30dp"/>
 
-                <RelativeLayout
-                    android:id="@+id/expandable2"
-                    android:layout_width="match_parent"
-                    android:layout_height="1650dp"
-                    android:background="@color/btn_bg_color">
+                        <TextView
+                            android:id="@+id/expandtxtview3"
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:layout_below="@id/tab_layout_ohs"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginRight="30dp"
+                            android:text="@string/workers_right"
+                            android:textColor="#33817B"
+                            android:textSize="20dp"></TextView>
+                    </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/expand2txtview1"
-                        android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginRight="10dp"
-                        android:text="There are 4 hazards that relate to workplace health and safety"
-                        android:textSize="20dp"
-                        android:textStyle="bold"></TextView>
-                    <!-- for physical hazard-->
-                    <TextView
-                        android:id="@+id/expand2txtview2"
+                    <RelativeLayout
+                        android:id="@+id/lay2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/btn_bg_color"
+                        android:paddingLeft="40dp"
+                        android:paddingTop="40dp"
+                        android:paddingRight="40dp"
+                        android:paddingBottom="40dp">
+
+                        <Button
+                            android:id="@+id/Workplace_Hazard"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:background="#ACD3CF"
+                            android:onClick="workplacehazard"
+                            android:text="Workplace Hazard"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/Workplace_Hazard"
+                            android:background="@drawable/custom_bg"
+                            android:text="" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/expandable2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2txtview1"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
+                        android:background="@color/btn_bg_color">
 
-                        android:text="Pysical Hazard"
-                        android:textColor="#33817B"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
-                    <ImageView
-                        android:id="@+id/expand2imageview1"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_below="@id/expand2txtview2"
-                        android:src="@drawable/physical_hazard_hdpi" >
-                    </ImageView>
-                    <TextView
-                        android:id="@+id/expand2txtview3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2imageview1"
-                        android:layout_gravity="center"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginRight="10dp"
-                        android:text="Description of Hazard"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
-<!--                    <TextView-->
-<!--                        android:id="@+id/expand2txtview4"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="100dp" >-->
-<!--                    </TextView>-->
+                        <TextView
+                            android:id="@+id/expand2txtview1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginRight="40dp"
+                            android:text="There are 4 hazards that relate to workplace health and safety"
+                            android:textSize="24sp"
+                            android:textStyle="bold"></TextView>
 
-                    <TextView
-                        android:id="@+id/expand2txtview5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2txtview3"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
+                        <androidx.viewpager.widget.ViewPager android:id="@+id/viewpagerOHSWorkplaceHazard"
+                            android:layout_width="match_parent"
+                            android:layout_height="470dp"
+                            android:layout_below="@id/expand2txtview1"
+                            android:layout_marginTop="30dp"
+                            android:background="#ACD3CF" />
 
-                        android:text="Chemical Hazards"
-                        android:textColor="#33817B"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
-                    <ImageView
-                        android:id="@+id/expand2imageview2"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_below="@id/expand2txtview5"
-                        android:src="@drawable/chemical_hazard_hdpi" >
-                    </ImageView>
-                    <TextView
-                        android:id="@+id/expand2txtview6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2imageview2"
-                        android:layout_gravity="center"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginRight="10dp"
-                        android:text="Description of Hazard"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_layout_ohs_hazard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_below="@id/viewpagerOHSWorkplaceHazard"
+                            app:tabBackground="@drawable/tab_selector_ohs"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp"
+                           android:layout_marginBottom="30dp"
+                            app:tabMaxWidth="30dp"/>
+                    </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/expand2txtview8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2txtview6"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-
-                        android:text="Biological Hazards"
-                        android:textColor="#33817B"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
-                    <ImageView
-                        android:id="@+id/expand2imageview3"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_below="@id/expand2txtview8"
-                        android:src="@drawable/biological_hazard_hdpi" >
-                    </ImageView>
-                    <TextView
-                        android:id="@+id/expand2txtview9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2imageview3"
-                        android:layout_gravity="center"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginRight="10dp"
-                        android:text="Description of Hazard"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
-
-                    <TextView
-                        android:id="@+id/expand2txtview11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2txtview9"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginRight="10dp"
-
-                        android:text="Psychological Hazards"
-                        android:textColor="#33817B"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
-                    <ImageView
-                        android:id="@+id/expand2imageview4"
-                        android:layout_width="match_parent"
-                        android:layout_height="250dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_below="@id/expand2txtview11"
-                        android:src="@drawable/psychological_hazard_hdpi" >
-                    </ImageView>
-                    <TextView
-                        android:id="@+id/expand2txtview12"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/expand2imageview4"
-                        android:layout_gravity="center"
-                        android:gravity="center_horizontal"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginTop="30dp"
-                        android:layout_marginRight="10dp"
-                        android:text="Description of Hazard"
-                        android:textSize="24dp"
-                        android:textStyle="bold"></TextView>
-
-                </RelativeLayout>
-
-<!--                <RelativeLayout-->
-<!--                    android:id="@+id/lay3"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:background="@color/btn_bg_color"-->
-<!--                    android:paddingLeft="40dp"-->
-<!--                    android:paddingTop="40dp"-->
-<!--                    android:paddingRight="40dp">-->
-
-<!--                    <Button-->
-<!--                        android:id="@+id/CaseStudy_Link"-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="55dp"-->
-<!--                        android:background="#ACD3CF"-->
-<!--                        android:onClick="casestudy"-->
-<!--                        android:textSize="20dp"-->
-<!--                        android:text="Case Study Links"-->
-<!--                        android:textColor="@color/colorPrimary" />-->
-
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="20dp"-->
-<!--                        android:layout_below="@+id/CaseStudy_Link"-->
-<!--                        android:background="@drawable/custom_bg"-->
-<!--                        android:text="" />-->
-
-<!--                </RelativeLayout>-->
-                <!--                </androidx.cardview.widget.CardView>-->
-
-
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        </ScrollView>
 
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
